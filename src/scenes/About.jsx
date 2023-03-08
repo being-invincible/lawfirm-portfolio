@@ -3,8 +3,9 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { motion } from 'framer-motion';
 import SocialMediaIcons from '../components/SocialMediaIcons'
+import LineGradient from '../components/LineGradient';
 
-const About = ({setSelectedPage}) => {
+const About = ({setSelectedPage, aboutTitle, aboutContent, button02, button03}) => {
 
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
@@ -53,11 +54,14 @@ const About = ({setSelectedPage}) => {
                     visible: {opacity:1, x:0}
                 }}
             >
-                <h2 className='text-xl font-bold font-montserrat z-10 text-center md:text-start'>
-                    About The Firm
+                <h2 className='text-xl font-bold font-montserrat z-10 text-center md:text-start uppercase tracking-[.25em] text-mettalic-gold'>
+                    {aboutTitle}
                 </h2>
+                <div className=''>
+                    <LineGradient width='w-40' />
+                </div>
                 <p className='mt-10 mb-8 text-sm text-center md:text-start font-montserrat font-medium'>
-                    Ahattah Law and Legal Consultations Co. was established as one of the specialized legal entities in the Kingdom of Saudi Arabia. It was established as a professional legal firm licensed by the Ministry of Commerce as well as licensed by the Saudi Bar Association, to meet the needs and aspirations of clients. The company includes a group of lawyers, legal and administrative consultants. The company also provides legal services to its clients with High quality and professional performance that serves individuals, companies and private establishments.
+                    {aboutContent}
                 </p>
             </motion.div>
 
@@ -99,16 +103,16 @@ const About = ({setSelectedPage}) => {
             >
                     <a
                     href="#packages"
-                    class="block w-full rounded bg-russian-violet px-5 py-3 text-sm font-medium text-white shadow hover:bg-mettalic-gold focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+                    class="block w-full rounded bg-russian-violet px-12 py-3 text-sm font-medium text-white shadow hover:bg-mettalic-gold focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
                     >
-                    Packages
+                    {button03}
                     </a>
 
                     <a
                     href="#services"
-                    class="block w-full rounded bg-white px-5 py-3 text-sm font-medium text-russian-violet shadow hover:text-black focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+                    class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-russian-violet shadow hover:text-black focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
                     >
-                    Services
+                    {button02}
                     </a>
             </motion.div>
 

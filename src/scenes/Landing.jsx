@@ -4,7 +4,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { motion } from 'framer-motion';
 
 
-const Landing = ({setselectedPage, companyName, slogan}) => {
+const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => {
 
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060p)");
 
@@ -66,17 +66,17 @@ const Landing = ({setselectedPage, companyName, slogan}) => {
                     }}
                 >
                     <a
-                    href="#"
+                    href="https://wa.me/966594161652"
                     class="block w-full rounded bg-russian-violet px-5 py-3 text-sm font-medium text-white shadow hover:bg-mettalic-gold focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
                     >
-                    Request Consultation
+                    {button01}
                     </a>
 
                     <a
-                    href="#packages"
+                    href="#services"
                     class="block w-full rounded bg-white px-5 py-3 text-sm font-medium text-russian-violet shadow hover:text-black focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
                     >
-                    Explore our Packages
+                    {button02}
                     </a>
                 </motion.div>
                 </div>

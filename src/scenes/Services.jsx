@@ -14,18 +14,18 @@ const serviceVariant = {
     visible: { opacity:1, scale: 1 },
 };
 
-const Service = ({ title }) => {
+const Service = ({ title, desp }) => {
     const projectTitle = title.split(" ").join("-").toLowerCase;
     
     return (
         <motion.div variants={serviceVariant}>
             <div class="group relative cursor-pointer items-center justify-center overflow-hidden">
             <div class="h-72 w-92">
-                <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="card image" />
+                <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="about the law firm" />
                 <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
-                <div class="absolute inset-0 flex translate-y-[55%] flex-col items-center justify-center px-9 text-center transition-all group-hover:translate-y-0 duration-500">
-                    <h1 class="text-3xl font-bold text-white py-3">Legal Advice</h1>
-                    <p class="mb-3 text-lg italic text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">Loren ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
+                <div class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all group-hover:translate-y-0 duration-500">
+                    <h1 class="text-2xl font-bold text-white py-3">{title}</h1>
+                    <p class="mb-3 text-md italic text-justify text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">{desp}</p>
                 </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@ const Service = ({ title }) => {
     )
 }
 
-const Services = () => {
+const Services = ({services, serviceTitle01, serviceTitle02, serviceTitle03, serviceTitle04, serviceTitle05, serviceTitle06, serviceTitle07, serviceTitle08, serviceTitle09, serviceContent01, serviceContent02, serviceContent03, serviceContent04, serviceContent05, serviceContent06, serviceContent07, serviceContent08, serviceContent09 }) => {
   return (
     <section id='services' className='pt-32 pb-32'>
         {/* Heading */}
@@ -50,10 +50,10 @@ const Services = () => {
                 }}
         >
                 <div>
-                    <h2 className='text-xl font-bold font-montserrat text-center sm:text-left'>
-                        Services
+                    <h2 className='mb-8 md:mb-0 text-xl font-bold font-montserrat text-center sm:text-left uppercase tracking-[.25em] text-russian-violet'>
+                        {services}
                     </h2>
-                    <div className='mt-5 mb-8'>
+                    <div className=''>
                         <LineGradient width='w-20' />
                     </div>
                 </div>
@@ -70,13 +70,17 @@ const Services = () => {
                         variants={container}
                 >
                     
-                    <Service title="Legal Advice" img="/public/Legal Advice.jpg" />
-                    <Service title="Legal Advice" img="Legal Advice.jpg" />
-                    <Service title="Legal Advice" img="Legal Advice.jpg" />
+                    <Service title={serviceTitle01} desp={serviceContent01} img="/public/Legal Advice.jpg" />
+                    <Service title={serviceTitle02} desp={serviceContent02} img="Legal Advice.jpg" />
+                    <Service title={serviceTitle03} desp={serviceContent03} img="Legal Advice.jpg" />
 
-                    <Service title="Legal Advice" img="/public/Legal Advice.jpg" />
-                    <Service title="Legal Advice" img="Legal Advice.jpg" />
-                    <Service title="Legal Advice" img="Legal Advice.jpg" />
+                    <Service title={serviceTitle04} desp={serviceContent04} img="/public/Legal Advice.jpg" />
+                    <Service title={serviceTitle05} desp={serviceContent05} img="Legal Advice.jpg" />
+                    <Service title={serviceTitle06} desp={serviceContent06} img="Legal Advice.jpg" />
+
+                    <Service title={serviceTitle07} desp={serviceContent07} img="/public/Legal Advice.jpg" />
+                    <Service title={serviceTitle08} desp={serviceContent08} img="Legal Advice.jpg" />
+                    <Service title={serviceTitle09} desp={serviceContent09} img="Legal Advice.jpg" />
 
                     {/* Row 1 
                     <div

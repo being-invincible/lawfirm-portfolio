@@ -2,6 +2,7 @@ import React from 'react'
 import useMediaQuery from "../hooks/useMediaQuery";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { motion } from 'framer-motion';
+import LineGradient from '../components/LineGradient';
 
 const serviceVariant = {
     hidden: { opacity:0, scale: 0.8 },
@@ -20,7 +21,7 @@ const tickMessage = () => {
 const Package = ({ title, price, desp, list1, list2, list3 }) => {
     
     return (
-        <motion.div variants={serviceVariant} className="w-full h-80 p-8 font-montserrat bg-antique-bronze rounded-lg hover:drop-shadow-lg hover:bg-gradient-to-tr from-coyote to-arylide-yellow">
+        <motion.div variants={serviceVariant} className="w-full h-80 p-8 mb-5 font-montserrat bg-gradient-to-tr from-ecru to-sheen-gold rounded-lg hover:drop-shadow-lg hover:bg-gradient-to-tr hover:to-arylide-yellow hover:from-coyote">
             <h1 className='font-normal text-sm'>{title}</h1>
             <h1 className='py-5 font-bold text-5xl'>{price}</h1>
             <p className='font-normal text-lg mb-5'>{desp}</p>
@@ -42,11 +43,11 @@ const Package = ({ title, price, desp, list1, list2, list3 }) => {
     )
 }
 
-const Packages = () => {
+const Packages = ({packages}) => {
   return (
     <section id="packages" className='pt-10 pb-10'>
         {/* Header */}
-        <div className='basis-4/5 mt-16 md:mt-24'>
+        <div className='basis-4/5 mt-16 mb:10 md:mt-24'>
             <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -57,9 +58,12 @@ const Packages = () => {
                     visible: {opacity:1, x: 0}
                 }}
             >
-                <h2 className='text-xl font-bold font-montserrat z-10 text-center md:text-start'>
-                    Packages
+                <h2 className='text-mettalic-gold text-xl font-bold font-montserrat z-10 text-center md:text-start uppercase tracking-[.25em]'>
+                    {packages}
                 </h2>
+                <div className=''>
+                    <LineGradient width='w-20' />
+                </div>
                 <p className='mt-5 mb-8 text-sm text-center md:text-start font-montserrat font-medium'>
                     Explore our packages which is carefully build upon the cases.
                 </p>
