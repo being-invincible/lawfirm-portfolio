@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import SocialMediaIcons from '../components/SocialMediaIcons'
 import LineGradient from '../components/LineGradient';
 
-const About = ({setSelectedPage, aboutTitle, aboutContent, button02, button03}) => {
+const About = ({setSelectedPage, aboutTitle, aboutContent, button02, button03, font}) => {
 
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
@@ -42,7 +42,7 @@ const About = ({setSelectedPage, aboutTitle, aboutContent, button02, button03}) 
         </motion.div>
 
         {/* About Section */}
-        <div className='z-30 basis-4/5 mt-12 md:mt-32'>
+        <div className={`z-30 basis-4/5 ${font} mt-12 md:mt-32`}>
             <motion.div
                 className=''
                 initial="hidden"
@@ -54,13 +54,13 @@ const About = ({setSelectedPage, aboutTitle, aboutContent, button02, button03}) 
                     visible: {opacity:1, x:0}
                 }}
             >
-                <h2 className='text-xl font-bold font-montserrat z-10 text-center md:text-start uppercase tracking-[.25em] text-mettalic-gold'>
+                <h2 className='text-xl font-bold z-10 text-center md:text-right uppercase tracking-[.25em] text-mettalic-gold'>
                     {aboutTitle}
                 </h2>
-                <div className=''>
+                {/* <div className=''>
                     <LineGradient width='w-40' />
-                </div>
-                <p className='mt-10 mb-8 text-sm text-center md:text-start font-montserrat font-medium'>
+                </div> */}
+                <p className='mt-5 mb-8 text-sm text-center md:text-right font-medium'>
                     {aboutContent}
                 </p>
             </motion.div>
@@ -91,7 +91,7 @@ const About = ({setSelectedPage, aboutTitle, aboutContent, button02, button03}) 
                     Packages
                 </AnchorLink>
             </motion.div>*/}
-            <motion.div class="mt-8 flex flex-wrap gap-4 text-center"
+            <motion.div class="mt-8 flex flex-wrap gap-4 text-center place-content-end"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
@@ -103,20 +103,20 @@ const About = ({setSelectedPage, aboutTitle, aboutContent, button02, button03}) 
             >
                     <a
                     href="#packages"
-                    class="block w-full rounded bg-russian-violet px-12 py-3 text-sm font-medium text-white shadow hover:bg-mettalic-gold focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+                    class="block w-full rounded bg-russian-violet px-12 py-3 text-sm font-semibold text-white shadow hover:bg-mettalic-gold focus:outline-none focus:ring sm:w-auto"
                     >
                     {button03}
                     </a>
 
                     <a
                     href="#services"
-                    class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-russian-violet shadow hover:text-black focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+                    class="block w-full rounded bg-white px-12 py-3 text-sm font-semibold text-russian-violet shadow hover:text-black focus:outline-none focus:ring sm:w-auto"
                     >
                     {button02}
                     </a>
             </motion.div>
 
-            <motion.div className=''
+            <motion.div className=""
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
@@ -126,7 +126,7 @@ const About = ({setSelectedPage, aboutTitle, aboutContent, button02, button03}) 
                     visible: {opacity:1, x:0}
                 }}
             >
-            <SocialMediaIcons />
+            <SocialMediaIcons align = "place-content-end" />
             </motion.div>
             
 

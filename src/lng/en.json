@@ -28,6 +28,7 @@
     "serviceTitle09" : "Franchise contracts",
     "serviceContent09" : "We prepare franchise contracts to preserve the rights of clients and manage the contract professionally",
     "packages" : "Packages",
-    "contact" : "Contact"
-
+    "contact" : "Contact",
+    "contactContent" : "Reach us via Email",
+    "font": "font-notosans"
 }

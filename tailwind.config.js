@@ -33,7 +33,8 @@ module.exports = {
           "linear-gradient(90deg, #24cbff 14.53%, #fc59ff 69.36%, #ffbd0c 117.73%)"
       }),
       fontFamily : {
-        montserrat: ["Montserrat", "serif"]
+        notosans: ["Noto Sans", "serif"],
+        notosansarabic: ["Noto Sans Arabic", "serif"]
       },
     },
   },

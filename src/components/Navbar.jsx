@@ -21,7 +21,7 @@ const Link = ({ page, selectedPage, setSelectedPage}) => {
     )
 }
 
-const Navbar = ({ selectedPage, setSelectedPage }) => {
+const Navbar = ({ selectedPage, setSelectedPage, font }) => {
 
     const { t, i18n } = useTranslation();
 
@@ -36,7 +36,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
     const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
 
     return (
-        <nav className='z-40 w-full fixed top-0 bg-gradient-to-tl from-coyote to-sheen-gold'>
+        <nav className={`z-40 w-full ${font} fixed top-0 bg-gradient-to-tl from-coyote to-sheen-gold`}>
             <div className='py-5 flex items-center justify-between mx-auto w-5/6'>
                 <img className='w-20 lg:w-20' src="logo.png" alt="Logo" />
 
@@ -50,7 +50,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
 
                 {/* Desktop Nav */}
                 {isAboveSmallScreens ? (
-                    <div className='flex justify-between gap-16 font-montserrat text-md font-semibold'>
+                    <div className={`flex justify-between gap-16 text-md font-semibold`}>
                         <Link 
                             page="Home"
                             selectedPage={selectedPage}

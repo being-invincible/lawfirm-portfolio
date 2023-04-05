@@ -16,24 +16,20 @@ function App() {
 
   const { t, i18n } = useTranslation();
 
-	const handleChangeLng = (lng) => {
-		i18n.changeLanguage(lng);
-	};
-
   const [selectedPage, setSelectedPage] = useState('home');
   const isAboutMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   return (
     <div className="app">
 
-      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} langChange={handleChangeLng} />
+      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} font={t("font")} />
 
-      <Landing setSelectedPage={setSelectedPage} companyName={t("companyName")} slogan={t("slogan")} button01={t("button01")} button02={t("button02")} />
+      <Landing setSelectedPage={setSelectedPage} companyName={t("companyName")} slogan={t("slogan")} button01={t("button01")} button02={t("button02")} font={t("font")}/>
 
       {/* About */}
       <div className="bg-olive">
         <div className="w-5/6 mx-auto">
-        <About setSelectedPage={setSelectedPage} aboutTitle={t("aboutTitle")} aboutContent={t("aboutContent")} button02={t("button02")} button03={t("button03")} />
+        <About setSelectedPage={setSelectedPage} aboutTitle={t("aboutTitle")} aboutContent={t("aboutContent")} button02={t("button02")} button03={t("button03")} font={t("font")} />
         </div>
       </div>
       
@@ -57,6 +53,7 @@ function App() {
         serviceTitle07={t("serviceTitle07")} serviceContent07={t("serviceContent07")}
         serviceTitle08={t("serviceTitle08")} serviceContent08={t("serviceContent08")}
         serviceTitle09={t("serviceTitle09")} serviceContent09={t("serviceContent09")}
+        font={t("font")}
         />
         </div>
       </div>
@@ -64,13 +61,13 @@ function App() {
       {/* Packages */}
       <div className="bg-olive">
         <div className="w-5/6 mx-auto md:h-full">
-        <Packages packages={t("packages")} />
+        <Packages packages={t("packages")} font={t("font")} />
         </div>
       </div>
 
       <div className="bg-olive md:justify-between md:items-center md:h-full">
         <div className="w-5/6 mx-auto">
-        <Contact contact={t("contact")} />
+        <Contact contact={t("contact")} contactContent={t("contactContent")} font={t("font")} />
         </div>
       </div>
 

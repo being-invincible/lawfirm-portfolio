@@ -4,7 +4,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { motion } from 'framer-motion';
 
 
-const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => {
+const Landing = ({setselectedPage, companyName, slogan, button01, button02, font}) => {
 
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060p)");
 
@@ -18,11 +18,12 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
                 class="absolute inset-0 bg-transparent sm:bg-black/25"
             ></div>
 
-            <div
-                class="relative mx-auto max-w-screen-xl pt-60 sm:px-6 lg:flex min-h-screen lg:items-center lg:px-8"
-            >
-                <div class="px-10  font-montserrat text-center sm:text-left">
+            {/* <div
+                class="relative mx-auto max-w-screen-xl pt-60 lg:flex min-h-screen lg:items-center lg:px-8"
+            > */}
+                <div class={`relative px-10 ${font} text-center sm:text-left pt-[350px]`}>
                 <motion.div
+                    class="text-center"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
@@ -32,7 +33,7 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
                         visible: {opacity:1, x:0}
                     }}
                 >
-                    <h1 class="text-4xl font-extrabold sm:text-5xl">
+                    <h1 class="text-4xl font-black sm:text-5xl">
                         <strong class="block font-extrabold text-white">
                         {companyName}
                         </strong>
@@ -50,12 +51,12 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
                     }}
                 >
 
-                    <p class="mt-4 font-semibold text-lg sm:text-2xl sm:leading-relaxed">
+                    <p class="mt-4 font-semibold font-sans text-center text-lg sm:text-2xl sm:leading-relaxed">
                     {slogan}
                     </p>
                 </motion.div>
 
-                <motion.div class="mt-8 flex flex-wrap gap-4 text-center"
+                <motion.div class="mt-8 flex flex-wrap gap-4 text-center place-content-center"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
@@ -80,7 +81,7 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
                     </a>
                 </motion.div>
                 </div>
-            </div>
+            {/* </div> */}
         </section>
 
     )
