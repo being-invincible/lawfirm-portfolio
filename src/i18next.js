@@ -5,11 +5,12 @@ import transEN from "./lng/en.json";
 import transAR from "./lng/ar.json";
 
 i18next.use(initReactI18next).init({
+	interpolation: { escapeValue: false },
 	resources: {
 		English: {
 			translation: transEN,
 		},
-		Arabic: {
+		عربي: {
 			translation: transAR,
 		},
 	},

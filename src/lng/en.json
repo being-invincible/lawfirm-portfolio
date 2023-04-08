@@ -30,5 +30,13 @@
     "packages" : "Packages",
     "contact" : "Contact",
     "contactContent" : "Reach us via Email",
-    "font": "font-notosans"
+    "font": "font-notosans",
+    "or": "or",
+    "name": "Name",
+    "email": "Email ID",
+    "phone": "Phone No.",
+    "selectPackage": "Select Package",
+    "submit": "Submit",
+    "whatsapp": "WhatsApp",
+    "location": "Location"
 }

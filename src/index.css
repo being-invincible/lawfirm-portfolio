@@ -12,3 +12,13 @@ body,
     height: 100%;
     @apply text-white;
 }
+
+@font-face {
+  font-family: "ReemKufi";
+  src: url("../public/ReemKufi.ttf");
+}
+
+@font-face {
+  font-family: "NotoSansSymbol";
+  src: url("../public/NotoSansSymbols.ttf");
+}

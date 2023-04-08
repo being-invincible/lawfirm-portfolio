@@ -2,9 +2,12 @@ import React from 'react';
 import useMediaQuery from "../hooks/useMediaQuery";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 
 const Landing = ({setselectedPage, companyName, slogan, button01, button02, font}) => {
+
+    const { t, i18n } = useTranslation();
 
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060p)");
 
@@ -21,46 +24,45 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02, font
             {/* <div
                 class="relative mx-auto max-w-screen-xl pt-60 lg:flex min-h-screen lg:items-center lg:px-8"
             > */}
-                <div class={`relative px-10 ${font} text-center sm:text-left pt-[350px]`}>
+                <div class={`relative px-10  text-center sm:text-left pt-[350px]`}>
                 <motion.div
                     class="text-center"
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.3 }}
+                    viewport={{ once: false, amount: 0.5 }}
+                    transition={{ duration: 0.4 }}
                     variants={{
                         hidden: {opacity:0, x:-50},
                         visible: {opacity:1, x:0}
                     }}
                 >
-                    <h1 class="text-4xl font-black sm:text-5xl">
-                        <strong class="block font-extrabold text-white">
+                    <h1 class={`text-3xl ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem font-semibold': 'font-noto font-bold'} md:text-5xl`}>
                         {companyName}
-                        </strong>
+                        
                     </h1>
                 </motion.div>
 
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.5 }}
+                    viewport={{ once: false, amount: 0.5 }}
+                    transition={{ duration: 0.6 }}
                     variants={{
                         hidden: {opacity:0, x:-50},
                         visible: {opacity:1, x:0}
                     }}
                 >
 
-                    <p class="mt-4 font-semibold font-sans text-center text-lg sm:text-2xl sm:leading-relaxed">
+                    <p class={`mt-4 font-semibold  ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'} text-center text-lg sm:text-2xl sm:leading-relaxed`}>
                     {slogan}
                     </p>
                 </motion.div>
 
-                <motion.div class="mt-8 flex flex-wrap gap-4 text-center place-content-center"
+                <motion.div class={`mt-8 flex flex-wrap gap-4 text-center place-content-center  ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'}`}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.75 }}
+                    viewport={{ once: false, amount: 0.5 }}
+                    transition={{ duration: 0.85 }}
                     variants={{
                         hidden: {opacity:0, x:-50},
                         visible: {opacity:1, x:0}

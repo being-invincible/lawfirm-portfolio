@@ -4,10 +4,12 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { motion } from 'framer-motion';
 import SocialMediaIcons from '../components/SocialMediaIcons'
 import LineGradient from '../components/LineGradient';
+import { useTranslation } from 'react-i18next';
 
 const About = ({setSelectedPage, aboutTitle, aboutContent, button02, button03, font}) => {
 
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+    const { t, i18n } = useTranslation();
 
     return (
         <section
@@ -27,22 +29,22 @@ const About = ({setSelectedPage, aboutTitle, aboutContent, button02, button03, f
                     }}
         >
             {isAboveMediumScreens ? (
-                <div className='relative z-0 before:absolute before:w-full before:max-w-[600px]  before:h-full'>
+                <div className='relative z-0 before:absolute before:w-full before:max-w-[700px]  before:h-full'>
                     <img
-                    className='hover:filter hover:saturate-200 transition-all duration-500 z-10 w-full max-w-[280px] md:max-w-[550px] rounded-lg'
+                    className='hover:filter hover:saturate-200 transition-all duration-500 z-10 w-full max-w-[280px] md:max-w-[600px] rounded-lg'
                     alt='profile' src='about.jpg' />
                 </div>
             ) : (
                 <div>
                     <img
-                    className='hover:filter hover:saturate-200 transition-all duration-500 z-10 w-full max-w-[280px] md:max-w-[350px]'
+                    className='hover:filter hover:saturate-200 transition-all duration-500 z-10 w-full max-w-[480px] md:max-w-[450px]'
                     alt='profile' src='about.jpg' />
                 </div>
             )}
         </motion.div>
 
         {/* About Section */}
-        <div className={`z-30 basis-4/5 ${font} mt-12 md:mt-32`}>
+        <div className={`z-30 basis-4/5 ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'} mt-12 md:mt-32`}>
             <motion.div
                 className=''
                 initial="hidden"
@@ -54,13 +56,13 @@ const About = ({setSelectedPage, aboutTitle, aboutContent, button02, button03, f
                     visible: {opacity:1, x:0}
                 }}
             >
-                <h2 className='text-xl font-bold z-10 text-center md:text-right uppercase tracking-[.25em] text-mettalic-gold'>
+                <h2 className='text-2xl font-bold z-10 text-center md:text-right uppercase text-mettalic-gold'>
                     {aboutTitle}
                 </h2>
                 {/* <div className=''>
                     <LineGradient width='w-40' />
                 </div> */}
-                <p className='mt-5 mb-8 text-sm text-center md:text-right font-medium'>
+                <p className='mt-5 mb-8 text-md text-center md:text-right font-normal'>
                     {aboutContent}
                 </p>
             </motion.div>

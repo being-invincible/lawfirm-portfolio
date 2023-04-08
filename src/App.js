@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="app">
 
-      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} font={t("font")} />
+      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} font={t("font")} home={t("home")} about={t("about")} packages={t("packages")} services={t("services")} contact={t("contact")} />
 
       <Landing setSelectedPage={setSelectedPage} companyName={t("companyName")} slogan={t("slogan")} button01={t("button01")} button02={t("button02")} font={t("font")}/>
 
@@ -67,7 +67,7 @@ function App() {
 
       <div className="bg-olive md:justify-between md:items-center md:h-full">
         <div className="w-5/6 mx-auto">
-        <Contact contact={t("contact")} contactContent={t("contactContent")} font={t("font")} />
+        <Contact contact={t("contact")} contactContent={t("contactContent")} or={t("or")} name={t("name")} email={t("email")} phone={t("phone")} selectPackage={t("selectPackage")} submit={t("submit")} whatsapp={t("whatsapp")} location={t("location")} />
         </div>
       </div>
 

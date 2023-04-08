@@ -3,6 +3,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { motion } from 'framer-motion';
 import LineGradient from '../components/LineGradient';
+import { useTranslation } from 'react-i18next';
 
 const serviceVariant = {
     hidden: { opacity:0, scale: 0.8 },
@@ -21,7 +22,7 @@ const tickMessage = () => {
 const Package = ({ title, price, desp, list1, list2, list3, font }) => {
     
     return (
-        <motion.div variants={serviceVariant} className={`w-full h-80 p-8 mb-5 ${font} bg-gradient-to-tr from-ecru to-sheen-gold rounded-lg hover:drop-shadow-lg hover:bg-gradient-to-tr hover:to-arylide-yellow hover:from-coyote`}>
+        <motion.div variants={serviceVariant} className={`w-full h-80 p-8 mb-5  bg-gradient-to-tr from-ecru to-sheen-gold rounded-lg hover:drop-shadow-lg hover:bg-gradient-to-tr hover:to-arylide-yellow hover:from-coyote`}>
             <h1 className='font-normal text-sm'>{title}</h1>
             <h1 className='py-5 font-bold text-5xl'>{price}</h1>
             <p className='font-normal text-lg mb-5'>{desp}</p>
@@ -44,8 +45,11 @@ const Package = ({ title, price, desp, list1, list2, list3, font }) => {
 }
 
 const Packages = ({packages}) => {
+
+    const { t, i18n } = useTranslation();
+
   return (
-    <section id="packages" className='pt-10 pb-10'>
+    <section id="packages" className={`pt-10 pb-10 ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'}`}>
         {/* Header */}
         <div className='basis-4/5 mt-16 mb:10 md:mt-24'>
             <motion.div
@@ -58,13 +62,13 @@ const Packages = ({packages}) => {
                     visible: {opacity:1, x: 0}
                 }}
             >
-                <h2 className='text-mettalic-gold text-xl font-bold font-montserrat z-10 text-center md:text-start uppercase tracking-[.25em]'>
+                <h2 className='text-mettalic-gold text-xl font-bold font-montserrat z-10 text-center md:text-start uppercase'>
                     {packages}
                 </h2>
                 {/* <div className=''>
                     <LineGradient width='w-20' />
                 </div> */}
-                <p className='mt-5 mb-8 text-sm text-center md:text-start font-montserrat font-medium'>
+                <p className='mt-5 mb-8 text-md text-center md:text-start font-montserrat font-medium'>
                     Explore our packages which is carefully build upon the cases.
                 </p>
             </motion.div>
