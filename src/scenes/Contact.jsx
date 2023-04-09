@@ -30,7 +30,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
         <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: false, amount: 0.5 }}
             transition={{ duration: 0.2 }}
             variants={{
                 hidden: {opacity:0, x:-50},
@@ -101,7 +101,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
     <motion.div class="mt-8 flex flex-wrap gap-4 text-center items-center justify-between"
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
+                    viewport={{ once: false, amount: 0.5 }}
                     transition={{ duration: 0.75 }}
                     variants={{
                         hidden: {opacity:0, x:-50},

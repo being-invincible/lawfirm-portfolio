@@ -47,7 +47,7 @@ const Services = ({services, serviceTitle01, serviceTitle02, serviceTitle03, ser
                 className={`mx-auto text-center ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'}`}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: false, amount: 0.5 }}
                 transition={{ duration: 0.5 }}
                 variants={{
                     hidden: {opacity:0, y:-50},
@@ -71,7 +71,7 @@ const Services = ({services, serviceTitle01, serviceTitle02, serviceTitle03, ser
                         className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, amount: 0.2 }}
+                        viewport={{ once: false, amount: 0.2 }}
                         variants={container}
                 >
 
