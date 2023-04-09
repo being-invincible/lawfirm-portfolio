@@ -1,5 +1,5 @@
 import React from 'react';
-import { SiInstagram, SiFacebook, SiLinkedin } from "react-icons/si";
+import { SiInstagram, SiTwitter, SiLinkedin } from "react-icons/si";
 
 const SocialMediaIcons = ({align}) => {
   return (
@@ -14,11 +14,11 @@ const SocialMediaIcons = ({align}) => {
         </a>
         <a 
         className='hover:opacity-50 transition duration-500'
-        href='www.facebook.com'
+        href='https://twitter.com/AHATTAHLAW'
         target="_blank"
         rel='noreferrer'
         >
-            <SiFacebook size={20} />
+            <SiTwitter size={20} />
         </a>
         <a 
         className='hover:opacity-50 transition duration-500'

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 
-const Landing = ({setselectedPage, companyName, slogan, button01, button02, font}) => {
+const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => {
 
     const { t, i18n } = useTranslation();
 
@@ -18,7 +18,7 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02, font
             >
               
             <div
-                class="absolute inset-0 bg-transparent sm:bg-black/25"
+                class="absolute inset-0 bg-black/5"
             ></div>
 
             {/* <div
@@ -36,7 +36,7 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02, font
                         visible: {opacity:1, x:0}
                     }}
                 >
-                    <h1 class={`text-3xl ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem font-semibold': 'font-noto font-bold'} md:text-5xl`}>
+                    <h1 class={`text-3xl ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem font-semibold': 'font-noto font-black'} md:text-5xl text-mettalic-gold`}>
                         {companyName}
                         
                     </h1>
