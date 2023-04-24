@@ -65,10 +65,14 @@ function App() {
         </div>
       </div>
 
-      <div className="bg-olive md:justify-between md:items-center md:h-full">
+      <div className="bg-olive md:justify-between md:items-center md:h-full bg-logo bg-no-repeat bg-contain bg-center">
+        {/* <img className="absolute w-1/2" src='/logo.png' alt="logo-bg" /> */}
+        {/* <div className="absolute bg-logo bg-no-repeat bg-contain bg-center"> */}
+        
         <div className="w-5/6 mx-auto">
         <Contact contact={t("contact")} contactContent={t("contactContent")} or={t("or")} name={t("name")} email={t("email")} phone={t("phone")} selectPackage={t("selectPackage")} submit={t("submit")} whatsapp={t("whatsapp")} location={t("location")} />
         </div>
+        {/* </div> */}
       </div>
 
       <div className="bg-antique-bronze md:justify-between md:items-center">

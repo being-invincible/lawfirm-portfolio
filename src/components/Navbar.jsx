@@ -11,7 +11,7 @@ import { SlGlobe } from "react-icons/sl";
 const Link = ({ page, selectedPage, setSelectedPage}) => {
     const lowerCasePage = page.toLowerCase();
     return (
-        <AnchorLink className={`${selectedPage === lowerCasePage ? "text-mettalic-gold" : ""}
+        <AnchorLink className={`${selectedPage === lowerCasePage ? "text-mettalic-gold font-bold" : ""}
             hover:text-mettalic-gold transition-all`}
             href={`#${lowerCasePage}`}
             onClick={() => setSelectedPage(lowerCasePage)}
@@ -52,36 +52,36 @@ const Navbar = ({ selectedPage, setSelectedPage, home, about, packages, services
                 {/* Desktop Nav */}
                 {isAboveSmallScreens ? (
                     <div className={`flex justify-between gap-16 text-md`}>
-                        <AnchorLink className={`${selectedPage === Object.keys({home})[0] ? "text-mettalic-gold" : ""}
-                            hover:text-mettalic-gold transition-all`}
+                        <AnchorLink className={`${selectedPage === Object.keys({home})[0] ? "text-russian-violet" : ""}
+                            hover:text-russian-violet transition-all`}
                             href={`#${Object.keys({home})[0]}`}
                             onClick={() => setSelectedPage(home)}
                             >
                                 {home}
                         </AnchorLink>
-                        <AnchorLink className={`${selectedPage === Object.keys({about})[0] ? "text-mettalic-gold" : ""}
-                            hover:text-mettalic-gold transition-all`}
+                        <AnchorLink className={`${selectedPage === Object.keys({about})[0] ? "text-russian-violet" : ""}
+                            hover:text-russian-violet transition-all`}
                             href={`#${Object.keys({about})[0]}`}
                             onClick={() => setSelectedPage(about)}
                             >
                                 {about}
                         </AnchorLink>
-                        <AnchorLink className={`${selectedPage === Object.keys({services})[0] ? "text-mettalic-gold" : ""}
-                            hover:text-mettalic-gold transition-all`}
+                        <AnchorLink className={`${selectedPage === Object.keys({services})[0] ? "text-russian-violet" : ""}
+                            hover:text-russian-violet transition-all`}
                             href={`#${Object.keys({services})[0]}`}
                             onClick={() => setSelectedPage(services)}
                             >
                                 {services}
                         </AnchorLink>
-                        <AnchorLink className={`${selectedPage === Object.keys({packages})[0] ? "text-mettalic-gold" : ""}
-                            hover:text-mettalic-gold transition-all`}
+                        <AnchorLink className={`${selectedPage === Object.keys({packages})[0] ? "text-russian-violet" : ""}
+                            hover:text-russian-violet transition-all`}
                             href={`#${Object.keys({packages})[0]}`}
                             onClick={() => setSelectedPage(packages)}
                             >
                                 {packages}
                         </AnchorLink>
-                        <AnchorLink className={`${selectedPage === Object.keys({contact})[0] ? "text-mettalic-gold" : ""}
-                            hover:text-mettalic-gold transition-all`}
+                        <AnchorLink className={`${selectedPage === Object.keys({contact})[0] ? "text-russian-violet" : ""}
+                            hover:text-russian-violet transition-all`}
                             href={`#${Object.keys({contact})[0]}`}
                             onClick={() => setSelectedPage(contact)}
                             >

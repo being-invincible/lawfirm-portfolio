@@ -18,7 +18,7 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
             >
               
             <div
-                class="absolute inset-0 bg-black/5"
+                class="absolute inset-0 filter"
             ></div>
 
             {/* <div
@@ -36,7 +36,7 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
                         visible: {opacity:1, x:0}
                     }}
                 >
-                    <h1 class={`text-3xl ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem font-semibold': 'font-noto font-black'} md:text-5xl text-mettalic-gold`}>
+                    <h1 class={`text-4xl ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem font-semibold': 'font-noto font-black'} md:text-5xl text-mettalic-gold`}>
                         {companyName}
                         
                     </h1>
@@ -53,7 +53,7 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
                     }}
                 >
 
-                    <p class={`mt-4 font-semibold  ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'} text-center text-lg sm:text-2xl sm:leading-relaxed`}>
+                    <p class={`mt-4 font-semibold  ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'} text-center text-russian-violet text-2xl sm:text-2xl sm:leading-relaxed`}>
                     {slogan}
                     </p>
                 </motion.div>
@@ -70,14 +70,14 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
                 >
                     <a
                     href="https://wa.me/966594161652"
-                    class="block w-full rounded bg-russian-violet px-5 py-3 text-sm font-medium text-white shadow hover:bg-mettalic-gold focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+                    class="block w-full rounded bg-russian-violet px-8 py-3 text-sm font-medium text-white shadow hover:bg-mettalic-gold focus:outline-none focus:ring active:bg-rose-500 sm:w-auto hover:text-russian-violet"
                     >
                     {button01}
                     </a>
 
                     <a
                     href="#services"
-                    class="block w-full rounded bg-white px-5 py-3 text-sm font-medium text-russian-violet shadow hover:text-black focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+                    class="block w-full rounded bg-white px-8 py-3 text-sm font-medium text-russian-violet shadow focus:outline-none focus:ring active:text-rose-500 sm:w-auto hover:bg-russian-violet hover:text-white"
                     >
                     {button02}
                     </a>

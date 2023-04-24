@@ -15,7 +15,7 @@ const serviceVariant = {
     visible: { opacity:1, scale: 1 },
 };
 
-const Service = ({ title, desp, font }) => {
+const Service = ({ title, desp, img}) => {
 
     
     const projectTitle = title.split(" ").join("-").toLowerCase;
@@ -24,7 +24,7 @@ const Service = ({ title, desp, font }) => {
         <motion.div variants={serviceVariant}>
             <div class={`group relative cursor-pointer items-center justify-center overflow-hidden `}>
             <div class="h-72 w-92">
-                <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="about the law firm" />
+                <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125" src={img} alt="about the law firm" />
                 <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/30 to-gray/10 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
                 <div class="absolute inset-0 flex flex-col items-center justify-center px-9 text-center transition-all group-hover:translate-y-0 duration-500">
                     <h1 class="group-hover:hidden block text-2xl font-bold text-russian-violet">{title}</h1>
@@ -75,17 +75,17 @@ const Services = ({services, serviceTitle01, serviceTitle02, serviceTitle03, ser
                         variants={container}
                 >
 
-                    <Service title={serviceTitle01} desp={serviceContent01} img="/public/Legal Advice.jpg" font={font}/>
-                    <Service title={serviceTitle02} desp={serviceContent02} img="Legal Advice.jpg" font={font}/>
-                    <Service title={serviceTitle03} desp={serviceContent03} img="Legal Advice.jpg" font={font}/>
+                    <Service title={serviceTitle01} desp={serviceContent01} img="legal.jpeg" font={font}/>
+                    <Service title={serviceTitle02} desp={serviceContent02} img="representation.jpeg" font={font}/>
+                    <Service title={serviceTitle03} desp={serviceContent03} img="establish.jpeg" font={font}/>
 
-                    <Service title={serviceTitle04} desp={serviceContent04} img="/public/Legal Advice.jpg" font={font}/>
-                    <Service title={serviceTitle05} desp={serviceContent05} img="Legal Advice.jpg" font={font}/>
-                    <Service title={serviceTitle06} desp={serviceContent06} img="Legal Advice.jpg" font={font}/>
+                    <Service title={serviceTitle04} desp={serviceContent04} img="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" font={font}/>
+                    <Service title={serviceTitle05} desp={serviceContent05} img="compliance.jpeg" font={font}/>
+                    <Service title={serviceTitle06} desp={serviceContent06} img="record.jpeg" font={font}/>
 
-                    <Service title={serviceTitle07} desp={serviceContent07} img="/public/Legal Advice.jpg" font={font}/>
-                    <Service title={serviceTitle08} desp={serviceContent08} img="Legal Advice.jpg" font={font}/>
-                    <Service title={serviceTitle09} desp={serviceContent09} img="Legal Advice.jpg" font={font}/>
+                    <Service title={serviceTitle07} desp={serviceContent07} img="comercial.jpeg" font={font}/>
+                    <Service title={serviceTitle08} desp={serviceContent08} img="/debt.jpeg" font={font}/>
+                    <Service title={serviceTitle09} desp={serviceContent09} img="franchise.jpeg" font={font}/>
 
                     {/* Row 1 
                     <div

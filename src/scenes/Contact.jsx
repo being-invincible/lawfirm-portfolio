@@ -1,6 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next';
+import useMediaQuery from '../hooks/useMediaQuery';
 
 import { motion } from 'framer-motion'
 import { SiWhatsapp } from "react-icons/si";
@@ -9,6 +10,7 @@ import { SlCallOut, SlLocationPin } from "react-icons/sl"
 const Contact = ({contact, contactContent, or, name, email, phone, selectPackage, submit, location, whatsapp}) => {
 
     const { t, i18n } = useTranslation();
+    const isAboveMediumScreens = useMediaQuery("(min-width: 1060p)");
 
     const {
         register,
@@ -26,7 +28,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
   return (
     <section id='contact' className={`md:justify-between md:items-center py-10 ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'}`}>
 
-    <div className={`mt-36 px-5 md:px-10 py-10 bg-metalic-grey w-full rounded-lg`}>
+    <div className={`mt-36 px-5 md:px-10 py-10 bg-metalic-grey/80 w-full rounded-lg`}>
         <motion.div
             initial="hidden"
             whileInView="visible"
@@ -95,10 +97,10 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
         </motion.div>
         
     </div>
-    <h2 className='text-xl mt-10 font-bold z-10 text-center uppercase'>
+    {/* <h2 className='text-xl mt-10 font-bold z-10 text-center uppercase'>
         {or}
-    </h2>
-    <motion.div class="mt-8 flex flex-wrap gap-4 text-center items-center justify-between"
+    </h2> */}
+    <motion.div class="mt-8 md:mt-12 flex flex-wrap gap-4 text-center items-center justify-between"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: false, amount: 0.5 }}
@@ -110,7 +112,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
             >
                     <a
                     href="tel:+966508188743"
-                    class="inline-block w-full rounded bg-white px-10 py-3 text-sm font-medium text-russian-violet shadow hover:text-black focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+                    class="block w-full rounded bg-white/75 px-10 py-3 text-sm font-bold text-russian-violet shadow hover:text-black focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
                     >
                         <SlCallOut className='inline mr-5' />
                     +966508188743
@@ -118,7 +120,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
                     
                     <a
                     href="tel:+966594161652"
-                    class="inline-block w-full rounded bg-white px-10 py-3 text-sm font-medium text-russian-violet shadow hover:text-black focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+                    class="block w-full rounded bg-white/75 px-10 py-3 text-sm font-bold text-russian-violet shadow hover:text-black focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
                     >
                         <SlCallOut className='inline mr-5' />
                     +966594161652
@@ -126,7 +128,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
 
                     <a
                     href="https://wa.me/966508188743"
-                    class="block w-full rounded bg-russian-violet px-16 py-3 text-sm font-medium text-white shadow hover:bg-mettalic-gold focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+                    class="block w-full rounded bg-white/75 px-16 py-3 text-sm font-bold text-russian-violet shadow hover:bg-mettalic-gold focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
                     >
                         <SiWhatsapp className='inline mr-5' />
                     {whatsapp}
@@ -134,7 +136,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
 
                     <a
                     href="https://www.google.com/maps/place/24%C2%B040'35.9%22N+46%C2%B043'48.5%22E/@24.6766472,46.7279444,17z/data=!3m1!4b1!4m4!3m3!8m2!3d24.6766472!4d46.7301331?hl=en"
-                    class="block w-full rounded bg-white px-16 py-3 text-sm font-medium text-russian-violet shadow hover:text-black focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+                    class="block w-full rounded bg-white/75 px-16 py-3 text-sm font-bold text-russian-violet shadow hover:text-black focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
                     >
                         <SlLocationPin className='inline mr-5' />
                     {location}

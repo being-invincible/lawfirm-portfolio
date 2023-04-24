@@ -25,6 +25,7 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         "hero-image": "url(../public/about.jpg)",
+        "logo": "url(../public/logo-law.png)",
       }),
       fontFamily : {
         noto: ["NotoSansSymbol"],

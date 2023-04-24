@@ -14,7 +14,7 @@ const About = ({setSelectedPage, aboutTitle, aboutContent, button02, button03, f
     return (
         <section
             id='about'
-            className='md:flex md:justify-between md:items-center md:h-full gap-16 py-10'
+            className='md:flex md:justify-between md:items-center md:h-full gap-16 py-10 md:py-20'
         >
 
         {/* Image Section */}
@@ -29,16 +29,18 @@ const About = ({setSelectedPage, aboutTitle, aboutContent, button02, button03, f
                     }}
         >
             {isAboveMediumScreens ? (
-                <div className='relative z-0 before:absolute before:w-full before:max-w-[700px]  before:h-full'>
+                
+                <div className='overflow-hidden cursor-pointer rounded-sm relative group z-0 before:absolute before:w-full before:max-w-[500px] before:h-full'>
                     <img
-                    className='hover:filter hover:saturate-200 transition-all duration-500 z-10 w-full max-w-[280px] md:max-w-[600px] rounded-lg'
-                    alt='profile' src='about.jpg' />
+                    className='object-cover group-hover:scale-110 transition duration-500 ease-in-out z-10 w-full max-w-[450px] md:max-w-[550px]'
+                    alt='Library of Scholars' src='about01.jpeg' />
                 </div>
+                
             ) : (
                 <div>
                     <img
-                    className='hover:filter hover:saturate-200 transition-all duration-500 z-10 w-full max-w-[480px] md:max-w-[450px]'
-                    alt='profile' src='about.jpg' />
+                    className='group-hover:scale-110 transition duration-500 ease-in-out z-10 w-full max-w-[450px] md:max-w-[550px]'
+                    alt='Library of Scholars' src='about01.jpeg' />
                 </div>
             )}
         </motion.div>
