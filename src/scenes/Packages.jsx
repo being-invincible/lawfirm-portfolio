@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link,Route, BrowserRouter as Router } from 'react-router-dom';
 import useMediaQuery from "../hooks/useMediaQuery";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { motion } from 'framer-motion';
 import LineGradient from '../components/LineGradient';
 import { useTranslation } from 'react-i18next';
+import Package from '../pages/Package';
 
 const serviceVariant = {
     hidden: { opacity:0, scale: 0.8 },
@@ -19,7 +21,7 @@ const tickMessage = () => {
     )
 }
 
-const Package = ({ title, price, desp, list1, list2, list3, font }) => {
+const Packag = ({ title, price, desp, list1, list2, list3, font }) => {
     
     return (
         <motion.div variants={serviceVariant} className={`w-full h-80 p-8 mb-5  bg-gradient-to-tr from-ecru to-sheen-gold rounded-lg hover:drop-shadow-lg hover:bg-gradient-to-tr hover:to-arylide-yellow hover:from-coyote`}>
@@ -62,7 +64,7 @@ const Packages = ({packages}) => {
                     visible: {opacity:1, x: 0}
                 }}
             >
-                <h2 className='text-mettalic-gold text-xl font-bold font-montserrat z-10 text-center md:text-start uppercase'>
+                <h2 className='text-mettalic-gold text-2xl font-bold font-montserrat z-10 text-center md:text-start uppercase'>
                     {packages}
                 </h2>
                 {/* <div className=''>
@@ -75,9 +77,10 @@ const Packages = ({packages}) => {
         </div>
         {/* Packages */}
         <div className='md:flex md:justify-between mt-10 gap-16'>
-            <Package title = "Package 01" price = "$ 100" desp = "Basic plan" list1 = "Point 1" list2 = "Point 2" list3 = "Point 3" />
-            <Package title = "Package 02" price = "$ 300" desp = "Advanced plan" list1 = "Point 1" list2 = "Point 2" list3 = "Point 3" />
-            <Package title = "Package 03" price = "$ 900" desp = "Custom build plan" list1 = "Point 1" list2 = "Point 2" list3 = "Point 3" />
+            <Packag title = "Package 01" price = "$ 100" desp = "Basic plan" list1 = "Point 1" list2 = "Point 2" list3 = "Point 3" />
+            
+            <Packag title = "Package 02" price = "$ 300" desp = "Advanced plan" list1 = "Point 1" list2 = "Point 2" list3 = "Point 3" />
+            <Packag title = "Package 03" price = "$ 900" desp = "Custom build plan" list1 = "Point 1" list2 = "Point 2" list3 = "Point 3" />
         </div>
     </section>
   )

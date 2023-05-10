@@ -17,18 +17,20 @@ const serviceVariant = {
 
 const Service = ({ title, desp, img}) => {
 
-    
     const projectTitle = title.split(" ").join("-").toLowerCase;
     
     return (
         <motion.div variants={serviceVariant}>
-            <div class={`group relative cursor-pointer items-center justify-center overflow-hidden `}>
+            <div class={`group relative cursor-pointer items-center justify-center overflow-hidden`}>
             <div class="h-72 w-92">
                 <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125" src={img} alt="about the law firm" />
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/30 to-gray/10 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent/30 to-gray/10 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
                 <div class="absolute inset-0 flex flex-col items-center justify-center px-9 text-center transition-all group-hover:translate-y-0 duration-500">
-                    <h1 class="group-hover:hidden block text-2xl font-bold text-russian-violet">{title}</h1>
-                    <p class="group-hover:block hidden  mb-3 text-md font-semibold text-justify text-white">{desp}</p>
+                    <div class="group-hover:hidden block p-4 bg-black/50 rounded">
+                    <h1 class="group-hover:hidden block text-2xl font-bold text-mettalic-gold">{title}</h1>
+                    </div>
+                    
+                    <p class="group-hover:block hidden  mb-3 text-md font-semibold text-center text-white">{desp}</p>
                 </div>
                 </div>
             </div>
@@ -47,15 +49,15 @@ const Services = ({services, serviceTitle01, serviceTitle02, serviceTitle03, ser
                 className={`mx-auto text-center ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'}`}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.5 }}
+                viewport={{ once: false, amount: 0.1 }}
                 transition={{ duration: 0.5 }}
                 variants={{
-                    hidden: {opacity:0, y:-50},
-                    visible: {opacity:1, y: 0}
+                    hidden: {opacity:0, x:-50},
+                    visible: {opacity:1, x: 0}
                 }}
         >
                 <div>
-                    <h2 className='pb-8 md:mb-0 text-xl font-bold text-center sm:text-left uppercase text-russian-violet'>
+                    <h2 className='pb-8 md:mb-0 text-2xl font-bold text-center sm:text-left uppercase text-russian-violet'>
                         {services}
                     </h2>
                     {/* <div className=''>
@@ -71,11 +73,40 @@ const Services = ({services, serviceTitle01, serviceTitle02, serviceTitle03, ser
                         className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: false, amount: 0.2 }}
+                        viewport={{ once: false, amount: .1 }}
                         variants={container}
                 >
+                    
+                    <motion.div variants={serviceVariant}>
+                        <div class={`group relative cursor-pointer items-center justify-center overflow-hidden`}>
+                        <div class="h-72 w-92">
+                            <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125" src="legal.jpeg" alt="about the law firm" />
+                            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent/30 to-gray/10 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+                            <div class="absolute inset-0 flex flex-col items-center justify-center px-9 transition-all group-hover:translate-y-0 duration-500">
+                                <div class="group-hover:hidden block p-4 bg-black/50 rounded">
+                                <h1 class="group-hover:hidden block text-2xl font-bold text-mettalic-gold">{serviceTitle01}</h1>
+                                </div>
+                                {i18n.language === 'عربي' ? (
+                                    <><p class="group-hover:block hidden text-center mb-3 text-sm font-semibold text-white">تمثل الاستشارة القانونية وسيلة وقائية تمنحك الرأي القانوني،  الذي يوضح موقف النظام في المسألة ووجهة النظر القانونية التي تمنحك ميزة المعرفة التامة بالمشكلات والعقبات القانونية التي قد تواجهك قبل وقوعها، باختيارك الخدمة</p><ol style={{ listStyleType: 'decimal' }}>
+                                        <li class="group-hover:block hidden text-right text-sm font-semibold text-white">.{serviceContent01.split("•")[1].split(".")[0]} •</li>
+                                        <li class="group-hover:block hidden text-right text-sm font-semibold text-white">.{serviceContent01.split("•")[2].split(".")[0]} •</li>
+                                        <li class="group-hover:block hidden text-right text-sm font-semibold text-white">.{serviceContent01.split("•")[3].split(".")[0]} •</li>
+                                          </ol></>
+                                ) : (
+                                    <><p class="group-hover:block hidden text-center mb-3 text-sm font-semibold text-white">{serviceContent01.split("•")[0]}</p><ol style={{ listStyleType: 'decimal' }}>
+                                        <li class="group-hover:block hidden text-sm font-semibold text-white">• {serviceContent01.split("•")[1]}</li>
+                                        <li class="group-hover:block hidden text-sm font-semibold text-white">• {serviceContent01.split("•")[2]}</li>
+                                        <li class="group-hover:block hidden text-sm font-semibold text-white">• {serviceContent01.split("•")[3]}</li>
+                                    </ol></>
+                                )}
+                                
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </motion.div>
 
-                    <Service title={serviceTitle01} desp={serviceContent01} img="legal.jpeg" font={font}/>
+                    {/* <Service title={serviceTitle01} desp={serviceContent01} img="legal.jpeg" font={font}/> */}
                     <Service title={serviceTitle02} desp={serviceContent02} img="representation.jpeg" font={font}/>
                     <Service title={serviceTitle03} desp={serviceContent03} img="establish.jpeg" font={font}/>
 

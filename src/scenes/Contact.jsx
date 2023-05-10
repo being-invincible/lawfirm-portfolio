@@ -10,7 +10,7 @@ import { SlCallOut, SlLocationPin } from "react-icons/sl"
 const Contact = ({contact, contactContent, or, name, email, phone, selectPackage, submit, location, whatsapp}) => {
 
     const { t, i18n } = useTranslation();
-    const isAboveMediumScreens = useMediaQuery("(min-width: 1060p)");
+    
 
     const {
         register,
@@ -39,7 +39,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
                 visible: {opacity:1, x: 0}
             }}
         >
-            <h2 className='text-mettalic-gold text-xl font-bold z-10 text-center uppercase'>
+            <h2 className='text-mettalic-gold text-2xl font-bold z-10 text-center uppercase'>
                 {contact}
             </h2>
             

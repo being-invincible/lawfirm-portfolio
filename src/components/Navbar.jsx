@@ -51,46 +51,46 @@ const Navbar = ({ selectedPage, setSelectedPage, home, about, packages, services
 
                 {/* Desktop Nav */}
                 {isAboveSmallScreens ? (
-                    <div className={`flex justify-between gap-16 text-md`}>
-                        <AnchorLink className={`${selectedPage === Object.keys({home})[0] ? "text-russian-violet" : ""}
-                            hover:text-russian-violet transition-all`}
+                    <div className={`flex justify-between gap-16 text-md text-russian-violet font-semibold`}>
+                        <AnchorLink className={`${selectedPage === Object.keys({home})[0] ? "text-mettalic-gold" : ""}
+                            hover:text-mettalic-gold transition-all`}
                             href={`#${Object.keys({home})[0]}`}
-                            onClick={() => setSelectedPage(home)}
+                            onClick={() => setSelectedPage('home')}
                             >
                                 {home}
                         </AnchorLink>
-                        <AnchorLink className={`${selectedPage === Object.keys({about})[0] ? "text-russian-violet" : ""}
-                            hover:text-russian-violet transition-all`}
+                        <AnchorLink className={`${selectedPage === Object.keys({about})[0] ? "text-mettalic-gold" : ""}
+                            hover:text-mettalic-gold transition-all`}
                             href={`#${Object.keys({about})[0]}`}
-                            onClick={() => setSelectedPage(about)}
+                            onClick={() => setSelectedPage('about')}
                             >
                                 {about}
                         </AnchorLink>
-                        <AnchorLink className={`${selectedPage === Object.keys({services})[0] ? "text-russian-violet" : ""}
-                            hover:text-russian-violet transition-all`}
+                        <AnchorLink className={`${selectedPage === Object.keys({services})[0] ? "text-mettalic-gold" : ""}
+                            hover:text-mettalic-gold transition-all`}
                             href={`#${Object.keys({services})[0]}`}
-                            onClick={() => setSelectedPage(services)}
+                            onClick={() => setSelectedPage('services')}
                             >
                                 {services}
                         </AnchorLink>
-                        <AnchorLink className={`${selectedPage === Object.keys({packages})[0] ? "text-russian-violet" : ""}
-                            hover:text-russian-violet transition-all`}
+                        <AnchorLink className={`${selectedPage === Object.keys({packages})[0] ? "text-mettalic-gold" : ""}
+                            hover:text-mettalic-gold transition-all`}
                             href={`#${Object.keys({packages})[0]}`}
-                            onClick={() => setSelectedPage(packages)}
+                            onClick={() => setSelectedPage('packages')}
                             >
                                 {packages}
                         </AnchorLink>
-                        <AnchorLink className={`${selectedPage === Object.keys({contact})[0] ? "text-russian-violet" : ""}
-                            hover:text-russian-violet transition-all`}
+                        <AnchorLink className={`${selectedPage === Object.keys({contact})[0] ? "text-mettalic-gold" : ""}
+                            hover:text-mettalic-gold transition-all`}
                             href={`#${Object.keys({contact})[0]}`}
-                            onClick={() => setSelectedPage(contact)}
+                            onClick={() => setSelectedPage('contact')}
                             >
                                 {contact}
                         </AnchorLink>
                         
                     </div>
                 ) : (
-                    <button className='rounded-full bg-mettalic-gold p-2'
+                    <button className='rounded-full bg-mettalic-gold/75 p-2'
                             onClick={() => setIsMenuToggled(!isMenuToggled)}
                     >
                         <MdSegment size={30} />
@@ -99,10 +99,11 @@ const Navbar = ({ selectedPage, setSelectedPage, home, about, packages, services
 
                 {/* Mobile Menu Popup */}
                 {!isAboveSmallScreens && isMenuToggled && (
-                    <div className={`fixed right-0 bottom-0 h-full bg-tiger-eye w-[300px]`}>
+                    <div className={`fixed right-0 bottom-0 h-full bg-gradient-to-tl from-coyote to-sheen-gold w-[300px]`}>
                         {/* Close Icon */}
-                        <div className='flex justify-end p-12'>
-                            <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                        <div className='flex justify-end py-6 pr-10'>
+                            <button className='rounded-full bg-mettalic-gold/75 p-2'
+                                    onClick={() => setIsMenuToggled(!isMenuToggled)}>
                                 <MdClear size={30} />
                             </button>
                         </div>
@@ -112,35 +113,35 @@ const Navbar = ({ selectedPage, setSelectedPage, home, about, packages, services
                         <AnchorLink className={`${selectedPage === Object.keys({home})[0] ? "text-mettalic-gold" : ""}
                             hover:text-mettalic-gold transition-all`}
                             href={`#${Object.keys({home})[0]}`}
-                            onClick={() => setSelectedPage(home)}
+                            onClick={() => {setSelectedPage('home'); setIsMenuToggled(!isMenuToggled)}}
                             >
                                 {home}
                         </AnchorLink>
                         <AnchorLink className={`${selectedPage === Object.keys({about})[0] ? "text-mettalic-gold" : ""}
                             hover:text-mettalic-gold transition-all`}
                             href={`#${Object.keys({about})[0]}`}
-                            onClick={() => setSelectedPage(about)}
+                            onClick={() => {setSelectedPage('about'); setIsMenuToggled(!isMenuToggled)}}
                             >
                                 {about}
                         </AnchorLink>
                         <AnchorLink className={`${selectedPage === Object.keys({services})[0] ? "text-mettalic-gold" : ""}
                             hover:text-mettalic-gold transition-all`}
                             href={`#${Object.keys({services})[0]}`}
-                            onClick={() => setSelectedPage(services)}
+                            onClick={() => {setSelectedPage('services'); setIsMenuToggled(!isMenuToggled)}}
                             >
                                 {services}
                         </AnchorLink>
                         <AnchorLink className={`${selectedPage === Object.keys({packages})[0] ? "text-mettalic-gold" : ""}
                             hover:text-mettalic-gold transition-all`}
                             href={`#${Object.keys({packages})[0]}`}
-                            onClick={() => setSelectedPage(packages)}
+                            onClick={() => {setSelectedPage('packages'); setIsMenuToggled(!isMenuToggled)}}
                             >
                                 {packages}
                         </AnchorLink>
                         <AnchorLink className={`${selectedPage === Object.keys({contact})[0] ? "text-mettalic-gold" : ""}
                             hover:text-mettalic-gold transition-all`}
                             href={`#${Object.keys({contact})[0]}`}
-                            onClick={() => setSelectedPage(contact)}
+                            onClick={() => {setSelectedPage('contact'); setIsMenuToggled(!isMenuToggled)}}
                             >
                                 {contact}
                         </AnchorLink>

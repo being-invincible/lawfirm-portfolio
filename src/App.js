@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 
 import useMediaQuery from "./hooks/useMediaQuery";
 import Navbar from "./components/Navbar";
@@ -10,6 +11,7 @@ import Packages from "./scenes/Packages";
 import Services from "./scenes/Services";
 import Contact from "./scenes/Contact";
 import Footer from "./components/Footer";
+import Package from "./pages/Package";
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
   const isAboutMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   return (
+    <Router>
     <div className="app">
 
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} font={t("font")} home={t("home")} about={t("about")} packages={t("packages")} services={t("services")} contact={t("contact")} />
@@ -75,12 +78,14 @@ function App() {
         {/* </div> */}
       </div>
 
-      <div className="bg-antique-bronze md:justify-between md:items-center">
+      <div className="bg-gradient-to-tl from-coyote to-sheen-gold md:justify-between md:items-center">
         <div className="w-5/6 mx-auto">
         <Footer />
         </div>
       </div>
     </div>
+    
+    </Router>
   );
 }
 
