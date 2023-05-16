@@ -22,7 +22,7 @@ const Service = ({ title, desp, img}) => {
     return (
         <motion.div variants={serviceVariant}>
             <div class={`group relative cursor-pointer items-center justify-center overflow-hidden`}>
-            <div class="h-72 w-92">
+            <div class="h-80 w-92">
                 <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125" src={img} alt="about the law firm" />
                 <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent/30 to-gray/10 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
                 <div class="absolute inset-0 flex flex-col items-center justify-center px-9 text-center transition-all group-hover:translate-y-0 duration-500">
@@ -68,9 +68,9 @@ const Services = ({services, serviceTitle01, serviceTitle02, serviceTitle03, ser
             </motion.div>
 
             {/* Services */}
-            <div className={`flex justify-center ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'}`}>
+            <div className={`${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'}`}>
                 <motion.div
-                        className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'
+                        className='grid grid-cols-1 gap-4 md:grid-cols-2'
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: false, amount: .1 }}
@@ -79,7 +79,7 @@ const Services = ({services, serviceTitle01, serviceTitle02, serviceTitle03, ser
                     
                     <motion.div variants={serviceVariant}>
                         <div class={`group relative cursor-pointer items-center justify-center overflow-hidden`}>
-                        <div class="h-72 w-92">
+                        <div class="h-80 w-92">
                             <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125" src="legal.jpeg" alt="about the law firm" />
                             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent/30 to-gray/10 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
                             <div class="absolute inset-0 flex flex-col items-center justify-center px-9 transition-all group-hover:translate-y-0 duration-500">
@@ -87,16 +87,16 @@ const Services = ({services, serviceTitle01, serviceTitle02, serviceTitle03, ser
                                 <h1 class="group-hover:hidden block text-2xl font-bold text-mettalic-gold">{serviceTitle01}</h1>
                                 </div>
                                 {i18n.language === 'عربي' ? (
-                                    <><p class="group-hover:block hidden text-center mb-3 text-sm font-semibold text-white">تمثل الاستشارة القانونية وسيلة وقائية تمنحك الرأي القانوني،  الذي يوضح موقف النظام في المسألة ووجهة النظر القانونية التي تمنحك ميزة المعرفة التامة بالمشكلات والعقبات القانونية التي قد تواجهك قبل وقوعها، باختيارك الخدمة</p><ol style={{ listStyleType: 'decimal' }}>
-                                        <li class="group-hover:block hidden text-right text-sm font-semibold text-white">.{serviceContent01.split("•")[1].split(".")[0]} •</li>
-                                        <li class="group-hover:block hidden text-right text-sm font-semibold text-white">.{serviceContent01.split("•")[2].split(".")[0]} •</li>
-                                        <li class="group-hover:block hidden text-right text-sm font-semibold text-white">.{serviceContent01.split("•")[3].split(".")[0]} •</li>
+                                    <><p class="group-hover:block hidden text-center mb-3 md:text-md font-semibold text-white">تمثل الاستشارة القانونية وسيلة وقائية تمنحك الرأي القانوني،  الذي يوضح موقف النظام في المسألة ووجهة النظر القانونية التي تمنحك ميزة المعرفة التامة بالمشكلات والعقبات القانونية التي قد تواجهك قبل وقوعها، باختيارك الخدمة</p><ol style={{ listStyleType: 'decimal' }}>
+                                        <li class="group-hover:block hidden text-right font-semibold text-white">.{serviceContent01.split("•")[1].split(".")[0]} •</li>
+                                        <li class="group-hover:block hidden text-right font-semibold text-white">.{serviceContent01.split("•")[2].split(".")[0]} •</li>
+                                        <li class="group-hover:block hidden text-right font-semibold text-white">.{serviceContent01.split("•")[3].split(".")[0]} •</li>
                                           </ol></>
                                 ) : (
-                                    <><p class="group-hover:block hidden text-center mb-3 text-sm font-semibold text-white">{serviceContent01.split("•")[0]}</p><ol style={{ listStyleType: 'decimal' }}>
-                                        <li class="group-hover:block hidden text-sm font-semibold text-white">• {serviceContent01.split("•")[1]}</li>
-                                        <li class="group-hover:block hidden text-sm font-semibold text-white">• {serviceContent01.split("•")[2]}</li>
-                                        <li class="group-hover:block hidden text-sm font-semibold text-white">• {serviceContent01.split("•")[3]}</li>
+                                    <><p class="group-hover:block hidden text-center mb-3 md:text-md md:font-semibold text-white">{serviceContent01.split("•")[0]}</p><ol style={{ listStyleType: 'decimal' }}>
+                                        <li class="group-hover:block hidden md:font-semibold text-white">• {serviceContent01.split("•")[1]}</li>
+                                        <li class="group-hover:block hidden md:font-semibold text-white">• {serviceContent01.split("•")[2]}</li>
+                                        <li class="group-hover:block hidden md:font-semibold text-white">• {serviceContent01.split("•")[3]}</li>
                                     </ol></>
                                 )}
                                 
@@ -106,7 +106,6 @@ const Services = ({services, serviceTitle01, serviceTitle02, serviceTitle03, ser
                         </div>
                     </motion.div>
 
-                    {/* <Service title={serviceTitle01} desp={serviceContent01} img="legal.jpeg" font={font}/> */}
                     <Service title={serviceTitle02} desp={serviceContent02} img="representation.jpeg" font={font}/>
                     <Service title={serviceTitle03} desp={serviceContent03} img="establish.jpeg" font={font}/>
 
@@ -117,16 +116,6 @@ const Services = ({services, serviceTitle01, serviceTitle02, serviceTitle03, ser
                     <Service title={serviceTitle07} desp={serviceContent07} img="comercial.jpeg" font={font}/>
                     <Service title={serviceTitle08} desp={serviceContent08} img="/debt.jpeg" font={font}/>
                     <Service title={serviceTitle09} desp={serviceContent09} img="franchise.jpeg" font={font}/>
-
-                    {/* Row 1 
-                    <div
-                        className="flex justify-center text-center items-center p-10 bg-red
-                        max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
-                    >
-                        BEAUTIFUL USER INTERFACES
-                    </div>*/}
-                    
-                    
                     
                 </motion.div>
             </div>

@@ -3,7 +3,7 @@ import SocialMediaIcons from './SocialMediaIcons'
 
 const Footer = () => {
   return (
-    <footer id="#Footer"className=" p-4 bg- sm:p-6">
+    <footer id="#Footer"className="p-4 bg- sm:p-6">
           <div className=" mb-0 max-h-screen max-w-screen-xl">
               
               {/*<hr class="my-6 border-smoky-black/75 sm:mx-auto lg:my-8" />*/}

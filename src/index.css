@@ -23,3 +23,13 @@ body,
   font-family: "NotoSansSymbol";
   src: url("../public/NotoSansSymbols.ttf");
 }
+
+@layer base {
+  .shadow-link {
+    background-image: linear-gradient(to top, #D1AB29 , #E5C973, transparent);
+    background-position: 0 -5px;
+    background-repeat: no-repeat;
+    background-size: auto 3rem;
+  }
+}
+

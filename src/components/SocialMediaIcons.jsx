@@ -3,7 +3,7 @@ import { SiInstagram, SiTwitter, SiLinkedin } from "react-icons/si";
 
 const SocialMediaIcons = ({align}) => {
   return (
-    <div className='flex flex-row-reverse justify-center md:justify-start my-10 gap-7' >
+    <div className={`flex place-content-center md:justify-center gap-7`} >
         <a
         className='hover:opacity-50 transition duration-500'
         href='www.instagram.com'
