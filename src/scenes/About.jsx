@@ -59,7 +59,7 @@ const About = ({ setSelectedPage, aboutTitle, aboutContent, button02, button03, 
                     <h2 className='mt-8 md:mt-0 text-2xl font-bold z-10 text-center uppercase text-mettalic-gold'>
                         {aboutTitle}
                     </h2>
-                    <p className='mt-5 mb-8 text-md text-center font-normal'>
+                    <p className='mt-5 mb-8 text-md text-center font-semibold'>
                         {aboutContent}
                     </p>
                 </motion.div>
@@ -75,14 +75,14 @@ const About = ({ setSelectedPage, aboutTitle, aboutContent, button02, button03, 
                 >
                     <a
                         href="#packages"
-                        class="block w-full rounded bg-russian-violet px-12 py-3 text-sm font-semibold text-white shadow hover:bg-mettalic-gold focus:outline-none focus:ring sm:w-auto"
+                        class="block w-full rounded-lg bg-russian-violet text-mettalic-gold border-2 border-mettalic-gold px-12 py-3 text-sm font-semibold shadow hover:bg-mettalic-gold hover:text-russian-violet hover:border-russian-violet focus:outline-none focus:ring sm:w-auto transition duration-500"
                     >
                         {button03}
                     </a>
 
                     <a
                         href="#services"
-                        class="block w-full rounded bg-white px-12 py-3 text-sm font-semibold text-russian-violet shadow hover:text-white hover:bg-mettalic-gold focus:outline-none focus:ring sm:w-auto"
+                        class="block w-full rounded-lg bg-mettalic-gold text-russian-violet border-2 border-russian-violet px-12 py-3 text-sm font-semibold shadow hover:bg-russian-violet hover:text-mettalic-gold hover:border-mettalic-gold focus:outline-none focus:ring sm:w-auto transition duration-500"
                     >
                         {button02}
                     </a>

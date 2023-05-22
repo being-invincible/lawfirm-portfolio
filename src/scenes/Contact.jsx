@@ -112,36 +112,41 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
             >
                     <a
                     href="tel:+966508188743"
-                    class="w-full rounded bg-white lg:px-10 py-3 text-sm font-bold text-russian-violet shadow hover:bg-mettalic-gold focus:outline-none focus:ring active:text-indigo-900 sm:w-auto"
+                    class="grid grid-cols-3 items-center text-center w-full rounded bg-white lg:px-10 px-20 py-3 text-sm font-bold border-russian-violet text-russian-violet shadow hover:bg-mettalic-gold border-2 hover:border-russian-violet sm:w-auto transition duration-500"
                     >
-                        <SlCallOut className='inline mr-5' />
-                    +966508188743
+                        <SlCallOut className='col-span-1' />
+                        <p className='col-span-2'>+966508188743</p>
+                    
                     </a>
                     
                     <a
                     href="tel:+966594161652"
-                    class="w-full rounded bg-white px-10 py-3 text-sm font-bold text-russian-violet shadow hover:bg-mettalic-gold focus:outline-none focus:ring active:text-indigo-900 sm:w-auto"
+                    class="grid grid-cols-3 items-center text-center w-full rounded bg-white lg:px-10 px-20 py-3 text-sm font-bold border-russian-violet text-russian-violet shadow hover:bg-mettalic-gold border-2 hover:border-russian-violet sm:w-auto transition duration-500"
                     >
-                        <SlCallOut className='inline mr-5' />
-                    +966594161652
+                        <SlCallOut className='col-span-1' />
+                        <p className='col-span-2'>+966594161652</p>
+                    
                     </a>
 
                     <a
                     href="https://wa.me/966508188743"
-                    class="w-full rounded bg-white px-[60px] py-3 text-sm font-bold text-russian-violet shadow hover:bg-mettalic-gold focus:outline-none focus:ring active:bg-indigo-900 sm:w-auto"
+                    class="grid grid-cols-3 items-center text-center w-full rounded bg-white lg:px-[70px] px-20 py-3 text-sm font-bold border-russian-violet text-russian-violet shadow hover:bg-mettalic-gold border-2 hover:border-russian-violet sm:w-auto transition duration-500"
                     >
-                        <SiWhatsapp className='inline mr-5' />
-                    {whatsapp}
+                        <SiWhatsapp className='col-span-1' />
+                        <p className='col-span-2'>{whatsapp}</p>
+                    
                     </a>
 
                     <a
                     href="https://www.google.com/maps/place/24%C2%B040'35.9%22N+46%C2%B043'48.5%22E/@24.6766472,46.7279444,17z/data=!3m1!4b1!4m4!3m3!8m2!3d24.6766472!4d46.7301331?hl=en"
-                    class="w-full rounded bg-white px-[60px] py-3 text-sm font-bold text-russian-violet shadow hover:bg-mettalic-gold focus:outline-none focus:ring active:text-indigo-900 sm:w-auto"
+                    class="grid grid-cols-3 items-center text-center w-full rounded bg-white lg:px-[70px] px-20 py-3 text-sm font-bold border-russian-violet text-russian-violet shadow hover:bg-mettalic-gold border-2 hover:border-russian-violet sm:w-auto transition duration-500"
                     >
-                        <SlLocationPin className='inline mr-5' />
-                    {location}
+                        <SlLocationPin className='col-span-1' />
+                        <p className='col-span-2'>{location}</p>
+                    
                     </a>
             </motion.div>
+            
     </section>
   )
 }

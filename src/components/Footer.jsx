@@ -3,8 +3,8 @@ import SocialMediaIcons from './SocialMediaIcons'
 
 const Footer = () => {
   return (
-    <footer id="#Footer"className="p-4 bg- sm:p-6">
-          <div className=" mb-0 max-h-screen max-w-screen-xl">
+    <footer id="#Footer"className="py-4">
+          <div className="max-h-screen max-w-screen-xl">
               
               {/*<hr class="my-6 border-smoky-black/75 sm:mx-auto lg:my-8" />*/}
               <div className="sm:flex text-smoky-black sm:items-center sm:justify-between">
@@ -34,9 +34,9 @@ const Footer = () => {
                 </div>
                 
               </div>
-              <p className="sm:invisible w-full visible font-montserrat text-xs text-center text-russian-violet">© 2023 <a href="#home" class="hover:underline">Ahattah law & legal consultations Co.</a>
+              <p className="sm:hidden w-full block font-montserrat text-xs text-center text-russian-violet mb-2">© 2023 <a href="#home" class="hover:underline">Ahattah law & legal consultations Co.</a>
                 </p>
-                <p className="sm:invisible w-full visible font-montserrat text-xs text-center text-russian-violet"> All Rights Reserved
+                <p className="sm:hidden w-full block font-montserrat text-xs text-center text-russian-violet mb-1"> All Rights Reserved
                 </p> 
               
           </div>
