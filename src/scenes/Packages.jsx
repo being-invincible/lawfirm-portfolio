@@ -64,15 +64,26 @@ const Packages = ({packages}) => {
                     visible: {opacity:1, x: 0}
                 }}
             >
-                <h2 className='text-mettalic-gold text-2xl font-bold font-montserrat z-10 text-center md:text-start uppercase'>
-                    {packages}
-                </h2>
-                {/* <div className=''>
-                    <LineGradient width='w-20' />
-                </div> */}
-                <p className='mt-5 mb-8 text-md text-center md:text-start font-montserrat font-medium'>
-                    Explore our packages which is carefully build upon the cases.
-                </p>
+                {i18n.language === 'عربي' ? (
+                     <div>
+                     <h2 className='text-mettalic-gold text-2xl font-bold font-montserrat z-10 text-center md:text-end uppercase'>
+                         {packages}
+                     </h2>
+                     <p className='mt-5 mb-8 text-md text-center md:text-end font-montserrat font-medium'>
+                         Explore our packages which is carefully build upon the cases.
+                     </p>
+                     </div>
+                ) : (
+                    <div>
+                    <h2 className='text-mettalic-gold text-2xl font-bold font-montserrat z-10 text-center md:text-start uppercase'>
+                        {packages}
+                    </h2>
+                    <p className='mt-5 mb-8 text-md text-center md:text-start font-montserrat font-medium'>
+                        Explore our packages which is carefully build upon the cases.
+                    </p>
+                    </div>
+                )}
+               
             </motion.div>
         </div>
         {/* Packages */}

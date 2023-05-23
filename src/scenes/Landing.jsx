@@ -38,7 +38,7 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
                     }}
                 >
                     
-                    <h1 class={`text-4xl ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem font-semibold': 'font-noto font-black'} md:text-5xl text-mettalic-gold`}>
+                    <h1 class={`text-3xl ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem font-semibold': 'font-noto font-black'} md:text-4xl text-mettalic-gold`}>
                         {companyName}
                         
                     </h1>
@@ -59,7 +59,7 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
                     }}
                 >
 
-                    <p class={`font-semibold  ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'} text-center text-russian-violet text-2xl sm:text-2xl sm:leading-relaxed`}>
+                    <p class={`font-semibold  ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'} text-center text-russian-violet text-xl sm:text-xl sm:leading-relaxed`}>
                     {slogan}
                     </p>
                 </motion.div>

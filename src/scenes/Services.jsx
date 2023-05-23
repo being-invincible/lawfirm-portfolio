@@ -22,7 +22,7 @@ const Service = ({ title, desp, img }) => {
     return (
         <motion.div variants={serviceVariant}>
             <div class={`group relative cursor-pointer items-center justify-center overflow-hidden`}>
-                <div class="h-[325px] w-92">
+                <div class="h-[350px] w-92">
                     <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125" src={img} alt="about the law firm" />
                     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent/30 to-gray/10 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
                         <div class="absolute inset-0 flex flex-col items-center justify-center px-9 text-center transition-all group-hover:translate-y-0 duration-500">
@@ -56,14 +56,20 @@ const Services = ({ services, serviceTitle01, serviceTitle02, serviceTitle03, se
                     visible: { opacity: 1, x: 0 }
                 }}
             >
-                <div>
-                    <h2 className='pb-8 md:mb-0 text-2xl font-bold text-center sm:text-left uppercase text-russian-violet'>
-                        {services}
-                    </h2>
-                    {/* <div className=''>
-                        <LineGradient width='w-20' />
-                    </div> */}
-                </div>
+                {i18n.language === 'عربي' ? (
+                    <div>
+                        <h2 className='pb-8 md:mb-0 text-2xl font-bold sm:text-right uppercase text-russian-violet'>
+                            {services}
+                        </h2>
+                    </div>
+                ) : (
+                    <div>
+                        <h2 className='pb-8 md:mb-0 text-2xl font-bold sm:text-left uppercase text-russian-violet'>
+                            {services}
+                        </h2>
+                    </div>
+                )}
+
 
             </motion.div>
 
@@ -79,7 +85,7 @@ const Services = ({ services, serviceTitle01, serviceTitle02, serviceTitle03, se
 
                     <motion.div variants={serviceVariant}>
                         <div className={`group relative cursor-pointer items-center justify-center overflow-hidden`}>
-                            <div className="h-[325px] w-92">
+                            <div className="h-[350px] w-92">
                                 <img className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125" src="legal.jpeg" alt="about the law firm" />
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent/30 to-gray/10 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
                                     <div className="absolute inset-0 flex flex-col items-center justify-center px-9 transition-all group-hover:translate-y-0 duration-500">
@@ -89,15 +95,15 @@ const Services = ({ services, serviceTitle01, serviceTitle02, serviceTitle03, se
                                         {i18n.language === 'عربي' ? (
                                             <><p className="group-hover:block hidden text-center mb-3 text-md font-semibold text-white">تمثل الاستشارة القانونية وسيلة وقائية تمنحك الرأي القانوني،  الذي يوضح موقف النظام في المسألة ووجهة النظر القانونية التي تمنحك ميزة المعرفة التامة بالمشكلات والعقبات القانونية التي قد تواجهك قبل وقوعها، باختيارك الخدمة</p>
                                                 <div className='text-sm group-hover:grid grid-cols-8 gap-2 text-right hidden font-semibold text-white w-full'>
-                                                    <p className='col-span-7'>.{serviceContent01.split("•")[1].split(".")[0]}</p><p className='col-span-1'>■</p>
+                                                    <p className='col-span-7'>{serviceContent01.split("•")[1].split(".")[0]}</p><p className='col-span-1'>■</p>
                                                 </div>
                                                 <div className='text-sm group-hover:grid grid-cols-8 gap-2 text-right hidden font-semibold text-white w-full'>
-                                                    <p className='col-span-7'>.{serviceContent01.split("•")[2].split(".")[0]}</p><p className='col-span-1'>■</p>
+                                                    <p className='col-span-7'>{serviceContent01.split("•")[2].split(".")[0]}</p><p className='col-span-1'>■</p>
                                                 </div>
                                                 <div className='text-sm group-hover:grid grid-cols-8 gap-2 text-right hidden font-semibold text-white w-full'>
-                                                    <p className='col-span-7'>.{serviceContent01.split("•")[3].split(".")[0]}</p><p className='col-span-1'>■</p>
+                                                    <p className='col-span-7'>{serviceContent01.split("•")[3].split(".")[0]}</p><p className='col-span-1'>■</p>
                                                 </div>
-                                                </>
+                                            </>
                                         ) : (
                                             <><p className="text-sm group-hover:block hidden text-center mb-3 font-semibold text-white">{serviceContent01.split("•")[0]}</p>
                                                 <div className='text-sm group-hover:grid grid-cols-8 gap-2 hidden font-semibold text-white w-full'>
@@ -112,7 +118,7 @@ const Services = ({ services, serviceTitle01, serviceTitle02, serviceTitle03, se
                                                     <p className='col-span-1'>■</p>
                                                     <p className='col-span-7'>{serviceContent01.split("•")[3]}</p>
                                                 </div>
-                                                
+
                                             </>
                                         )}
 
