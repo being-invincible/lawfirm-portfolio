@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 import { SiWhatsapp } from "react-icons/si";
 import { SlCallOut, SlLocationPin } from "react-icons/sl"
 
-const Contact = ({contact, contactContent, or, name, email, phone, selectPackage, submit, location, whatsapp}) => {
+const Contact = ({contact, contactContent, or, name, email, phone, selectPackage, submit, location, whatsapp, call}) => {
 
     const { t, i18n } = useTranslation();
     
@@ -26,7 +26,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
     }
 
   return (
-    <section id='contact' className={`py-10 ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'}`}>
+    <section data-section id='contact' className={`py-10 ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'}`}>
 
     <div className={`mt-24 px-5 md:px-10 py-10 bg-metalic-grey/80 w-full rounded-lg`}>
         <motion.div
@@ -53,6 +53,47 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
                 action=""
                 method="POST"
             >
+                {i18n.language === 'عربي' ? (
+                    <div className='flex flex-col justify-center md:flex-row md:space-x-3 text-russian-violet'>
+                    <button className='rounded mb-3 md:rounded-none md:mb-0 md:rounded-l-lg bg-mettalic-gold px-8 py-1.5'>{submit}</button>
+                    <input
+                        className='w-full rounded mb-3 md:rounded-none md:mb-0 bg-white text-sm font-normal placeholder-olive/75 px-5 py-2'
+                        type='text'
+                        placeholder={selectPackage}
+                        {...register("name",{
+                            required: true,
+                            maxLength: 20,
+                        })}
+                    />
+                    <input
+                        className='w-full rounded mb-3 md:rounded-none md:mb-0 bg-white text-sm font-normal placeholder-olive/75 px-5 py-2'
+                        type='text'
+                        placeholder={phone}
+                        {...register("phone",{
+                            required: true,
+                            maxLength: 20,
+                        })}
+                    />
+                    <input
+                        className='w-full rounded mb-3 md:rounded-none md:mb-0 bg-white text-sm font-normal placeholder-olive/75 px-5 py-2'
+                        type='text'
+                        placeholder={email}
+                        {...register("email",{
+                            required: true,
+                            maxLength: 20,
+                        })}
+                    />
+                    <input
+                        className='w-full rounded mb-3 md:rounded-none md:mb-0 md:rounded-r-lg bg-white text-sm font-normal placeholder-olive/75 px-5 py-2'
+                        type='text'
+                        placeholder={name}
+                        {...register("name",{
+                            required: true,
+                            maxLength: 20,
+                        })}
+                    />
+                </div>
+                ) : (
                 <div className='flex flex-col justify-center md:flex-row md:space-x-3'>
                     <input
                         className='w-full rounded mb-3 md:rounded-none md:mb-0 md:rounded-l-lg bg-white text-sm font-normal placeholder-olive/75 px-5 py-2'
@@ -93,6 +134,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
                     
                     <button className='rounded mb-3 md:rounded-none md:mb-0 md:rounded-r-lg bg-mettalic-gold px-8 py-1.5'>{submit}</button>
                 </div>
+                )}
             </form>
         </motion.div>
         
@@ -112,25 +154,26 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
             >
                     <a
                     href="tel:+966508188743"
-                    class="grid grid-cols-3 items-center text-center w-full rounded bg-white lg:px-10 px-20 py-3 text-sm font-bold border-russian-violet text-russian-violet shadow hover:bg-mettalic-gold border-2 hover:border-russian-violet sm:w-auto transition duration-500"
+                    class="grid grid-cols-3 group items-center text-center w-full lg:w-[300px] rounded bg-white lg:px-auto px-20 py-3 text-sm font-bold border-russian-violet text-russian-violet shadow hover:bg-mettalic-gold border-2 hover:border-russian-violet sm:w-auto transition duration-500"
                     >
-                        <SlCallOut className='col-span-1' />
-                        <p className='col-span-2'>+966508188743</p>
+                        <SlCallOut className='block col-span-1' />
+                        <p className='group-hover:hidden block col-span-2'>{call}</p>
+                        <p className='group-hover:block hidden col-span-2'>+966508188743</p>
                     
                     </a>
                     
-                    <a
+                    {/* <a
                     href="tel:+966594161652"
                     class="grid grid-cols-3 items-center text-center w-full rounded bg-white lg:px-10 px-20 py-3 text-sm font-bold border-russian-violet text-russian-violet shadow hover:bg-mettalic-gold border-2 hover:border-russian-violet sm:w-auto transition duration-500"
                     >
                         <SlCallOut className='col-span-1' />
                         <p className='col-span-2'>+966594161652</p>
                     
-                    </a>
+                    </a> */}
 
                     <a
                     href="https://wa.me/966508188743"
-                    class="grid grid-cols-3 items-center text-center w-full rounded bg-white lg:px-[70px] px-20 py-3 text-sm font-bold border-russian-violet text-russian-violet shadow hover:bg-mettalic-gold border-2 hover:border-russian-violet sm:w-auto transition duration-500"
+                    class="grid grid-cols-3 items-center text-center w-full lg:w-[300px] rounded bg-white lg:px-auto px-20 py-3 text-sm font-bold border-russian-violet text-russian-violet shadow hover:bg-mettalic-gold border-2 hover:border-russian-violet sm:w-auto transition duration-500"
                     >
                         <SiWhatsapp className='col-span-1' />
                         <p className='col-span-2'>{whatsapp}</p>
@@ -138,8 +181,8 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
                     </a>
 
                     <a
-                    href="https://www.google.com/maps/place/24%C2%B040'35.9%22N+46%C2%B043'48.5%22E/@24.6766472,46.7279444,17z/data=!3m1!4b1!4m4!3m3!8m2!3d24.6766472!4d46.7301331?hl=en"
-                    class="grid grid-cols-3 items-center text-center w-full rounded bg-white lg:px-[70px] px-20 py-3 text-sm font-bold border-russian-violet text-russian-violet shadow hover:bg-mettalic-gold border-2 hover:border-russian-violet sm:w-auto transition duration-500"
+                    
+                    class="grid grid-cols-3 items-center text-center w-full lg:w-[300px] rounded bg-white lg:px-auto px-20 py-3 text-sm font-bold border-russian-violet text-russian-violet shadow hover:bg-mettalic-gold border-2 hover:border-russian-violet sm:w-auto transition duration-500"
                     >
                         <SlLocationPin className='col-span-1' />
                         <p className='col-span-2'>{location}</p>

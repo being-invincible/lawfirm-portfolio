@@ -13,7 +13,7 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
 
     return (
 
-        <section id='home'
+        <section data-section id='home'
             class="min-h-screen relative bg-hero-image bg-cover bg-center bg-no-repeat backdrop-saturate-150 grid items-center"
             >
               
@@ -21,11 +21,8 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
                 class="absolute bg-black/10 inset-0 filter"
             ></div> */}
 
-            {/* <div
-                class="relative mx-auto max-w-screen-xl pt-60 lg:flex min-h-screen lg:items-center lg:px-8"
-            > */}
                 <div class={`relative px-10  text-center sm:text-left pt-[300px] items-center flex flex-col`}>
-                <div class="w-[320px] lg:w-[800px] bg-russian-violet/75 p-4 rounded-lg">
+                <div class="w-[300px] lg:w-auto bg-russian-violet/75 p-4 rounded-lg">
                 <motion.div
                     class="text-center"
                     initial="hidden"
@@ -47,7 +44,7 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
                     
                 </motion.div>
                 </div>
-                <div class="mt-4 w-[320px] lg:w-[500px] bg-mettalic-gold/75 p-2 rounded-lg">
+                <div class="mt-4 w-[300px] lg:w-auto bg-mettalic-gold/75 p-2 rounded-lg">
                 <motion.div
                     initial="hidden"
                     whileInView="visible"

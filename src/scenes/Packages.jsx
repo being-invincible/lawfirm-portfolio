@@ -51,7 +51,7 @@ const Packages = ({packages}) => {
     const { t, i18n } = useTranslation();
 
   return (
-    <section id="packages" className={`pt-10 pb-10 ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'}`}>
+    <section data-section id="packages" className={`pt-10 pb-10 ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'}`}>
         {/* Header */}
         <div className='basis-4/5 mt-16 mb:10 md:mt-24'>
             <motion.div

@@ -39,11 +39,11 @@ const Service = ({ title, desp, img }) => {
     )
 }
 
-const Services = ({ services, serviceTitle01, serviceTitle02, serviceTitle03, serviceTitle04, serviceTitle05, serviceTitle06, serviceTitle07, serviceTitle08, serviceTitle09, serviceContent01, serviceContent02, serviceContent03, serviceContent04, serviceContent05, serviceContent06, serviceContent07, serviceContent08, serviceContent09, font }) => {
+const Services = ({ services, serviceTitle01, serviceTitle02, serviceTitle03, serviceTitle04, serviceTitle05, serviceTitle06, serviceTitle07, serviceTitle08, serviceTitle09, serviceTitle10, serviceContent01, serviceContent02, serviceContent03, serviceContent04, serviceContent05, serviceContent06, serviceContent07, serviceContent08, serviceContent09, serviceContent10, font }) => {
 
     const { t, i18n } = useTranslation();
     return (
-        <section id='services' className='pt-32 pb-32'>
+        <section data-section id='services' className='pt-32 pb-32'>
             {/* Heading */}
             <motion.div
                 className={`mx-auto text-center ${i18n.language === 'Arabic' || 'عربي' ? 'font-reem' : 'font-noto'}`}
@@ -138,6 +138,8 @@ const Services = ({ services, serviceTitle01, serviceTitle02, serviceTitle03, se
                     <Service title={serviceTitle07} desp={serviceContent07} img="comercial.jpeg" font={font} />
                     <Service title={serviceTitle08} desp={serviceContent08} img="/debt.jpeg" font={font} />
                     <Service title={serviceTitle09} desp={serviceContent09} img="franchise.jpeg" font={font} />
+
+                    <Service title={serviceTitle10} desp={serviceContent10} img="document.jpeg" font={font} />
 
                 </motion.div>
             </div>

@@ -12,7 +12,8 @@ const About = ({ setSelectedPage, aboutTitle, aboutContent, button02, button03, 
     const { t, i18n } = useTranslation();
 
     return (
-        <section
+        <section 
+            data-section
             id='about'
             className='md:grid md:grid-cols-2 md:min-h-screen gap-16 py-10 md:py-40'
         >
