@@ -7,7 +7,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
         before:rounded-full before:border-2 before:border-mettalic-gold before:left-[-50%] before:top-[-50%]`;
 
   return (
-    <div className='flex flex-col gap-6 fixed top-[60%] right-7'>
+    <div className='flex flex-col gap-6 fixed top-[50%] right-7 transition delay-1000'>
         <AnchorLink className={`${selectedPage === 'home' ? selectedStyles : "bg-russian-violet"}
             w-3 h-3 rounded-full transition-all`}
             href={`#home`}

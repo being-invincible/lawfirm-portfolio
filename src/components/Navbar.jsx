@@ -37,7 +37,7 @@ const Navbar = ({ selectedPage, setSelectedPage, home, about, packages, services
             const sectionOffsetTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
 
-            if (pageYOffset >= sectionOffsetTop && pageYOffset < sectionOffsetTop + sectionHeight) {
+            if (pageYOffset >= sectionOffsetTop - 20 && pageYOffset < sectionOffsetTop + sectionHeight) {
                 console.log(section.id)
                 newActiveSection = section.id;
             }
