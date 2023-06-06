@@ -54,7 +54,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
                 method="POST"
             >
                 {i18n.language === 'عربي' ? (
-                    <div className='flex flex-col justify-center md:flex-row md:space-x-3 text-russian-violet'>
+                    <div className='flex flex-col-reverse justify-center md:flex-row md:space-x-3 text-russian-violet'>
                     <button className='rounded mb-3 md:rounded-none md:mb-0 md:rounded-l-lg bg-mettalic-gold px-8 py-1.5'>{submit}</button>
                     <input
                         className='w-full rounded mb-3 md:rounded-none md:mb-0 bg-white text-sm font-normal placeholder-olive/75 px-5 py-2 text-right'
