@@ -5,50 +5,75 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { motion } from 'framer-motion';
 import LineGradient from '../components/LineGradient';
 import { useTranslation } from 'react-i18next';
-import Package from '../pages/Package';
+import Package from '../pages/Package01';
+
+// json data
+import ar from "../lng/ar.json"
+import en from "../lng/en.json"
+import { MdCheckCircle } from 'react-icons/md';
 
 const serviceVariant = {
     hidden: { opacity:0, scale: 0.8 },
     visible: { opacity:1, scale: 1 },
 };
 
+const Packag = ({ title, price, desp, currency, points, link }) => {
+    const { t, i18n } = useTranslation();
 
-const tickMessage = () => {
     return (
-        <div>
-
-        </div>
-    )
-}
-
-const Packag = ({ title, price, desp, list1, list2, list3, font }) => {
-    
-    return (
-        <motion.div variants={serviceVariant} className={`w-full h-80 p-8 mb-5  bg-gradient-to-tr from-ecru to-sheen-gold rounded-lg hover:drop-shadow-lg hover:bg-gradient-to-tr hover:to-arylide-yellow hover:from-coyote`}>
-            <h1 className='font-normal text-sm'>{title}</h1>
-            <h1 className='py-5 font-bold text-5xl'>{price}</h1>
+        <div className='w-full group h-88 p-8 mb-5 bg-gradient-to-tr from-coyote to-arylide-yellow rounded-lg hover:drop-shadow-lg hover:border-russian-violet hover:border-2 hover:bg-gradient-to-tr hover:to-sheen-gold hover:from-ecru hover:scale-110 transition-all'>
+        <Link to={link}>
+        {i18n.language === 'عربي' ? (
+            <motion.div variants={serviceVariant} className={`text-right group-hover:text-russian-violet`}>
             <p className='font-normal text-lg mb-5'>{desp}</p>
-            <ul className='flex flex-col text-md gap-y-2'>
-                <li className='flex items-center'>
-                    <img src='/tick-and-circle.svg' alt='tick icon' width={20} />
-                    <h2 className='ml-3'>{list1}</h2>
+            <div className='flex flex-row-reverse items-baseline'>
+                <p className='pr-4 py-5 order-2 text-lg'>{currency}</p>
+                <h1 className='py-5 font-bold text-5xl'>{price}</h1>
+            </div>
+
+            <ul className='flex flex-col text-md gap-y-1'>
+            {points.map((s, i) =>
+                <li className='grid grid-cols-6 items-baseline align-text-top'>
+                    <h2 className='col-span-5'>{points[i]}</h2>
+                    <MdCheckCircle className='col-span-1 group-hover:fill-metalic-grey'/>
+                    
                 </li>
-                <li className='flex items-center'>
-                    <img src='/tick-and-circle.svg' alt='tick icon' width={20} />
-                    <h2 className='ml-3'>{list2}</h2>
-                </li>
-                <li className='flex items-center'>
-                    <img src='/tick-and-circle.svg' alt='tick icon' width={20} />
-                    <h2 className='ml-3'>{list3}</h2>
-                </li>
+            )}
             </ul>
+            
         </motion.div>
+
+        ) : (
+            <motion.div variants={serviceVariant} className={`text-left`}>
+            <p className='font-normal text-md group-hover:text-russian-violet'>{desp}</p>
+            <div className='flex flex-row my-5 items-baseline group-hover:text-russian-violet'>
+                <p className='ml-4 order-2 text-lg'>{currency}</p>
+                <h1 className='font-bold text-5xl'>{price}</h1>
+            </div>
+
+            <ul className='flex flex-col text-md gap-y-1'>
+            {points.map((s, i) =>
+                <li className='grid grid-cols-6 items-baseline align-text-top group-hover:text-russian-violet'>
+                    <MdCheckCircle className='col-span-1'/>
+                    <h2 className='col-span-5'>{points[i]}</h2>
+                </li>
+            )}
+            </ul>
+            
+        </motion.div>
+        )}
+        </Link>
+        </div>
     )
 }
 
 const Packages = ({packages}) => {
 
     const { t, i18n } = useTranslation();
+
+    const points01 = i18n.language === 'عربي' ? ar['package'].package01.points : en['package'].package01.points;
+    const points02 = i18n.language === 'عربي' ? ar['package'].package02.points : en['package'].package02.points;
+    const points03 = i18n.language === 'عربي' ? ar['package'].package03.points : en['package'].package03.points;
 
   return (
     <section data-section id="packages" className={`pt-10 pb-10 ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'}`}>
@@ -69,30 +94,39 @@ const Packages = ({packages}) => {
                      <h2 className='text-mettalic-gold text-2xl font-bold font-montserrat z-10 text-center md:text-end uppercase'>
                          {packages}
                      </h2>
-                     <p className='mt-5 mb-8 text-md text-center md:text-end font-montserrat font-medium'>
-                         Explore our packages which is carefully build upon the cases.
-                     </p>
                      </div>
                 ) : (
                     <div>
                     <h2 className='text-mettalic-gold text-2xl font-bold font-montserrat z-10 text-center md:text-start uppercase'>
                         {packages}
                     </h2>
-                    <p className='mt-5 mb-8 text-md text-center md:text-start font-montserrat font-medium'>
+                    {/* <p className='mt-5 mb-8 text-md text-center md:text-start font-montserrat font-medium'>
                         Explore our packages which is carefully build upon the cases.
-                    </p>
+                    </p> */}
                     </div>
                 )}
                
             </motion.div>
         </div>
         {/* Packages */}
-        <div className='md:flex md:justify-between mt-10 gap-16'>
-            <Packag title = "Package 01" price = "$ 100" desp = "Basic plan" list1 = "Point 1" list2 = "Point 2" list3 = "Point 3" />
+        {i18n.language === 'عربي' ? (
+        <div className='md:flex md:justify-between mt-10 gap-12'>
+
+            <Packag title = {(t(`${"package"}.package03.id`))} currency = {t(`${"package"}.package03.currency`)} price = {t(`${"package"}.package03.price`)} desp = {t(`${"package"}.package03.title`)} points={points03} link="/package03" />
+            <Packag title = {(t(`${"package"}.package02.id`))} currency = {t(`${"package"}.package02.currency`)} price = {t(`${"package"}.package02.price`)} desp = {t(`${"package"}.package02.title`)} points={points02} link="/package02" />
             
-            <Packag title = "Package 02" price = "$ 300" desp = "Advanced plan" list1 = "Point 1" list2 = "Point 2" list3 = "Point 3" />
-            <Packag title = "Package 03" price = "$ 900" desp = "Custom build plan" list1 = "Point 1" list2 = "Point 2" list3 = "Point 3" />
+            <Packag title = {(t(`${"package"}.package01.id`))} currency = {t(`${"package"}.package01.currency`)} price = {t(`${"package"}.package01.price`)} desp = {t(`${"package"}.package01.title`)} points={points01} link="/package01" />
+            
         </div>
+        ) : (
+            <div className='md:flex md:justify-between mt-10 gap-12'>
+            
+            <Packag title = {(t(`${"package"}.package01.id`))} currency = {t(`${"package"}.package01.currency`)} price = {t(`${"package"}.package01.price`)} desp = {t(`${"package"}.package01.title`)} points={points01} link="/package01" />
+            
+            <Packag title = {(t(`${"package"}.package02.id`))} currency = {t(`${"package"}.package02.currency`)} price = {t(`${"package"}.package02.price`)} desp = {t(`${"package"}.package02.title`)} points={points02} link="/package02" />
+            <Packag title = {(t(`${"package"}.package03.id`))} currency = {t(`${"package"}.package03.currency`)} price = {t(`${"package"}.package03.price`)} desp = {t(`${"package"}.package03.title`)} points={points03} link="/package03" />
+            </div>
+        )}
     </section>
   )
 }

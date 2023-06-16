@@ -30,6 +30,40 @@
     "serviceTitle10" : "Documentation",
     "serviceContent10" : "Providing documentation services including emptying and selling real estate, notarizing corporate contracts, notarizing debts, financial statements, issuing and canceling all kind of agencies/ power of attorney’s and other legal documentation services.",
     "packages" : "Packages",
+    "package" : {
+        "package01" : {
+            "id" : "Starter",
+            "title" : "New Companies / Establishments",
+            "description" : "Embark on a seamless journey of corporate success with our comprehensive Package, designed to cater to the diverse needs of new companies and establishments, this package is meticulously crafted to provide you with expert guidance and support throughout your legal and regulatory endeavors.",
+            "price" : "6900",
+            "currency" : "SAR",
+            "points" : ["Legal advice (2)", "Drafting contracts (2)", "Auditing contracts (2)", "Establishing companies and establishments", "Preparing the internal regulations of the company", "Reviewing the compliance of the company legally"],
+            "explain" : [
+                "Benefit from our experienced legal professionals who will provide you with two dedicated sessions of expert advice, ensuring your business remains compliant and well-informed",
+                "Our skilled team will assist you in drafting two meticulously crafted contracts, tailored to your specific business requirements, helping you safeguard your interests and foster fruitful partnerships",
+                "Avail yourself of two comprehensive contract auditing sessions, where our experts will meticulously review your existing contracts, identifying potential risks and providing valuable recommendations",
+                "Establish a solid framework for your company's operations with our assistance in preparing the internal regulations of your organization. These regulations will guide your employees and ensure a smooth workflow",
+                "Establishing a solid framework for your company's operations is crucial for maintaining order, promoting efficiency, and ensuring a harmonious work environment",
+                "We will conduct a thorough review of your company's legal compliance, meticulously analyzing various aspects to ensure that you adhere to all relevant regulations and requirements"
+            ]
+        },
+        "package02" : {
+            "id" : "Advanced",
+            "title" : "Medium Companies / Establishments",
+            "description" : "",
+            "price" : "9700",
+            "currency" : "SAR",
+            "points" : ["Legal advice (3)", "Drafting contracts (3)", "Auditing contracts (3)", "Documentation of agencies/power of attorney (2)", "Preparing  notes (2)", "Case study (2)", "Preparing the internal regulations of the company"] 
+        },
+        "package03" : {
+            "id" : "Pro",
+            "title" : "Large Companies / Establishments",
+            "description" : "",
+            "price" : "14950",
+            "currency" : "SAR",
+            "points" : ["Legal advice (4)", "Drafting contracts (4)", "Auditing contracts (4)", "Documentation of agencies/power of attorney (3)", "Preparing  notes (3)", "Case study (3)", "Preparing the internal regulations of the company", "Study the legal status of the company"] 
+        }
+    },
     "contact" : "Contact",
     "contactContent" : "Reach us via Email",
     "font": "font-notosans",

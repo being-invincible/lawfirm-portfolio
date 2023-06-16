@@ -154,7 +154,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
             >
                     <a
                     href="tel:+966508188743"
-                    class="grid grid-cols-3 group items-center text-center w-full lg:w-[300px] rounded bg-white lg:px-auto px-20 py-3 text-sm font-bold border-russian-violet text-russian-violet shadow hover:bg-mettalic-gold border-2 hover:border-russian-violet sm:w-auto transition duration-500"
+                    class="grid grid-cols-3 rounded-lg group items-center text-center w-full lg:w-[300px] bg-white lg:px-auto px-20 py-3 text-sm font-bold border-russian-violet text-russian-violet shadow hover:bg-mettalic-gold border-2 hover:border-russian-violet sm:w-auto transition duration-500"
                     >
                         <SlCallOut className='block col-span-1' />
                         <p className='group-hover:hidden block col-span-2'>{call}</p>
@@ -173,7 +173,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
 
                     <a
                     href="https://wa.me/966508188743"
-                    class="grid grid-cols-3 items-center text-center w-full lg:w-[300px] rounded bg-white lg:px-auto px-20 py-3 text-sm font-bold border-russian-violet text-russian-violet shadow hover:bg-mettalic-gold border-2 hover:border-russian-violet sm:w-auto transition duration-500"
+                    class="grid grid-cols-3 rounded-lg items-center text-center w-full lg:w-[300px] bg-white lg:px-auto px-20 py-3 text-sm font-bold border-russian-violet text-russian-violet shadow hover:bg-mettalic-gold border-2 hover:border-russian-violet sm:w-auto transition duration-500"
                     >
                         <SiWhatsapp className='col-span-1' />
                         <p className='col-span-2'>{whatsapp}</p>
@@ -182,7 +182,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
 
                     <a
                     
-                    class="grid grid-cols-3 items-center text-center w-full lg:w-[300px] rounded bg-white lg:px-auto px-20 py-3 text-sm font-bold border-russian-violet text-russian-violet shadow hover:bg-mettalic-gold border-2 hover:border-russian-violet sm:w-auto transition duration-500"
+                    class="grid grid-cols-3 rounded-lg items-center text-center w-full lg:w-[300px] bg-white lg:px-auto px-20 py-3 text-sm font-bold border-russian-violet text-russian-violet shadow hover:bg-mettalic-gold border-2 hover:border-russian-violet sm:w-auto transition duration-500"
                     >
                         <SlLocationPin className='col-span-1' />
                         <p className='col-span-2'>{location}</p>
