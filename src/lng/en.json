@@ -8,6 +8,7 @@
     "aboutTitle" : "About the Firm",
     "aboutContent" : "Ahattah Law and Legal Consultations Co. was established as one of the specialized legal entities in the Kingdom of Saudi Arabia. It was established as a professional legal firm licensed by the Ministry of Commerce as well as licensed by the Saudi Bar Association, to meet the needs and aspirations of clients. The company includes a group of lawyers, legal and administrative consultants. The company also provides legal services to its clients with High quality and professional performance that serves individuals, companies and private establishments.",
     "button03" : "Check out Packages",
+    "button04" : "Learn More",
     "services" : "Services",
     "serviceTitle01" : "Legal advice",
     "serviceContent01" : "Legal advice represents a protective way that gives you the legal opinion, which clarifies the position of the system in the matter and the legal point of view that gives you the advantage of full knowledge of the legal problems and obstacles that you may face before they occur, by choosing the service: • You will have knowledge of all the laws related to the subject of your consultation. • Protection from errors that are difficult to correct or afford. • Save time and effort.",
@@ -53,7 +54,16 @@
             "description" : "",
             "price" : "9700",
             "currency" : "SAR",
-            "points" : ["Legal advice (3)", "Drafting contracts (3)", "Auditing contracts (3)", "Documentation of agencies/power of attorney (2)", "Preparing  notes (2)", "Case study (2)", "Preparing the internal regulations of the company"] 
+            "points" : ["Legal advice (3)", "Drafting contracts (3)", "Auditing contracts (3)", "Documentation of agencies/power of attorney (2)", "Preparing  notes (2)", "Case study (2)", "Preparing the internal regulations of the company"],
+            "explain" : [
+                "Benefit from our experienced legal professionals who will provide you with two dedicated sessions of expert advice, ensuring your business remains compliant and well-informed",
+                "Our skilled team will assist you in drafting two meticulously crafted contracts, tailored to your specific business requirements, helping you safeguard your interests and foster fruitful partnerships",
+                "Avail yourself of two comprehensive contract auditing sessions, where our experts will meticulously review your existing contracts, identifying potential risks and providing valuable recommendations",
+                "Establish a solid framework for your company's operations with our assistance in preparing the internal regulations of your organization. These regulations will guide your employees and ensure a smooth workflow",
+                "Establishing a solid framework for your company's operations is crucial for maintaining order, promoting efficiency, and ensuring a harmonious work environment",
+                "We will conduct a thorough review of your company's legal compliance, meticulously analyzing various aspects to ensure that you adhere to all relevant regulations and requirements",
+                "We will conduct a thorough review of your company's legal compliance, meticulously analyzing various aspects to ensure that you adhere to all relevant regulations and requirements"
+            ]
         },
         "package03" : {
             "id" : "Pro",
@@ -61,7 +71,17 @@
             "description" : "",
             "price" : "14950",
             "currency" : "SAR",
-            "points" : ["Legal advice (4)", "Drafting contracts (4)", "Auditing contracts (4)", "Documentation of agencies/power of attorney (3)", "Preparing  notes (3)", "Case study (3)", "Preparing the internal regulations of the company", "Study the legal status of the company"] 
+            "points" : ["Legal advice (4)", "Drafting contracts (4)", "Auditing contracts (4)", "Documentation of agencies/power of attorney (3)", "Preparing  notes (3)", "Case study (3)", "Preparing the internal regulations of the company", "Study the legal status of the company"],
+            "explain" : [
+                "Benefit from our experienced legal professionals who will provide you with two dedicated sessions of expert advice, ensuring your business remains compliant and well-informed",
+                "Our skilled team will assist you in drafting two meticulously crafted contracts, tailored to your specific business requirements, helping you safeguard your interests and foster fruitful partnerships",
+                "Avail yourself of two comprehensive contract auditing sessions, where our experts will meticulously review your existing contracts, identifying potential risks and providing valuable recommendations",
+                "Establish a solid framework for your company's operations with our assistance in preparing the internal regulations of your organization. These regulations will guide your employees and ensure a smooth workflow",
+                "Establishing a solid framework for your company's operations is crucial for maintaining order, promoting efficiency, and ensuring a harmonious work environment",
+                "We will conduct a thorough review of your company's legal compliance, meticulously analyzing various aspects to ensure that you adhere to all relevant regulations and requirements",
+                "We will conduct a thorough review of your company's legal compliance, meticulously analyzing various aspects to ensure that you adhere to all relevant regulations and requirements",
+                "We will conduct a thorough review of your company's legal compliance, meticulously analyzing various aspects to ensure that you adhere to all relevant regulations and requirements"
+            ]
         }
     },
     "contact" : "Contact",

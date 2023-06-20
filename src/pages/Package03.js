@@ -10,11 +10,11 @@ import Footer from '../components/Footer';
 import { MdCheckCircle } from 'react-icons/md';
 import Contact from './Contact';
 
-const Package01 = () => {
+const Package03 = () => {
   const { t, i18n } = useTranslation();
 
-  const points01 = i18n.language === 'عربي' ? ar['package'].package01.points : en['package'].package01.points;
-  const explain01 = i18n.language === 'عربي' ? ar['package'].package01.explain : en['package'].package01.explain;
+  const points01 = i18n.language === 'عربي' ? ar['package'].package03.points : en['package'].package03.points;
+  const explain01 = i18n.language === 'عربي' ? ar['package'].package03.explain : en['package'].package03.explain;
 
   return (
     <div>
@@ -29,11 +29,11 @@ const Package01 = () => {
               {/* <Packag title = {(t(`${"package"}.package01.id`))} currency = {t(`${"package"}.package01.currency`)} price = {t(`${"package"}.package01.price`)} desp = {t(`${"package"}.package01.title`)} points={points01} link="/package01" /> */}
 
               <div className='w-full justify-center col-span-1 flex flex-row-reverse items-center my-2 lg:my-3 lg:float-right'>
-                <p className='pr-2 lg:pr-5 py-5 order-2 text-xl sm:text-3xl'>{t(`${"package"}.package01.currency`)}</p>
-                <h1 className='font-semibold text-3xl sm:text-3xl md:text-[100px]'>{t(`${"package"}.package01.price`)}</h1>
+                <p className='pr-2 lg:pr-5 py-5 order-2 text-xl sm:text-3xl'>{t(`${"package"}.package03.currency`)}</p>
+                <h1 className='font-semibold text-3xl sm:text-3xl md:text-[100px]'>{t(`${"package"}.package03.price`)}</h1>
               </div>
 
-              <h1 className='lg:ml-10 mb-8 text-xl font-bold sm:text-xl md:text-3xl'>{t(`${"package"}.package01.title`)}</h1>
+              <h1 className='lg:ml-10 mb-8 text-xl font-bold sm:text-xl md:text-3xl'>{t(`${"package"}.package03.title`)}</h1>
 
               <div class="mt-3 sm:mt-4 w-full flex flex-row-reverse">
                 <a
@@ -48,15 +48,15 @@ const Package01 = () => {
         ) : (
           <div class="bg-metalic-grey/40 px-8 pb-8 pt-28 md:p-12 lg:px-16 lg:pb-24 lg:pt-36">
             <div class="text-center md:text-left ltr:sm:text-left rtl:sm:text-right">
-              {/* <h2 className='mb-5 w-20 bg-mettalic-gold text-center p-2 font-semibold text-md sm:text-lg md:text-xl'>{t(`${"package"}.package01.id`)}</h2> */}
-              {/* <Packag title = {(t(`${"package"}.package01.id`))} currency = {t(`${"package"}.package01.currency`)} price = {t(`${"package"}.package01.price`)} desp = {t(`${"package"}.package01.title`)} points={points01} link="/package01" /> */}
+              {/* <h2 className='mb-5 w-20 bg-mettalic-gold text-center p-2 font-semibold text-md sm:text-lg md:text-xl'>{t(`${"package"}.package03.id`)}</h2> */}
+              {/* <Packag title = {(t(`${"package"}.package03.id`))} currency = {t(`${"package"}.package03.currency`)} price = {t(`${"package"}.package03.price`)} desp = {t(`${"package"}.package03.title`)} points={points01} link="/package03" /> */}
 
               <div className='w-full justify-center md:ml-10 col-span-1 flex flex-row items-baseline lg:p-3 lg:w-[18rem]'>
-                <p className='pl-2 md:pl-5 py-5 order-2 text-xl sm:text-3xl'>{t(`${"package"}.package01.currency`)}</p>
-                <h1 className='font-semibold text-xl sm:text-3xl md:text-[100px]'>{t(`${"package"}.package01.price`)}</h1>
+                <p className='pl-2 md:pl-5 py-5 order-2 text-xl sm:text-3xl'>{t(`${"package"}.package03.currency`)}</p>
+                <h1 className='font-semibold text-xl sm:text-3xl md:text-[100px]'>{t(`${"package"}.package03.price`)}</h1>
               </div>
 
-              <h1 className='md:ml-10 mb-8 text-lg font-bold sm:text-xl md:text-3xl'>{t(`${"package"}.package01.title`)}</h1>
+              <h1 className='md:ml-10 mb-8 text-lg font-bold sm:text-xl md:text-3xl'>{t(`${"package"}.package03.title`)}</h1>
 
               <div class="mt-3 sm:mt-4 md:ml-10">
                 <a
@@ -77,7 +77,7 @@ const Package01 = () => {
             <p
               class="text-white md:my-5 md:block md:text-lg md:leading-relaxed text-right"
             >
-              {t(`${"package"}.package01.description`)}
+              {t(`${"package"}.package03.description`)}
             </p>
             <div className='mt-10 mb-5'>
               <ul className='grid grid-cols-1 md:grid-cols-2 text-md gap-y-2 lg:gap-y-5 lg:gap-x-10'>
@@ -100,7 +100,7 @@ const Package01 = () => {
             <p
               class="text-white md:my-5 md:block md:text-lg md:leading-relaxed"
             >
-              {t(`${"package"}.package01.description`)}
+              {t(`${"package"}.package03.description`)}
             </p>
             <div className='mt-10 mb-5'>
               <ul className='grid grid-cols-1 md:grid-cols-2 text-md gap-y-2 lg:gap-y-5 lg:gap-x-10'>
@@ -130,4 +130,4 @@ const Package01 = () => {
   )
 }
 
-export default Package01
+export default Package03

@@ -8,6 +8,7 @@
     "aboutTitle" : "عن الشركة",
     "aboutContent" : "تأسست شركة إحاطة للمحاماة والاستشارات القانونية كأحد الكيانات القانونية المتخصصة بالمملكة العربية السعودية وتم تأسيسها كشركة مهنية قانونية مرخصة من وزارة التجارة وكذلك مرخصة من الهيئة السعودية للمحامين، تلبية لاحتياجات وتطلعات العملاء، وتضم الشركة نخبة من المحامين والمستشارين القانونيين والإداريين، كما تقدم الشركة الخدمات القانونية لعملائها بجودة عالية وأداء احترافي يخدم الافراد والشركات والمؤسسات الخاصة",
     "button03" : "تحقق من الباقات",
+    "button04" : "يتعلم أكثر",
     "services" : "الخدمات",
     "serviceTitle01" : "الاستشارات القانونية",
     "serviceContent01" : "تمثل الاستشارة القانونية وسيلة وقائية تمنحك الرأي القانوني،  الذي يوضح موقف النظام في المسألة ووجهة النظر القانونية التي تمنحك ميزة المعرفة التامة بالمشكلات والعقبات القانونية التي قد تواجهك قبل وقوعها، باختيارك الخدمة :•تتوفر لك المعرفة بكل القوانين المتعلقة بموضوع استشارتك.•وقاية من الوقوع في أخطاء يصعب تصحيحها أو تحمل تكلفتها.•توفر الوقت والجهد.",
@@ -53,7 +54,16 @@
             "description" : "",
             "price" : "9700",
             "currency" : "ريال",
-            "points" : ["استشارات قانونية عدد (3)", "صياغة عقود عدد (3)", "تدقيق عقود عدد (3)", "توثيق الوكالات عدد (2)", "اعداد المذكرات عدد (2)", "دراسة قضايا عدد (2)", "اعداد اللائحة الداخلية للمنشأة"] 
+            "points" : ["استشارات قانونية عدد (3)", "صياغة عقود عدد (3)", "تدقيق عقود عدد (3)", "توثيق الوكالات عدد (2)", "اعداد المذكرات عدد (2)", "دراسة قضايا عدد (2)", "اعداد اللائحة الداخلية للمنشأة"],
+            "explain" : [
+                "Benefit from our experienced legal professionals who will provide you with two dedicated sessions of expert advice, ensuring your business remains compliant and well-informed",
+                "Our skilled team will assist you in drafting two meticulously crafted contracts, tailored to your specific business requirements, helping you safeguard your interests and foster fruitful partnerships",
+                "Avail yourself of two comprehensive contract auditing sessions, where our experts will meticulously review your existing contracts, identifying potential risks and providing valuable recommendations",
+                "Establish a solid framework for your company's operations with our assistance in preparing the internal regulations of your organization. These regulations will guide your employees and ensure a smooth workflow",
+                "Establishing a solid framework for your company's operations is crucial for maintaining order, promoting efficiency, and ensuring a harmonious work environment",
+                "We will conduct a thorough review of your company's legal compliance, meticulously analyzing various aspects to ensure that you adhere to all relevant regulations and requirements",
+                "We will conduct a thorough review of your company's legal compliance, meticulously analyzing various aspects to ensure that you adhere to all relevant regulations and requirements"
+            ]
         },
         "package03" : {
             "id" : "03 - طَرد",
@@ -61,7 +71,17 @@
             "description" : "",
             "price" : "14950",
             "currency" : "ريال",
-            "points" : ["استشارات قانونية (4)", "صياغة عقود عدد (4)", "تدقيق العقود عدد  (4)", "توثيق الوكالات عدد ( 3)", "اعداد المذكرات عدد ( 3)", "دراسة قضايا عدد (3)", "اعداد اللائحة الداخلية للمنشأة", "دراسة الوضع القانوني للمنشاة"] 
+            "points" : ["استشارات قانونية (4)", "صياغة عقود عدد (4)", "تدقيق العقود عدد  (4)", "توثيق الوكالات عدد ( 3)", "اعداد المذكرات عدد ( 3)", "دراسة قضايا عدد (3)", "اعداد اللائحة الداخلية للمنشأة", "دراسة الوضع القانوني للمنشاة"],
+            "explain" : [
+                "Benefit from our experienced legal professionals who will provide you with two dedicated sessions of expert advice, ensuring your business remains compliant and well-informed",
+                "Our skilled team will assist you in drafting two meticulously crafted contracts, tailored to your specific business requirements, helping you safeguard your interests and foster fruitful partnerships",
+                "Avail yourself of two comprehensive contract auditing sessions, where our experts will meticulously review your existing contracts, identifying potential risks and providing valuable recommendations",
+                "Establish a solid framework for your company's operations with our assistance in preparing the internal regulations of your organization. These regulations will guide your employees and ensure a smooth workflow",
+                "Establishing a solid framework for your company's operations is crucial for maintaining order, promoting efficiency, and ensuring a harmonious work environment",
+                "We will conduct a thorough review of your company's legal compliance, meticulously analyzing various aspects to ensure that you adhere to all relevant regulations and requirements",
+                "We will conduct a thorough review of your company's legal compliance, meticulously analyzing various aspects to ensure that you adhere to all relevant regulations and requirements",
+                "We will conduct a thorough review of your company's legal compliance, meticulously analyzing various aspects to ensure that you adhere to all relevant regulations and requirements"
+            ]
         }
     },
     "contact" : "اتصل بنا",
