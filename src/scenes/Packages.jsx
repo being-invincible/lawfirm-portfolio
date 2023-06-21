@@ -27,7 +27,7 @@ const Packag = ({ title, price, desp, currency, points, link }) => {
             <motion.div variants={serviceVariant} className={`text-right group-hover:text-russian-violet grid grid-cols-1 h-full place-content-between`}>
             <div>
             <p className='font-normal text-lg mb-0'>{desp}</p>
-            <div className='px-10 grid grid-flow-col items-baseline w-full text-center'>
+            <div className='justify-center gap-1 grid grid-flow-col items-baseline w-full text-center'>
                 <p className='pr-4 py-5 order-2 text-lg'>{currency}</p>
                 <h1 className='py-5 font-bold text-5xl'>{price}</h1>
             </div>
@@ -60,7 +60,7 @@ const Packag = ({ title, price, desp, currency, points, link }) => {
             <motion.div variants={serviceVariant} className={`text-left grid grid-cols-1 gap-4 md:gap-0 h-full w-auto place-content-between`}>
             <div>
             <p className='font-normal text-md group-hover:text-russian-violet'>{desp}</p>
-            <div className='px-10 grid grid-flow-col my-5 w-full text-center items-baseline group-hover:text-russian-violet'>
+            <div className='justify-center gap-1 grid grid-flow-col my-5 w-full text-center items-baseline group-hover:text-russian-violet'>
                 <p className='order-2 text-lg'>{currency}</p>
                 <h1 className='font-bold text-5xl'>{price}</h1>
             </div>
