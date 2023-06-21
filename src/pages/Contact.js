@@ -3,8 +3,9 @@ import { useForm } from 'react-hook-form'
 import Navbar02 from '../components/Navbar02';
 import Footer from '../components/Footer';
 import { useTranslation } from 'react-i18next';
+import Dropdown from '../components/Dropdown';
 
-const Contact = () => {
+const Contact = ({val}) => {
 
     const { t, i18n } = useTranslation();
 
@@ -25,12 +26,12 @@ const Contact = () => {
   return (
     <>
     
-    <div id='contact' className='min-h-screen grid grid-cols-1 lg:grid-cols-2 py-[50px] gap-10 bg-olive px-10 md:px-[100px]'>
+    <div id='contact' className='min-h-screen grid grid-cols-1 lg:grid-cols-2 py-[50px] gap-10 bg-olive px-10 pt-28 md:px-[100px] md:pt-[125px] md:pb-[50px]'>
         <div className=''>
-            <h1 className='sm:text-3xl text-2xl font-medium title-font mb-4 text-mettalic-gold'>{t("contact")}</h1>
+            <h1 className='sm:text-3xl text-2xl font-medium title-font mb-4 text-mettalic-gold'>{t("contact02")}</h1>
             <div class="h-1 w-20 bg-mettalic-gold"></div>
 
-            <p className='lg:w-full w-full leading-relaxed text-white my-5'>Thinking about selecting this package? Just reach us through the form & mail us! We are ready with curated strategies to shape your organisation</p>
+            <p className='lg:w-full w-full leading-relaxed text-white my-5'>{t("contDescription")}</p>
 
         <form 
                 target="_blank"
@@ -74,8 +75,12 @@ const Contact = () => {
                         })}
                     />
                     {/* </label> */}
+
+                    <Dropdown val={val}/>
+
+
                     {/* <label className='text-gray-500 font-semibold'>Query : */}
-                    <textarea
+                    {/* <textarea
                         className='w-full rounded md:rounded-lg bg-gray-100 text-sm font-normal placeholder-olive/75 px-5 py-2 text-right'
                         type='text'
                         placeholder={t("selectPackage")}
@@ -83,7 +88,7 @@ const Contact = () => {
                             required: true,
                             maxLength: 20,
                         })}
-                    />
+                    /> */}
                     {/* </label>     */}
                     <button className='rounded border-2 border-russian-violet md:rounded-full text-russian-violet bg-white px-8 py-1.5 hover:bg-mettalic-gold transition-all'>{t("submit")}</button>
                 </div>
@@ -124,7 +129,7 @@ const Contact = () => {
                     />
                     {/* </label> */}
                     {/* <label className='text-gray-500 font-semibold'>Query : */}
-                    <textarea
+                    {/* <textarea
                         className='w-full rounded md:rounded-lg bg-gray-100 text-sm font-normal placeholder-olive/75 px-5 py-2'
                         type='text'
                         placeholder={t("selectPackage")}
@@ -132,7 +137,8 @@ const Contact = () => {
                             required: true,
                             maxLength: 20,
                         })}
-                    />
+                    /> */}
+                    <Dropdown val={val}/>
                     {/* </label>     */}
                     <button className='rounded border-2 border-russian-violet md:rounded-full text-russian-violet bg-white px-8 py-1.5 hover:bg-mettalic-gold transition-all'>{t("submit")}</button>
                 </div>
@@ -143,7 +149,7 @@ const Contact = () => {
         <div className=''>
         <div class="bg-mettalic-gold/80 p-2.5">
                 <div
-                class="overflow-hidden cursor-pointer rounded-sm relative group z-0 before:absolute before:w-full before:max-w-[600px] h-full md:h-[550px]"
+                class="overflow-hidden cursor-pointer rounded-sm relative group z-0 before:absolute before:w-full before:max-w-[600px] h-full md:h-[480px]"
                 >
                     <img
                         alt="First Product"

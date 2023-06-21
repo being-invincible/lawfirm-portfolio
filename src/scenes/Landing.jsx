@@ -35,7 +35,7 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
                     }}
                 >
                     
-                    <h1 class={`text-3xl ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem font-semibold': 'font-noto font-black'} md:text-4xl text-mettalic-gold`}>
+                    <h1 class={`text-[1.7rem] ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem font-semibold': 'font-noto font-black'} md:text-4xl text-mettalic-gold`}>
                         {companyName}
                         
                     </h1>

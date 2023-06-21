@@ -19,14 +19,13 @@ const Package01 = () => {
   return (
     <div>
       <Navbar02 />
-      <section
+      {/*<section
         class="overflow-hidden bg-[url(https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80)] bg-cover bg-center bg-no-repeat"
       >
-        {i18n.language === 'عربي' ? (
+         {i18n.language === 'عربي' ? (
           <div class="bg-metalic-grey/40 px-8 pb-8 pt-28 md:p-12 lg:px-16 lg:pb-24 lg:pt-36">
             <div class="text-center md:text-right ltr:sm:text-left rtl:sm:text-right lg:mr-[50px]">
-              {/* <h2 className='mb-5 w-20 bg-mettalic-gold text-center p-2 font-semibold text-md sm:text-lg md:text-xl'>{t(`${"package"}.package01.id`)}</h2> */}
-              {/* <Packag title = {(t(`${"package"}.package01.id`))} currency = {t(`${"package"}.package01.currency`)} price = {t(`${"package"}.package01.price`)} desp = {t(`${"package"}.package01.title`)} points={points01} link="/package01" /> */}
+             
 
               <div className='w-full justify-center col-span-1 flex flex-row-reverse items-center my-2 lg:my-3 lg:float-right'>
                 <p className='pr-2 lg:pr-5 py-5 order-2 text-xl sm:text-3xl'>{t(`${"package"}.package01.currency`)}</p>
@@ -48,9 +47,7 @@ const Package01 = () => {
         ) : (
           <div class="bg-metalic-grey/40 px-8 pb-8 pt-28 md:p-12 lg:px-16 lg:pb-24 lg:pt-36">
             <div class="text-center md:text-left ltr:sm:text-left rtl:sm:text-right">
-              {/* <h2 className='mb-5 w-20 bg-mettalic-gold text-center p-2 font-semibold text-md sm:text-lg md:text-xl'>{t(`${"package"}.package01.id`)}</h2> */}
-              {/* <Packag title = {(t(`${"package"}.package01.id`))} currency = {t(`${"package"}.package01.currency`)} price = {t(`${"package"}.package01.price`)} desp = {t(`${"package"}.package01.title`)} points={points01} link="/package01" /> */}
-
+              
               <div className='w-full justify-center md:ml-10 col-span-1 flex flex-row items-baseline lg:p-3 lg:w-[18rem]'>
                 <p className='pl-2 md:pl-5 py-5 order-2 text-xl sm:text-3xl'>{t(`${"package"}.package01.currency`)}</p>
                 <h1 className='font-semibold text-xl sm:text-3xl md:text-[100px]'>{t(`${"package"}.package01.price`)}</h1>
@@ -118,9 +115,9 @@ const Package01 = () => {
           </div>
         )}
 
-      </section>
+      </section> */}
 
-      <Contact />
+      <Contact val={0} />
       <div className="bg-gradient-to-tl from-coyote to-sheen-gold md:justify-between md:items-center">
         <div className="w-5/6 mx-auto">
           <Footer />

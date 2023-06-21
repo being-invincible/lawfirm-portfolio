@@ -110,7 +110,7 @@ const Navbar02 = ({ selectedPage, setSelectedPage, home, about, packages, servic
 
             ) : (
                 <div className='py-5 flex items-center justify-between mx-auto w-5/6'>
-                    <img className='w-20 lg:w-20' src="logo.png" alt="Logo" />
+                    <a href='/'><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></a>
 
                     <select onChange={onOptionChangeHandler} className="bg-mettalic-gold p-2 rounded-md text-sm hover:bg-russian-violet" >
                         {options.map((option, index) => {

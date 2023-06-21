@@ -8,7 +8,7 @@
     "aboutTitle" : "About the Firm",
     "aboutContent" : "Ahattah Law and Legal Consultations Co. was established as one of the specialized legal entities in the Kingdom of Saudi Arabia. It was established as a professional legal firm licensed by the Ministry of Commerce as well as licensed by the Saudi Bar Association, to meet the needs and aspirations of clients. The company includes a group of lawyers, legal and administrative consultants. The company also provides legal services to its clients with High quality and professional performance that serves individuals, companies and private establishments.",
     "button03" : "Check out Packages",
-    "button04" : "Learn More",
+    "button04" : "Request package",
     "services" : "Services",
     "serviceTitle01" : "Legal advice",
     "serviceContent01" : "Legal advice represents a protective way that gives you the legal opinion, which clarifies the position of the system in the matter and the legal point of view that gives you the advantage of full knowledge of the legal problems and obstacles that you may face before they occur, by choosing the service: • You will have knowledge of all the laws related to the subject of your consultation. • Protection from errors that are difficult to correct or afford. • Save time and effort.",
@@ -33,7 +33,7 @@
     "packages" : "Packages",
     "package" : {
         "package01" : {
-            "id" : "Starter",
+            "id" : "01",
             "title" : "New Companies / Establishments",
             "description" : "Embark on a seamless journey of corporate success with our comprehensive Package, designed to cater to the diverse needs of new companies and establishments, this package is meticulously crafted to provide you with expert guidance and support throughout your legal and regulatory endeavors.",
             "price" : "6900",
@@ -49,8 +49,8 @@
             ]
         },
         "package02" : {
-            "id" : "Advanced",
-            "title" : "Medium Companies / Establishments",
+            "id" : "02",
+            "title" : "Medium Companies",
             "description" : "",
             "price" : "9700",
             "currency" : "SAR",
@@ -66,8 +66,8 @@
             ]
         },
         "package03" : {
-            "id" : "Pro",
-            "title" : "Large Companies / Establishments",
+            "id" : "03",
+            "title" : "Large Companies",
             "description" : "",
             "price" : "14950",
             "currency" : "SAR",
@@ -92,6 +92,8 @@
     "email": "Email ID",
     "phone": "Phone No.",
     "callMe": "Call",
+    "contact02" : "Contact",
+    "contDescription" : "Thinking about selecting this package? Just reach us through the form & mail us! We are ready with curated strategies to shape your organisation",
     "selectPackage": "Select Package",
     "submit": "Submit",
     "whatsapp": "WhatsApp",

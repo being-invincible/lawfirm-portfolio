@@ -24,15 +24,15 @@ const Packag = ({ title, price, desp, currency, points, link }) => {
         <div className='w-full group h-88 p-8 mb-5 bg-gradient-to-tr from-coyote to-arylide-yellow rounded-lg hover:drop-shadow-lg hover:border-russian-violet hover:border-2 hover:bg-gradient-to-tr hover:to-sheen-gold hover:from-ecru hover:scale-110 transition-all'>
         
         {i18n.language === 'عربي' ? (
-            <motion.div variants={serviceVariant} className={`text-right group-hover:text-russian-violet grid h-full place-content-between`}>
+            <motion.div variants={serviceVariant} className={`text-right group-hover:text-russian-violet grid grid-cols-1 h-full place-content-between`}>
             <div>
             <p className='font-normal text-lg mb-0'>{desp}</p>
-            <div className='flex flex-row-reverse items-baseline'>
+            <div className='px-10 grid grid-flow-col items-baseline w-full text-center'>
                 <p className='pr-4 py-5 order-2 text-lg'>{currency}</p>
                 <h1 className='py-5 font-bold text-5xl'>{price}</h1>
             </div>
 
-            <ul className='flex flex-col text-md gap-y-1'>
+            <ul className='flex flex-col text-md gap-y-2'>
             {points.map((s, i) =>
                 <li className='grid grid-cols-6 items-baseline align-text-top'>
                     <h2 className='col-span-5'>{points[i]}</h2>
@@ -44,10 +44,10 @@ const Packag = ({ title, price, desp, currency, points, link }) => {
             )}
             </ul>
             </div>
-            <div class="mt-3 sm:mt-4 w-full flex items-stretch">
+            <div class="mt-3 sm:mt-4 items-stretch">
                 <Link to={link}>
                     <button
-                    class="block w-full rounded-lg bg-russian-violet text-mettalic-gold border-2 border-mettalic-gold px-8 py-3 text-sm text-center font-semibold  shadow hover:bg-mettalic-gold hover:text-russian-violet hover:border-russian-violet focus:outline-none focus:ring sm:w-[17.5rem] transition duration-500"
+                    class="self-end block w-full rounded-lg bg-transparent text-russian-violet border-2 border-russian-violet px-8 py-3 text-sm text-center font-semibold  shadow hover:bg-russian-violet hover:text-mettalic-gold hover:border-mettalic-gold focus:outline-none focus:ring transition duration-500"
                     >
                     {t("button04")}
                     </button>
@@ -57,11 +57,11 @@ const Packag = ({ title, price, desp, currency, points, link }) => {
         </motion.div>
 
         ) : (
-            <motion.div variants={serviceVariant} className={`text-left grid h-full place-content-between`}>
+            <motion.div variants={serviceVariant} className={`text-left grid grid-cols-1 gap-4 md:gap-0 h-full w-auto place-content-between`}>
             <div>
             <p className='font-normal text-md group-hover:text-russian-violet'>{desp}</p>
-            <div className='flex flex-row my-5 items-baseline group-hover:text-russian-violet'>
-                <p className='ml-4 order-2 text-lg'>{currency}</p>
+            <div className='px-10 grid grid-flow-col my-5 w-full text-center items-baseline group-hover:text-russian-violet'>
+                <p className='order-2 text-lg'>{currency}</p>
                 <h1 className='font-bold text-5xl'>{price}</h1>
             </div>
 
@@ -77,10 +77,10 @@ const Packag = ({ title, price, desp, currency, points, link }) => {
             </ul>
             </div>
             
-            <div class="w-full mt-5 flex items-stretch">
+            <div class="w-full mt-5 items-stretch">
             <Link to={link}>
                 <button
-                  class=" self-end block w-full rounded-lg bg-transparent text-russian-violet border-2 border-russian-violet px-8 py-3 text-sm text-center font-semibold  shadow hover:bg-mettalic-gold hover:text-russian-violet hover:border-russian-violet focus:outline-none focus:ring sm:w-[17.5rem] transition duration-500"
+                  class="self-end block w-full rounded-lg bg-transparent text-russian-violet border-2 border-russian-violet px-8 py-3 text-sm text-center font-semibold  shadow hover:bg-russian-violet hover:text-mettalic-gold hover:border-mettalic-gold focus:outline-none focus:ring transition duration-500"
                 >
                   {t("button04")}
                 </button>
@@ -137,16 +137,17 @@ const Packages = ({packages}) => {
         </div>
         {/* Packages */}
         {i18n.language === 'عربي' ? (
-        <div className='flex flex-col-reverse md:flex-row md:justify-between mt-10 gap-12'>
-
+        <div className='md:grid md:grid-cols-3 md:justify-between mt-10 gap-8'>
             <Packag title = {(t(`${"package"}.package03.id`))} currency = {t(`${"package"}.package03.currency`)} price = {t(`${"package"}.package03.price`)} desp = {t(`${"package"}.package03.title`)} points={points03} link="/package03" />
-            <Packag title = {(t(`${"package"}.package02.id`))} currency = {t(`${"package"}.package02.currency`)} price = {t(`${"package"}.package02.price`)} desp = {t(`${"package"}.package02.title`)} points={points02} link="/package02" />
-            
+
+
+            <Packag title = {(t(`${"package"}.package02.id`))} currency = {t(`${"package"}.package02.currency`)} price = {t(`${"package"}.package02.price`)} desp = {t(`${"package"}.package02.title`)} points={points02} link="/package02" /> 
+
             <Packag title = {(t(`${"package"}.package01.id`))} currency = {t(`${"package"}.package01.currency`)} price = {t(`${"package"}.package01.price`)} desp = {t(`${"package"}.package01.title`)} points={points01} link="/package01" />
-            
+                
         </div>
         ) : (
-            <div className='md:flex md:justify-between mt-10 gap-12'>
+            <div className='md:grid md:grid-cols-3 md:justify-between mt-10 gap-8'>
             
             <Packag title = {(t(`${"package"}.package01.id`))} currency = {t(`${"package"}.package01.currency`)} price = {t(`${"package"}.package01.price`)} desp = {t(`${"package"}.package01.title`)} points={points01} link="/package01" />
             
