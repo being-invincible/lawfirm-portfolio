@@ -15,7 +15,7 @@ const MySelect = (props) => {
     return <Select components={{ Input }} {...props} menuIsOpen={menuIsOpen} />;
   };
 
-const Dropdown = ({val, isDisabled}) => {
+const Dropdownv2 = ({val, isDisabled}) => {
 
     const { t, i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false)
@@ -68,7 +68,7 @@ const Dropdown = ({val, isDisabled}) => {
             )} */}
 
             {i18n.language === 'عربي' ? (
-                <select value={options_arb[val]} disabled={true} onChange={onOptionChangeHandler} className={`bg-gray-100 p-2 rounded-md text-sm text-right`} >
+                <select value={options_arb[val]} onChange={onOptionChangeHandler} className={`bg-white p-2 text-sm text-right`} >
                 {options_arb.map((option, index) => {
                     return <option className='p-4' key={index} >
                         {option}
@@ -77,7 +77,7 @@ const Dropdown = ({val, isDisabled}) => {
             </select>
 
             ) : (
-                <select value={options_eng[val]} disabled={true} onChange={onOptionChangeHandler} className={`bg-gray-100 p-2 rounded-md text-sm`} >
+                <select value={options_eng[val]} disabled={isDisabled} onChange={onOptionChangeHandler} className={`bg-white p-2 text-sm`} >
                 {options_eng.map((option, index) => {
                     return <option className='p-4' key={index} >
                         {option}
@@ -90,4 +90,4 @@ const Dropdown = ({val, isDisabled}) => {
     )
 }
 
-export default Dropdown
+export default Dropdownv2

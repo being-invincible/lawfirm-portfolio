@@ -7,6 +7,9 @@ import { MdSegment, MdClear } from "react-icons/md";
 import i18next from 'i18next';
 
 import { SlGlobe } from "react-icons/sl";
+import { useNavigate } from 'react-router-dom';
+
+import { MdArrowBackIos } from 'react-icons/md'
 
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
@@ -57,6 +60,8 @@ const Navbar02 = ({ selectedPage, setSelectedPage, home, about, packages, servic
         };
     }, []);
 
+    let navigate = useNavigate();
+
     const activeStyle = "text-mettalic-gold"
 
     // Language Dropdown
@@ -80,6 +85,13 @@ const Navbar02 = ({ selectedPage, setSelectedPage, home, about, packages, servic
 
                     {i18n.language === 'عربي' ? (
                         <div className='py-5 flex items-center justify-between mx-auto w-5/6'>
+                            <button
+                                className="absolute left-10 text-magic-potion hover:text-toddy-gold transition-all flex flex-wrap flex-col items-center font-montserrat text-md font-semibold gap-2"
+                                onClick={() => navigate(-1)}
+                            >
+                                <MdArrowBackIos size={30} className='fill-russian-violet hover:fill-mettalic-gold active:fill-mettalic-gold' />
+
+                            </button>
                             <select value={options[1]} onChange={onOptionChangeHandler} className="bg-mettalic-gold p-2 rounded-md text-sm hover:bg-russian-violet" >
                                 {options.map((option, index) => {
                                     return <option className='p-2' key={index} >
@@ -87,14 +99,21 @@ const Navbar02 = ({ selectedPage, setSelectedPage, home, about, packages, servic
                                     </option>
                                 })}
                             </select>
-                            
+
                             <a href='/'><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></a>
                         </div>
                     ) :
                         (
                             <div className='py-5 flex items-center justify-between mx-auto w-5/6'>
+                                <button
+                                    className="absolute left-10 text-magic-potion hover:text-toddy-gold transition-all flex flex-wrap flex-col items-center font-montserrat text-md font-semibold gap-2"
+                                    onClick={() => navigate(-1)}
+                                >
+                                    <MdArrowBackIos size={30} className='fill-russian-violet hover:fill-mettalic-gold active:fill-mettalic-gold' />
+
+                                </button>
                                 <a href='/'><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></a>
-                                
+
 
                                 <select onChange={onOptionChangeHandler} className="bg-mettalic-gold p-2 rounded-md text-sm hover:bg-russian-violet" >
                                     {options.map((option, index) => {
@@ -112,13 +131,26 @@ const Navbar02 = ({ selectedPage, setSelectedPage, home, about, packages, servic
                 <div className='py-5 flex items-center justify-between mx-auto w-5/6'>
                     <a href='/'><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></a>
 
-                    <select onChange={onOptionChangeHandler} className="bg-mettalic-gold p-2 rounded-md text-sm hover:bg-russian-violet" >
+                    {i18n.language === 'عربي' ? (
+                        
+                        <select value={options[1]} onChange={onOptionChangeHandler} className="bg-mettalic-gold p-2 rounded-md text-sm hover:bg-russian-violet" >
                         {options.map((option, index) => {
                             return <option className='p-2' key={index} >
                                 {option}
                             </option>
                         })}
                     </select>
+                    ) : (
+                        <select value={options[0]} onChange={onOptionChangeHandler} className="bg-mettalic-gold p-2 rounded-md text-sm hover:bg-russian-violet" >
+                        {options.map((option, index) => {
+                            return <option className='p-2' key={index} >
+                                {option}
+                            </option>
+                        })}
+                    </select>
+                    )}
+
+                    
                     <button className='rounded-full bg-mettalic-gold/75 p-2'
                         onClick={() => setIsMenuToggled(!isMenuToggled)}
                     >

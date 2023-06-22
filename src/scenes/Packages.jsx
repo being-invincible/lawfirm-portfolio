@@ -21,7 +21,7 @@ const Packag = ({ title, price, desp, currency, points, link }) => {
     const { t, i18n } = useTranslation();
 
     return (
-        <div className='w-full group h-88 p-8 mb-5 bg-gradient-to-tr from-coyote to-arylide-yellow rounded-lg hover:drop-shadow-lg hover:border-russian-violet hover:border-2 hover:bg-gradient-to-tr hover:to-sheen-gold hover:from-ecru hover:scale-110 transition-all'>
+        <div className={`w-full group h-88 p-8 mb-5 bg-gradient-to-tr from-coyote to-arylide-yellow rounded-lg hover:drop-shadow-lg hover:border-russian-violet hover:border-2 hover:bg-gradient-to-tr hover:to-sheen-gold hover:from-ecru hover:scale-110 transition-all ${i18n.language === 'Arabic' || 'عربي' ? 'font-reem' : 'font-noto'}`}>
         
         {i18n.language === 'عربي' ? (
             <motion.div variants={serviceVariant} className={`text-right group-hover:text-russian-violet grid grid-cols-1 h-full place-content-between`}>
@@ -57,7 +57,7 @@ const Packag = ({ title, price, desp, currency, points, link }) => {
         </motion.div>
 
         ) : (
-            <motion.div variants={serviceVariant} className={`text-left grid grid-cols-1 gap-4 md:gap-0 h-full w-auto place-content-between`}>
+            <motion.div variants={serviceVariant} className={`text-left grid grid-cols-1 gap-4 md:gap-0 h-full w-auto place-content-between ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'}`}>
             <div>
             <p className='font-normal text-md group-hover:text-russian-violet'>{desp}</p>
             <div className='justify-center gap-1 grid grid-flow-col my-5 w-full text-center items-baseline group-hover:text-russian-violet'>
@@ -137,7 +137,7 @@ const Packages = ({packages}) => {
         </div>
         {/* Packages */}
         {i18n.language === 'عربي' ? (
-        <div className='md:grid md:grid-cols-3 md:justify-between mt-10 gap-8'>
+        <div className='flex flex-col-reverse md:grid md:grid-cols-3 md:justify-between mt-10 gap-8'>
             <Packag title = {(t(`${"package"}.package03.id`))} currency = {t(`${"package"}.package03.currency`)} price = {t(`${"package"}.package03.price`)} desp = {t(`${"package"}.package03.title`)} points={points03} link="/package03" />
 
 

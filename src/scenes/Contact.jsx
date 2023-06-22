@@ -6,6 +6,7 @@ import useMediaQuery from '../hooks/useMediaQuery';
 import { motion } from 'framer-motion'
 import { SiWhatsapp } from "react-icons/si";
 import { SlCallOut, SlLocationPin } from "react-icons/sl"
+import Dropdownv2 from '../components/Dropdownv2';
 
 const Contact = ({contact, contactContent, or, name, email, phone, selectPackage, submit, location, whatsapp, call}) => {
 
@@ -56,7 +57,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
                 {i18n.language === 'عربي' ? (
                     <div className='flex flex-col-reverse justify-center md:flex-row md:space-x-3 text-russian-violet'>
                     <button className='rounded mb-3 md:rounded-none md:mb-0 md:rounded-l-lg bg-mettalic-gold px-8 py-1.5'>{submit}</button>
-                    <input
+                    {/* <input
                         className='w-full rounded mb-3 md:rounded-none md:mb-0 bg-white text-sm font-normal placeholder-olive/75 px-5 py-2 text-right'
                         type='text'
                         placeholder={selectPackage}
@@ -64,7 +65,8 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
                             required: true,
                             maxLength: 20,
                         })}
-                    />
+                    /> */}
+                    <Dropdownv2/>
                     <input
                         className='w-full rounded mb-3 md:rounded-none md:mb-0 bg-white text-sm font-normal placeholder-olive/75 px-5 py-2 text-right'
                         type='text'
@@ -122,7 +124,8 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
                             maxLength: 20,
                         })}
                     />
-                    <input
+                    <Dropdownv2/>
+                    {/* <input
                         className='w-full rounded mb-3 md:rounded-none md:mb-0 bg-white text-sm font-normal placeholder-olive/75 px-5 py-2'
                         type='text'
                         placeholder={selectPackage}
@@ -130,7 +133,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
                             required: true,
                             maxLength: 20,
                         })}
-                    />
+                    /> */}
                     
                     <button className='rounded mb-3 md:rounded-none md:mb-0 md:rounded-r-lg bg-mettalic-gold px-8 py-1.5'>{submit}</button>
                 </div>

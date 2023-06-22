@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import { useTranslation } from 'react-i18next';
 import Dropdown from '../components/Dropdown';
 
-const Contact = ({val}) => {
+const Contact = ({val, isDisabled}) => {
 
     const { t, i18n } = useTranslation();
 
@@ -26,12 +26,26 @@ const Contact = ({val}) => {
   return (
     <>
     
-    <div id='contact' className='min-h-screen grid grid-cols-1 lg:grid-cols-2 py-[50px] gap-10 bg-olive px-10 pt-28 md:px-[100px] md:pt-[125px] md:pb-[50px]'>
-        <div className=''>
-            <h1 className='sm:text-3xl text-2xl font-medium title-font mb-4 text-mettalic-gold'>{t("contact02")}</h1>
-            <div class="h-1 w-20 bg-mettalic-gold"></div>
+    <div id='contact' className={`min-h-screen grid grid-cols-1 lg:grid-cols-2 py-[50px] gap-10 bg-olive px-10 pt-28 md:px-[100px] md:pt-[125px] md:pb-[50px] ${i18n.language === 'Arabic' || 'عربي' ? 'font-reem' : 'font-noto'}`}>
 
-            <p className='lg:w-full w-full leading-relaxed text-white my-5'>{t("contDescription")}</p>
+        <div className={`${i18n.language === 'Arabic' || 'عربي' ? 'md:order-2' : 'order-1'}`}>
+            {i18n.language === 'عربي' ? (
+            <div className='text-right'>
+            <h1 className='sm:text-3xl text-2xl font-bold title-font mb-4 text-mettalic-gold uppercase'>{t("contact02")}</h1>
+            {/* <div class="h-1 w-20 bg-mettalic-gold"></div> */}
+
+            <p className='lg:w-full w-full text-md font-semibold leading-relaxed text-white my-5'>{t("contDescription")}</p>
+
+            </div>
+            ) : (
+                <div>
+            <h1 className='sm:text-3xl text-2xl font-bold title-font mb-4 text-mettalic-gold uppercase'>{t("contact02")}</h1>
+            {/* <div class="h-1 w-20 bg-mettalic-gold"></div> */}
+
+            <p className='lg:w-full w-full text-md leading-relaxed text-white mt-5'>{t("contDescription")}</p>
+
+            </div>
+            )}
 
         <form 
                 target="_blank"
@@ -76,7 +90,7 @@ const Contact = ({val}) => {
                     />
                     {/* </label> */}
 
-                    <Dropdown val={val}/>
+                    <Dropdown val={val} />
 
 
                     {/* <label className='text-gray-500 font-semibold'>Query : */}
@@ -146,8 +160,8 @@ const Contact = ({val}) => {
                 
             </form>
         </div>
-        <div className=''>
-        <div class="bg-mettalic-gold/80 p-2.5">
+        <div className={`${i18n.language === 'Arabic' || 'عربي' ? 'order-1' : 'order-2'}`}>
+        <div class={`bg-mettalic-gold/80 p-2.5`}>
                 <div
                 class="overflow-hidden cursor-pointer rounded-sm relative group z-0 before:absolute before:w-full before:max-w-[600px] h-full md:h-[480px]"
                 >
