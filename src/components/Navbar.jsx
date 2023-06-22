@@ -183,66 +183,80 @@ const Navbar = ({ selectedPage, setSelectedPage, home, about, packages, services
 
             ) : (
                 <div className='py-5 flex items-center justify-between mx-auto w-5/6'>
-                    <img className='w-20 lg:w-20' src="logo.png" alt="Logo" />
+                    <a href='/'><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></a>
 
-                    <select onChange={onOptionChangeHandler} className="bg-mettalic-gold p-2 rounded-md text-sm hover:bg-russian-violet" >
-                        {options.map((option, index) => {
-                            return <option className='p-2' key={index} >
-                                {option}
-                            </option>
-                        })}
-                    </select>
-                    <button className='rounded-full bg-mettalic-gold/75 p-2'
-                        onClick={() => setIsMenuToggled(!isMenuToggled)}
-                    >
-                        <MdSegment size={30} />
-                    </button>
+                    {i18n.language === 'عربي' ? (
+
+                        <select value={options[1]} onChange={onOptionChangeHandler} className="bg-mettalic-gold p-2 rounded-md text-sm hover:bg-russian-violet" >
+                            {options.map((option, index) => {
+                                return <option className='p-2' key={index} >
+                                    {option}
+                                </option>
+                            })}
+                        </select>
+                    ) : (
+                        <select value={options[0]} onChange={onOptionChangeHandler} className="bg-mettalic-gold p-2 rounded-md text-sm hover:bg-russian-violet" >
+                            {options.map((option, index) => {
+                                return <option className='p-2' key={index} >
+                                    {option}
+                                </option>
+                            })}
+                        </select>
+                    )}
+
+                    {!isMenuToggled ? (
+                        <button className='rounded-full bg-mettalic-gold/75 p-2'
+                            onClick={() => setIsMenuToggled(!isMenuToggled)}
+                        >
+                            <MdSegment size={30} />
+                        </button>
+                    ) : (
+                        <button className='rounded-full bg-mettalic-gold/75 p-2'
+                            onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                            <MdClear size={30} />
+                        </button>
+                    )}
+
                 </div>
             )}
 
             {/* Mobile Menu Popup */}
             {!isAboveSmallScreens && isMenuToggled && (
-                <div className={`fixed right-0 bottom-0 h-full bg-gradient-to-tl from-coyote to-sheen-gold w-[300px]`}>
+                <div className={`right-0 bottom-0 flex items-center justify-center w-full`}>
                     {/* Close Icon */}
-                    <div className='flex justify-end py-6 pr-10'>
-                        <button className='rounded-full bg-mettalic-gold/75 p-2'
-                            onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                            <MdClear size={30} />
-                        </button>
-                    </div>
 
                     {/* Menu Items */}
-                    <div className='flex flex-col gap-10 ml-[33%] pt-10 text-2xl text-russian-violet'>
-                        <AnchorLink className={`${selectedPage === Object.keys({ home })[0] ? "text-mettalic-gold" : ""}
-                            hover:text-mettalic-gold transition-all`}
+                    <div className='flex flex-col gap-5 py-10 text-2xl font-medium text-russian-violet transition duration-200 items-center'>
+                        <AnchorLink className={`${selectedPage === Object.keys({ home })[0] ? "text-mettalic-gold border-b-2 border-mettalic-gold" : ""}
+                            hover:text-mettalic-gold transition-colors border-0 hover:border-b-2 hover:border-mettalic-gold`}
                             href={`#${Object.keys({ home })[0]}`}
                             onClick={() => { setSelectedPage('home'); setIsMenuToggled(!isMenuToggled) }}
                         >
                             {home}
                         </AnchorLink>
-                        <AnchorLink className={`${selectedPage === Object.keys({ about })[0] ? "text-mettalic-gold" : ""}
-                            hover:text-mettalic-gold transition-all`}
+                        <AnchorLink className={`${selectedPage === Object.keys({ about })[0] ? "text-mettalic-gold border-b-2 border-mettalic-gold" : ""}
+                            hover:text-mettalic-gold transition-colors border-0 hover:border-b-2 hover:border-mettalic-gold`}
                             href={`#${Object.keys({ about })[0]}`}
                             onClick={() => { setSelectedPage('about'); setIsMenuToggled(!isMenuToggled) }}
                         >
                             {about}
                         </AnchorLink>
-                        <AnchorLink className={`${selectedPage === Object.keys({ services })[0] ? "text-mettalic-gold" : ""}
-                            hover:text-mettalic-gold transition-all`}
+                        <AnchorLink className={`${selectedPage === Object.keys({ services })[0] ? "text-mettalic-gold border-b-2 border-mettalic-gold" : ""}
+                            hover:text-mettalic-gold transition-colors border-0 hover:border-b-2 hover:border-mettalic-gold`}
                             href={`#${Object.keys({ services })[0]}`}
                             onClick={() => { setSelectedPage('services'); setIsMenuToggled(!isMenuToggled) }}
                         >
                             {services}
                         </AnchorLink>
-                        <AnchorLink className={`${selectedPage === Object.keys({ packages })[0] ? "text-mettalic-gold" : ""}
-                            hover:text-mettalic-gold transition-all`}
+                        <AnchorLink className={`${selectedPage === Object.keys({ packages })[0] ? "text-mettalic-gold border-b-2 border-mettalic-gold" : ""}
+                            hover:text-mettalic-gold transition-colors border-0 hover:border-b-2 hover:border-mettalic-gold`}
                             href={`#${Object.keys({ packages })[0]}`}
                             onClick={() => { setSelectedPage('packages'); setIsMenuToggled(!isMenuToggled) }}
                         >
                             {packages}
                         </AnchorLink>
-                        <AnchorLink className={`${selectedPage === Object.keys({ contact })[0] ? "text-mettalic-gold" : ""}
-                            hover:text-mettalic-gold transition-all`}
+                        <AnchorLink className={`${selectedPage === Object.keys({ contact })[0] ? "text-mettalic-gold border-b-2 border-mettalic-gold" : ""}
+                            hover:text-mettalic-gold transition-colors border-0 hover:border-b-2 hover:border-mettalic-gold`}
                             href={`#${Object.keys({ contact })[0]}`}
                             onClick={() => { setSelectedPage('contact'); setIsMenuToggled(!isMenuToggled) }}
                         >

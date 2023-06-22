@@ -132,46 +132,53 @@ const Navbar02 = ({ selectedPage, setSelectedPage, home, about, packages, servic
                     <a href='/'><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></a>
 
                     {i18n.language === 'عربي' ? (
-                        
+
                         <select value={options[1]} onChange={onOptionChangeHandler} className="bg-mettalic-gold p-2 rounded-md text-sm hover:bg-russian-violet" >
-                        {options.map((option, index) => {
-                            return <option className='p-2' key={index} >
-                                {option}
-                            </option>
-                        })}
-                    </select>
+                            {options.map((option, index) => {
+                                return <option className='p-2' key={index} >
+                                    {option}
+                                </option>
+                            })}
+                        </select>
                     ) : (
                         <select value={options[0]} onChange={onOptionChangeHandler} className="bg-mettalic-gold p-2 rounded-md text-sm hover:bg-russian-violet" >
-                        {options.map((option, index) => {
-                            return <option className='p-2' key={index} >
-                                {option}
-                            </option>
-                        })}
-                    </select>
+                            {options.map((option, index) => {
+                                return <option className='p-2' key={index} >
+                                    {option}
+                                </option>
+                            })}
+                        </select>
                     )}
 
-                    
-                    <button className='rounded-full bg-mettalic-gold/75 p-2'
-                        onClick={() => setIsMenuToggled(!isMenuToggled)}
-                    >
-                        <MdSegment size={30} />
-                    </button>
+
+                    {!isMenuToggled ? (
+                        <button className='rounded-full bg-mettalic-gold/75 p-2'
+                            onClick={() => setIsMenuToggled(!isMenuToggled)}
+                        >
+                            <MdSegment size={30} />
+                        </button>
+                    ) : (
+                        <button className='rounded-full bg-mettalic-gold/75 p-2'
+                            onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                            <MdClear size={30} />
+                        </button>
+                    )}
                 </div>
             )}
 
             {/* Mobile Menu Popup */}
             {!isAboveSmallScreens && isMenuToggled && (
-                <div className={`fixed right-0 bottom-0 h-full bg-gradient-to-tl from-coyote to-sheen-gold w-[300px]`}>
+                <div className={``}>
                     {/* Close Icon */}
-                    <div className='flex justify-end py-6 pr-10'>
+                    {/* <div className='flex justify-end py-6 pr-10'>
                         <button className='rounded-full bg-mettalic-gold/75 p-2'
                             onClick={() => setIsMenuToggled(!isMenuToggled)}>
                             <MdClear size={30} />
                         </button>
-                    </div>
+                    </div> */}
 
                     {/* Menu Items */}
-                    <div className='flex flex-col gap-10 ml-[33%] pt-10 text-2xl text-russian-violet'>
+                    {/* <div className='flex flex-col gap-10 ml-[33%] pt-10 text-2xl text-russian-violet'>
                         <AnchorLink className={`${selectedPage === Object.keys({ home })[0] ? "text-mettalic-gold" : ""}
                             hover:text-mettalic-gold transition-all`}
                             href={`#${Object.keys({ home })[0]}`}
@@ -207,7 +214,7 @@ const Navbar02 = ({ selectedPage, setSelectedPage, home, about, packages, servic
                         >
                             {contact}
                         </AnchorLink>
-                    </div>
+                    </div> */}
                 </div>
             )}
 

@@ -73,7 +73,7 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
                     }}
                 >
                     <a
-                    href="https://wa.me/966594161652"
+                    href="https://wa.me/966508188743"
                     class="block w-full rounded-lg bg-russian-violet text-mettalic-gold border-2 border-mettalic-gold px-8 py-3 text-sm font-semibold  shadow hover:bg-mettalic-gold hover:text-russian-violet hover:border-russian-violet focus:outline-none focus:ring sm:w-auto transition duration-500 motion-safe:animate-bounce"
                     >
                     {button01}

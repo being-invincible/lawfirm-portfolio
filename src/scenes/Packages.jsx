@@ -44,7 +44,7 @@ const Packag = ({ title, price, desp, currency, points, link }) => {
             )}
             </ul>
             </div>
-            <div class="mt-3 sm:mt-4 items-stretch">
+            <div class="mt-8 sm:mt-5 items-stretch">
                 <Link to={link}>
                     <button
                     class="self-end block w-full rounded-lg bg-transparent text-russian-violet border-2 border-russian-violet px-8 py-3 text-sm text-center font-semibold  shadow hover:bg-russian-violet hover:text-mettalic-gold hover:border-mettalic-gold focus:outline-none focus:ring transition duration-500"

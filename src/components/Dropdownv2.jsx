@@ -23,18 +23,20 @@ const Dropdownv2 = ({val, isDisabled}) => {
     let pack1 = i18n.language === 'عربي' ? ar.package.package01.id : en.package.package01.id;
     let pack2 = i18n.language === 'عربي' ? ar.package.package02.id : en.package.package02.id;
     let pack3 = i18n.language === 'عربي' ? ar.package.package03.id : en.package.package03.id;
+    let pack4 = i18n.language === 'عربي' ? ar.package.package04.id : en.package.package04.id;
 
     let packT1 = i18n.language === 'عربي' ? ar.package.package01.title : en.package.package01.title;
     let packT2 = i18n.language === 'عربي' ? ar.package.package02.title : en.package.package02.title;
     let packT3 = i18n.language === 'عربي' ? ar.package.package03.title : en.package.package03.title;
+    let packT4 = i18n.language === 'عربي' ? ar.package.package04.title : en.package.package04.title;
 
     // let title = [packT1, packT2, packT3]
     // let list = [pack1, pack2, pack3]
     // console.log(list)
 
     // Language Dropdown
-    let options_eng = [ pack1+" - "+packT1, pack2+" - "+packT2, pack3+" - "+packT3];
-    let options_arb = [pack1+" - "+ packT1, packT2+" - "+pack2, packT3+" - "+pack3]
+    let options_eng = [ pack1+" - "+packT1, pack2+" - "+packT2, pack3+" - "+packT3, pack4+" - "+packT4];
+    let options_arb = [pack1+" - "+ packT1, packT2+" - "+pack2, packT3+" - "+pack3, pack4+" - "+packT4]
     console.log(options_arb)
     const onOptionChangeHandler = (event) => {
         // console.log("User Selected Value - ", event.target.value)
