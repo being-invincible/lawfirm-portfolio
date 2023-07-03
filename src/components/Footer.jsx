@@ -8,7 +8,7 @@ const Footer = () => {
 
 
   return (
-    <footer id="#Footer"className="py-4">
+    <footer id="#Footer"className={`py-4 ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'}`}>
         {i18n.language === 'عربي' ? (
           <div className="max-h-screen max-w-screen-xl">
               

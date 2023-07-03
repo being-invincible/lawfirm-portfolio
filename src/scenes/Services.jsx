@@ -84,7 +84,7 @@ const Services = ({ services, serviceTitle01, serviceTitle02, serviceTitle03, se
                 >
 
                     <motion.div variants={serviceVariant}>
-                        <div className={`group relative cursor-pointer items-center justify-center overflow-hidden`}>
+                        <div className={`group relative cursor-pointer text-center items-center justify-center overflow-hidden`}>
                             <div className="h-[350px] w-92">
                                 <img className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125" src="legal.jpeg" alt="about the law firm" />
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent/30 to-gray/10 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">

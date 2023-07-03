@@ -28,7 +28,7 @@ const Packag = ({ title, price, desp, currency, points, link }) => {
             <div>
             <p className='font-normal text-lg mb-0'>{desp}</p>
             <div className='justify-center gap-1 grid grid-flow-col items-baseline w-full text-center'>
-                <p className='pr-4 py-5 order-2 text-lg'>{currency}</p>
+                <p className=' py-5 order-2 text-lg'>{currency}</p>
                 <h1 className='py-5 font-bold text-5xl'>{price}</h1>
             </div>
 
