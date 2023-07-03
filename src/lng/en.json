@@ -115,5 +115,7 @@
     "selectPackage": "Select Package",
     "submit": "Submit",
     "whatsapp": "WhatsApp",
-    "location": "Location"
+    "location": "Location",
+    "footer01": "All Rights Reserved",
+    "copyright": "© 2023"
 }

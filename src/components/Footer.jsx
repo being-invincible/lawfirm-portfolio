@@ -1,9 +1,15 @@
 import React from 'react'
 import SocialMediaIcons from './SocialMediaIcons'
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+
+    const { t, i18n } = useTranslation();
+
+
   return (
     <footer id="#Footer"className="py-4">
+        {i18n.language === 'عربي' ? (
           <div className="max-h-screen max-w-screen-xl">
               
               {/*<hr class="my-6 border-smoky-black/75 sm:mx-auto lg:my-8" />*/}
@@ -28,18 +34,41 @@ const Footer = () => {
                     <div className='items-center'>
                     <img className='w-36 lg:w-20' src="logo.png" alt="Logo" />
                     </div>
-                <span className="invisible md:visible font-montserrat text-justify text-xs sm:text-sm sm:text-center text-russian-violet">© 2023 <a href="#home" class="hover:underline">Ahattah law & legal consultations Co.</a> - All Rights Reserved.
+                <span className="flex flex-row gap-2 invisible md:visible font-montserrat text-justify text-xs sm:text-sm sm:text-center text-russian-violet">
+                    <p>{t("footer01")} - </p>
+                    <a href="#home" class="hover:underline"> {t("companyName")}</a> 
+                    <p>{t("copyright")}</p>
                 </span>
                 <SocialMediaIcons className="place-items-start" />
                 </div>
                 
               </div>
-              <p className="sm:hidden w-full block font-montserrat text-xs text-center text-russian-violet mb-2">© 2023 <a href="#home" class="hover:underline">Ahattah law & legal consultations Co.</a>
+              <p className="flex flex-row-reverse gap-2 sm:hidden w-full font-montserrat text-xs text-center justify-center text-russian-violet mb-2"><p>{t("copyright")}</p><a href="#home" class="hover:underline">{t("companyName")}</a>
                 </p>
-                <p className="sm:hidden w-full block font-montserrat text-xs text-center text-russian-violet mb-1"> All Rights Reserved
+                <p className="sm:hidden w-full block font-montserrat text-xs text-center text-russian-violet mb-1"> {t("footer01")}
                 </p> 
               
-          </div>
+          </div>) : (
+            <div className="max-h-screen max-w-screen-xl">
+            <div className="sm:flex text-smoky-black sm:items-center sm:justify-between">
+                
+              <div className='py-2.5 flex items-center md:justify-between mx-auto w-full'>
+                  <div className='items-center'>
+                  <img className='w-36 lg:w-20' src="logo.png" alt="Logo" />
+                  </div>
+              <span className="invisible md:visible font-montserrat text-justify text-xs sm:text-sm sm:text-center text-russian-violet">{t("copyright")} <a href="#home" class="hover:underline">{t("companyName")}</a> - {t("footer01")}
+              </span>
+              <SocialMediaIcons className="place-items-start" />
+              </div>
+              
+            </div>
+            <p className="sm:hidden w-full block font-montserrat text-xs text-center text-russian-violet mb-2">{t("copyright")} <a href="#home" class="hover:underline">{t("companyName")}</a>
+              </p>
+              <p className="sm:hidden w-full block font-montserrat text-xs text-center text-russian-violet mb-1">{t("footer01")}
+              </p> 
+            
+        </div>
+          )}
       </footer>
   )
 }

@@ -151,6 +151,7 @@ const Navbar02 = ({ selectedPage, setSelectedPage, home, about, packages, servic
                     )}
 
 
+                    
                     {!isMenuToggled ? (
                         <button className='rounded-full bg-mettalic-gold/75 p-2'
                             onClick={() => setIsMenuToggled(!isMenuToggled)}
@@ -168,8 +169,19 @@ const Navbar02 = ({ selectedPage, setSelectedPage, home, about, packages, servic
 
             {/* Mobile Menu Popup */}
             {!isAboveSmallScreens && isMenuToggled && (
-                <div className={``}>
+                <div className={`relative flex items-center justify-center w-full`}>
                     {/* Close Icon */}
+                    {/* <div className='flex flex-col pt-5 pb-14 text-2xl font-medium text-russian-violet transition duration-200'> */}
+                        {/* <button
+                            className="absolute left-11 text-magic-potion hover:text-toddy-gold transition-all flex flex-wrap flex-col font-montserrat text-md font-semibold gap-2"
+                            onClick={() => navigate(-1)}
+                        >
+                            <MdArrowBackIos size={30} className='fill-russian-violet hover:fill-mettalic-gold hover:bg-russian-violet active:fill-mettalic-gold pl-2 border-mettalic-gold border-2 rounded-lg' />
+
+                        </button> */}
+
+                    {/* </div> */}
+
                     {/* <div className='flex justify-end py-6 pr-10'>
                         <button className='rounded-full bg-mettalic-gold/75 p-2'
                             onClick={() => setIsMenuToggled(!isMenuToggled)}>

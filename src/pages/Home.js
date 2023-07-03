@@ -114,7 +114,7 @@ const Home = () => {
   </div>
 </div>
 
-<div className="bg-olive md:justify-between md:items-center md:h-full bg-logo bg-no-repeat bg-contain bg-center">
+<div className="bg-olive md:justify-between md:items-center md:h-full bg-logo bg-no-repeat bg-contain  md:bg-center">
   {/* <img className="absolute w-1/2" src='/logo.png' alt="logo-bg" /> */}
   {/* <div className="absolute bg-logo bg-no-repeat bg-contain bg-center"> */}
 

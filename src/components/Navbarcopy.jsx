@@ -25,7 +25,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
     )
 }
 
-const Navbarcopy = ({ selectedPage, setSelectedPage, home, about, packages, services, contact }) => {
+const Navbar = ({ selectedPage, setSelectedPage, home, about, packages, services, contact }) => {
 
     const { t, i18n } = useTranslation();
 
@@ -278,4 +278,4 @@ const Navbarcopy = ({ selectedPage, setSelectedPage, home, about, packages, serv
     )
 }
 
-export default Navbarcopy;
+export default Navbar;

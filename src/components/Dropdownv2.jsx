@@ -35,8 +35,8 @@ const Dropdownv2 = ({val, isDisabled}) => {
     // console.log(list)
 
     // Language Dropdown
-    let options_eng = [ pack1+" - "+packT1, pack2+" - "+packT2, pack3+" - "+packT3, pack4+" - "+packT4];
-    let options_arb = [pack1+" - "+ packT1, packT2+" - "+pack2, packT3+" - "+pack3, pack4+" - "+packT4]
+    let options_eng = [packT1, packT2, packT3, packT4];
+    let options_arb = [packT1, packT2, packT3, packT4]
     console.log(options_arb)
     const onOptionChangeHandler = (event) => {
         // console.log("User Selected Value - ", event.target.value)
