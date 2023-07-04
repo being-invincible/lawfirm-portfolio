@@ -72,7 +72,7 @@ const Dropdownv2 = ({val, isDisabled}) => {
             {i18n.language === 'عربي' ? (
                 <select value={options_arb[val]} onChange={onOptionChangeHandler} className={`bg-white p-2 text-sm text-right`} >
                 {options_arb.map((option, index) => {
-                    return <option className='p-4' key={index} >
+                    return <option className='p-4 text-right' key={index} >
                         {option}
                     </option>
                 })}
@@ -81,7 +81,7 @@ const Dropdownv2 = ({val, isDisabled}) => {
             ) : (
                 <select value={options_eng[val]} disabled={isDisabled} onChange={onOptionChangeHandler} className={`bg-white p-2 text-sm`} >
                 {options_eng.map((option, index) => {
-                    return <option className='p-4' key={index} >
+                    return <option className='p-4 text-left' key={index} >
                         {option}
                     </option>
                 })}

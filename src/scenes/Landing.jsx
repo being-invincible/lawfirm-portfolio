@@ -14,14 +14,14 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
     return (
 
         <section data-section id='home'
-            class="min-h-screen relative bg-hero-image bg-cover bg-center bg-no-repeat backdrop-saturate-150 grid items-center"
+            class="min-h-screen px-10 bg-hero-image bg-cover bg-center bg-no-repeat backdrop-saturate-150 grid items-center"
             >
               
             {/* <div
                 class="absolute bg-black/10 inset-0 filter"
             ></div> */}
 
-                <div class={`relative px-10  text-center sm:text-left pt-[180px] lg:pt-[300px] items-center flex flex-col`}>
+                <div class={`relative text-center sm:text-left pt-[100px] lg:pt-[300px] items-center flex flex-col`}>
                 <div class="w-[320px] lg:w-auto bg-russian-violet/75 p-4 rounded-lg">
                 <motion.div
                     class="text-center"
