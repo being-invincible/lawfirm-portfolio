@@ -226,11 +226,11 @@ const Navbarcopy = ({ selectedPage, setSelectedPage, home, about, packages, serv
             {/* Mobile Menu Popup */}
             {!isAboveSmallScreens && isMenuToggled && (
                 <div onClick={() => {setIsMenuToggled(!isMenuToggled)}}
-                className={`right-0 bottom-0 flex flex-col items-center justify-center w-full min-h-full`}>
+                className={`right-0 bottom-0 flex flex-col items-center justify-center w-full`}>
                     {/* Close Icon */}
 
                     {/* Menu Items */}
-                    <div className='flex flex-col gap-20 py-20 text-2xl font-medium text-russian-violet transition duration-200 items-center'>
+                    <div className='flex flex-col gap-10 py-20 text-2xl font-medium text-russian-violet transition duration-200 items-center'>
                         <AnchorLink className={`${selectedPage === Object.keys({ home })[0] ? "text-mettalic-gold border-b-2 border-mettalic-gold" : ""}
                             hover:text-mettalic-gold transition-colors border-0 hover:border-b-2 hover:border-mettalic-gold flex flex-wrap flex-col items-center`}
                             href={`#${Object.keys({ home })[0]}`}

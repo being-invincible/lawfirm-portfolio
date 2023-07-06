@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 
 import { MdCheckCircle } from 'react-icons/md';
 import Contact from './Contact';
+import Selector2 from '../components/Selector2';
 
 const Package01 = () => {
   const { t, i18n } = useTranslation();
