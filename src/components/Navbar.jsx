@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import useMediaQuery from '../hooks/useMediaQuery';
+import withClickOutside from '../hooks/withClickOutside.js'
+
 import { MdSegment, MdClear } from "react-icons/md";
 import i18next from 'i18next';
 
@@ -25,7 +27,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
     )
 }
 
-const Navbarcopy = ({ selectedPage, setSelectedPage, home, about, packages, services, contact }) => {
+const Navbarcopy = ({ selectedPage, setSelectedPage, home, about, packages, services, contact}) => {
 
     const { t, i18n } = useTranslation();
 
@@ -59,6 +61,17 @@ const Navbarcopy = ({ selectedPage, setSelectedPage, home, about, packages, serv
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    const ref = useRef();
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+          if (!ref.current.contains(event.target)) {
+            setIsMenuToggled(false);
+          }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+      }, [ref]);
 
     const activeStyle = "text-mettalic-gold"
 
@@ -230,7 +243,7 @@ const Navbarcopy = ({ selectedPage, setSelectedPage, home, about, packages, serv
                     {/* Close Icon */}
 
                     {/* Menu Items */}
-                    <div className='flex flex-col gap-10 py-20 text-2xl font-medium text-russian-violet transition duration-200 items-center'>
+                    <div ref={ref} className='flex flex-col gap-10 py-20 text-2xl font-medium text-russian-violet transition duration-200 items-center'>
                         <AnchorLink className={`${selectedPage === Object.keys({ home })[0] ? "text-mettalic-gold border-b-2 border-mettalic-gold" : ""}
                             hover:text-mettalic-gold transition-colors border-0 hover:border-b-2 hover:border-mettalic-gold flex flex-wrap flex-col items-center`}
                             href={`#${Object.keys({ home })[0]}`}
