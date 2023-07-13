@@ -21,7 +21,7 @@ const Packag = ({ title, price, desp, currency, points, link }) => {
     const { t, i18n } = useTranslation();
 
     return (
-        <div className={`w-full group h-88 p-8 mb-5 bg-gradient-to-tr from-coyote to-arylide-yellow rounded-lg hover:drop-shadow-lg hover:border-russian-violet hover:border-2 hover:bg-gradient-to-tr hover:to-sheen-gold hover:from-ecru hover:scale-110 transition-all ${i18n.language === 'Arabic' || 'عربي' ? 'font-reem' : 'font-noto'}`}>
+        <div className={`w-full group h-88 p-8 mb-5 bg-gradient-to-tr from-coyote to-arylide-yellow rounded-lg hover:drop-shadow-lg hover:border-russian-violet hover:border-2 hover:bg-gradient-to-tr hover:to-sheen-gold hover:from-ecru hover:lg:scale-110 transition-all ${i18n.language === 'Arabic' || 'عربي' ? 'font-reem' : 'font-noto'}`}>
         
         {i18n.language === 'عربي' ? (
             <div variants={serviceVariant} className={`text-right group-hover:text-russian-violet grid grid-cols-1 h-full place-content-between`}>
