@@ -198,7 +198,7 @@ const Navbarcopy = ({ selectedPage, setSelectedPage, home, about, packages, serv
                 </div>
 
             ) : (
-                <div className='py-5 flex items-center justify-between mx-auto w-5/6'>
+                <div className={`py-5 flex items-center justify-between mx-auto w-5/6 ${i18n.language === 'عربي' ? 'flex-row-reverse' : 'flex-row'}`}>
                     <a href='/'><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></a>
 
                     {i18n.language === 'عربي' ? (

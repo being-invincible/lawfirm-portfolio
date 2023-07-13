@@ -13,8 +13,8 @@ import en from "../lng/en.json"
 import { MdCheckCircle } from 'react-icons/md';
 
 const serviceVariant = {
-    hidden: { opacity:0, scale: 0.8 },
-    visible: { opacity:1, scale: 1 },
+    hidden: { opacity:0},
+    visible: { opacity:1},
 };
 
 const Packag = ({ title, price, desp, currency, points, link }) => {
@@ -24,7 +24,7 @@ const Packag = ({ title, price, desp, currency, points, link }) => {
         <div className={`w-full group h-88 p-8 mb-5 bg-gradient-to-tr from-coyote to-arylide-yellow rounded-lg hover:drop-shadow-lg hover:border-russian-violet hover:border-2 hover:bg-gradient-to-tr hover:to-sheen-gold hover:from-ecru hover:scale-110 transition-all ${i18n.language === 'Arabic' || 'عربي' ? 'font-reem' : 'font-noto'}`}>
         
         {i18n.language === 'عربي' ? (
-            <motion.div variants={serviceVariant} className={`text-right group-hover:text-russian-violet grid grid-cols-1 h-full place-content-between`}>
+            <div variants={serviceVariant} className={`text-right group-hover:text-russian-violet grid grid-cols-1 h-full place-content-between`}>
             <div>
             <p className='font-normal text-lg mb-0'>{desp}</p>
             <div className='justify-center gap-1 grid grid-flow-col items-baseline w-full text-center'>
@@ -54,7 +54,7 @@ const Packag = ({ title, price, desp, currency, points, link }) => {
                 </Link>
               </div>
             
-        </motion.div>
+        </div>
 
         ) : (
             <motion.div variants={serviceVariant} className={`text-left grid grid-cols-1 gap-4 md:gap-0 h-full w-auto place-content-between ${i18n.language === 'Arabic' || 'عربي' ?  'font-reem': 'font-noto'}`}>

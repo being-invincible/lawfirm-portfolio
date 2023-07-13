@@ -15,7 +15,7 @@ export default function withClickOutside(WrappedComponent) {
       document.addEventListener("mousedown", handleClickOutside);
     }, [ref]);
 
-    return <WrappedComponent isMenuToggled={isMenuToggled} setIsMenuToggled={setIsMenuToggled} ref={ref} />;
+    return <WrappedComponent isMenuToggled={isMenuToggled} setIsMenuToggled={setIsMenuToggled} ref={ref} props={props} />;
   };
 
   return Component;
