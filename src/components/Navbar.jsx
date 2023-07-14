@@ -243,7 +243,7 @@ const Navbarcopy = ({ selectedPage, setSelectedPage, home, about, packages, serv
                     {/* Close Icon */}
 
                     {/* Menu Items */}
-                    <div ref={ref} className='flex flex-col gap-10 py-20 text-2xl font-medium text-russian-violet transition duration-200 items-center'>
+                    <div ref={ref} className='flex flex-col gap-10 py-8 text-2xl font-medium text-russian-violet transition duration-200 items-center'>
                         <AnchorLink className={`${selectedPage === Object.keys({ home })[0] ? "text-mettalic-gold border-b-2 border-mettalic-gold" : ""}
                             hover:text-mettalic-gold transition-colors border-0 hover:border-b-2 hover:border-mettalic-gold flex flex-wrap flex-col items-center`}
                             href={`#${Object.keys({ home })[0]}`}

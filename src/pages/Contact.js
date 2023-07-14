@@ -45,10 +45,10 @@ const Contact = ({ val, isDisabled }) => {
                     </button>
 
                     <div>
-                        <h1 className={`sm:text-3xl text-2xl font-bold title-font mb-4 text-mettalic-gold uppercase ${i18n.language === 'Arabic' || 'عربي' ? 'text-right' : 'text-left'}`}>{t("contact02")}</h1>
+                        <h1 className={`sm:text-3xl text-2xl font-bold title-font mb-4 text-mettalic-gold uppercase ${i18n.language === 'عربي' ? 'text-right' : 'text-left'}`}>{t("contact02")}</h1>
                         {/* <div class="h-1 w-20 bg-mettalic-gold"></div> */}
 
-                        <p className={`lg:w-full w-full text-md leading-relaxed text-white my-5 ${i18n.language === 'Arabic' || 'عربي' ? 'text-right' : 'text-left'}`}>{t("contact02")}`}>{t("contDescription")}</p>
+                        <p className={`lg:w-full w-full text-md leading-relaxed text-white my-5 ${i18n.language === 'عربي' ? 'text-right' : 'text-left'}`}>{t("contDescription")}</p>
 
                     </div>
 
