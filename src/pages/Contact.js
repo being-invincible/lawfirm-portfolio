@@ -150,11 +150,13 @@ const Contact = ({ val, isDisabled }) => {
                 <div className={`${i18n.language === 'Arabic' || 'عربي' ? 'order-1' : 'order-2'}`}>
                     <div class={`bg-mettalic-gold/80 p-2.5`}>
                         <div
-                            class="overflow-hidden cursor-pointer rounded-sm relative group z-0 before:absolute before:w-full before:max-w-[600px] h-full md:h-[480px]"
+                            class="overflow-hidden bg-[url('/public/balance.jpeg')] bg-cover cursor-pointer rounded-sm relative group z-0 before:absolute w-full h-full"
                         >
+                            {/* bg-[url('/public/balance.jpeg')] */}
                             <img
+                            
                                 alt="First Product"
-                                class="object-cover group-hover:scale-110 transition duration-500 ease-in-out z-10 w-full max-w-full md:max-w-[550px]"
+                                class="object-cover group-hover:scale-110 transition duration-500 ease-in-out z-10 w-full max-w-full md:invisible"
                                 src="balance.jpeg"
                             />
                         </div>
