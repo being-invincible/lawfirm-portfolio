@@ -21,8 +21,8 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
                 class="absolute bg-black/10 inset-0 filter"
             ></div> */}
 
-                <div class={`relative text-center sm:text-left pt-[100px] lg:pt-[300px] items-center flex flex-col`}>
-                <div class="w-[320px] lg:w-auto bg-russian-violet/75 p-4 rounded-lg">
+                <div class={`relative text-center sm:text-left pt-[100px] lg:pt-[300px] justify-center items-center grid grid-flow-row`}>
+                <div class="w-auto lg:w-auto bg-russian-violet/75 p-4 rounded-lg">
                 <motion.div
                     class="text-center"
                     initial="hidden"
@@ -44,7 +44,7 @@ const Landing = ({setselectedPage, companyName, slogan, button01, button02}) => 
                     
                 </motion.div>
                 </div>
-                <div class="mt-4 w-[320px] lg:w-auto bg-mettalic-gold/75 p-2 rounded-lg">
+                <div class="mt-4 w-auto lg:w-auto bg-mettalic-gold/75 p-2 rounded-lg">
                 <motion.div
                     initial="hidden"
                     whileInView="visible"

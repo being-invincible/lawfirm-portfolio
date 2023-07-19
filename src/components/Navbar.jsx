@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from "react-i18next";
+import { Link } from 'react-router-dom';
 
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import useMediaQuery from '../hooks/useMediaQuery';
@@ -14,7 +15,7 @@ import { SlGlobe } from "react-icons/sl";
 import {GoPackage } from "react-icons/go"
 
 
-const Link = ({ page, selectedPage, setSelectedPage }) => {
+const Link0 = ({ page, selectedPage, setSelectedPage }) => {
     const lowerCasePage = page.toLowerCase();
     return (
         <AnchorLink className={`${selectedPage === lowerCasePage ? "text-mettalic-gold font-bold" : ""}
@@ -140,12 +141,12 @@ const Navbarcopy = ({ selectedPage, setSelectedPage, home, about, packages, serv
                                     {contact}
                                 </AnchorLink>
                             </div>
-                            <a href='/'><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></a>
+                            <Link to={"/"}><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></Link>
                         </div>
                     ) :
                         (
                             <div className='py-5 flex items-center justify-between mx-auto w-5/6'>
-                                <a href='/'><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></a>
+                                <Link to={"/"}><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></Link>
                                 <div className={`flex justify-between gap-16 text-md text-russian-violet font-semibold`}>
                                     <AnchorLink className={`${selectedPage === Object.keys({ home })[0] ? "text-mettalic-gold" : ""}
                                                         `}
@@ -199,7 +200,7 @@ const Navbarcopy = ({ selectedPage, setSelectedPage, home, about, packages, serv
 
             ) : (
                 <div className={`py-5 flex items-center justify-between mx-auto w-5/6 ${i18n.language === 'عربي' ? 'flex-row-reverse' : 'flex-row'}`}>
-                    <a href='/'><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></a>
+                    <Link to={"/"}><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></Link>
 
                     {i18n.language === 'عربي' ? (
 

@@ -7,12 +7,12 @@ import { MdSegment, MdClear } from "react-icons/md";
 import i18next from 'i18next';
 
 import { SlGlobe } from "react-icons/sl";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { MdArrowBackIos } from 'react-icons/md'
 
 
-const Link = ({ page, selectedPage, setSelectedPage }) => {
+const Link0 = ({ page, selectedPage, setSelectedPage }) => {
     const lowerCasePage = page.toLowerCase();
     return (
         <AnchorLink className={`${selectedPage === lowerCasePage ? "text-mettalic-gold font-bold" : ""}
@@ -100,7 +100,7 @@ const Navbar02 = ({ selectedPage, setSelectedPage, home, about, packages, servic
                                 })}
                             </select>
 
-                            <a href='/'><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></a>
+                            <Link to={"/"}><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></Link>
                         </div>
                     ) :
                         (
@@ -112,7 +112,7 @@ const Navbar02 = ({ selectedPage, setSelectedPage, home, about, packages, servic
                                     <MdArrowBackIos size={30} className='fill-russian-violet hover:fill-mettalic-gold active:fill-mettalic-gold' />
 
                                 </button>
-                                <a href='/'><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></a>
+                                <Link to={"/"}><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></Link>
 
 
                                 <select onChange={onOptionChangeHandler} className="bg-mettalic-gold p-2 rounded-md text-sm hover:bg-russian-violet" >
@@ -129,7 +129,7 @@ const Navbar02 = ({ selectedPage, setSelectedPage, home, about, packages, servic
 
             ) : (
                 <div className='py-5 flex items-center justify-between mx-auto w-5/6'>
-                    <a href='/'><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></a>
+                    <Link to={"/"}><img className='w-20 lg:w-20' src="logo.png" alt="Logo" /></Link>
 
                     {i18n.language === 'عربي' ? (
 
@@ -152,7 +152,7 @@ const Navbar02 = ({ selectedPage, setSelectedPage, home, about, packages, servic
 
 
                     
-                    {!isMenuToggled ? (
+                    {/* {!isMenuToggled ? (
                         <button className='rounded-full bg-mettalic-gold/75 p-2'
                             onClick={() => setIsMenuToggled(!isMenuToggled)}
                         >
@@ -163,7 +163,7 @@ const Navbar02 = ({ selectedPage, setSelectedPage, home, about, packages, servic
                             onClick={() => setIsMenuToggled(!isMenuToggled)}>
                             <MdClear size={30} />
                         </button>
-                    )}
+                    )} */}
                 </div>
             )}
 
