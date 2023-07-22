@@ -70,7 +70,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
                     <Selector />
                     {/* <Dropdownv2/> */}
                     <input
-                        className='w-full rounded mb-3 md:rounded-none md:mb-0 bg-white text-sm font-normal placeholder-olive/75 px-5 py-2 text-right'
+                        className='w-full rounded mb-3 md:rounded-none md:mb-0 bg-white text-[1rem] font-normal placeholder-olive/75 px-5 py-2 text-right'
                         type='text'
                         placeholder={phone}
                         {...register("phone",{
@@ -79,7 +79,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
                         })}
                     />
                     <input
-                        className='w-full rounded mb-3 md:rounded-none md:mb-0 bg-white text-sm font-normal placeholder-olive/75 px-5 py-2 text-right'
+                        className='w-full rounded mb-3 md:rounded-none md:mb-0 bg-white text-[1rem] font-normal placeholder-olive/75 px-5 py-2 text-right'
                         type='text'
                         placeholder={email}
                         {...register("email",{
@@ -88,7 +88,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
                         })}
                     />
                     <input
-                        className='w-full rounded mb-3 md:rounded-none md:mb-0 md:rounded-r-lg bg-white text-sm font-normal placeholder-olive/75 px-5 py-2 text-right'
+                        className='w-full rounded mb-3 md:rounded-none md:mb-0 md:rounded-r-lg bg-white text-[1rem] font-normal placeholder-olive/75 px-5 py-2 text-right'
                         type='text'
                         placeholder={name}
                         {...register("name",{
@@ -100,7 +100,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
                 ) : (
                 <div className='flex flex-col justify-center md:flex-row md:space-x-3 text-russian-violet'>
                     <input
-                        className='w-full rounded mb-3 md:rounded-none md:mb-0 md:rounded-l-lg bg-white text-sm font-normal placeholder-olive/75 px-5 py-2'
+                        className='w-full rounded mb-3 md:rounded-none md:mb-0 md:rounded-l-lg bg-white text-[1rem] font-normal placeholder-olive/75 px-5 py-2'
                         type='text'
                         placeholder={name}
                         {...register("name",{
@@ -109,7 +109,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
                         })}
                     />
                     <input
-                        className='w-full rounded mb-3 md:rounded-none md:mb-0 bg-white text-sm font-normal placeholder-olive/75 px-5 py-2'
+                        className='w-full rounded mb-3 md:rounded-none md:mb-0 bg-white text-[1rem] font-normal placeholder-olive/75 px-5 py-2'
                         type='text'
                         placeholder={email}
                         {...register("email",{
@@ -118,7 +118,7 @@ const Contact = ({contact, contactContent, or, name, email, phone, selectPackage
                         })}
                     />
                     <input
-                        className='w-full rounded mb-3 md:rounded-none md:mb-0 bg-white text-sm font-normal placeholder-olive/75 px-5 py-2'
+                        className='w-full rounded mb-3 md:rounded-none md:mb-0 bg-white text-[1rem] font-normal placeholder-olive/75 px-5 py-2'
                         type='text'
                         placeholder={phone}
                         {...register("phone",{

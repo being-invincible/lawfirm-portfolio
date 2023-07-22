@@ -74,7 +74,7 @@ const Selector2 = ({val}) => {
         //     )}
 
         // </div>
-        <div className={`w-full h-full ${i18n.language === 'Arabic' || 'عربي' ? 'font-reem' : 'font-noto'} `}>
+        <div className={`w-full h-full text-md ${i18n.language === 'Arabic' || 'عربي' ? 'font-reem' : 'font-noto'} `}>
           <Listbox disabled={true} value={selected} onChange={setSelected}>
             <div className="relative">
               <Listbox.Button className={`relative w-full cursor-default rounded bg-zinc-200 py-2 pl-5 pr-5 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 text-sm ${i18n.language === 'عربي' ? 'text-right' : 'text-left'} cursor-not-allowed`}>
@@ -84,7 +84,7 @@ const Selector2 = ({val}) => {
                     aria-hidden="true"
                   />
                 </span>
-              <span className={`block truncate `}>{selected.name}</span>
+              <span className={`block truncate text-[1rem]`}>{selected.name}</span>
                 
                 {/* <span className={`block truncate ${i18n.language === 'عربي' ? 'hidden' : 'block'}`}>{selected.name}</span> */}
               </Listbox.Button>

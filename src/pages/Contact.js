@@ -60,7 +60,7 @@ const Contact = ({ val, isDisabled }) => {
             >
                 {i18n.language === 'عربي' ? (
                     <div className='flex justify-center flex-col-reverse space-y-5 text-russian-violet'>
-                    <button className='mt-5 rounded mb-3 md:mb-0 bg-mettalic-gold px-8 py-1.5'>{t("submit")}</button>
+                    <button className='text-[1rem] mt-5 rounded mb-3 md:mb-0 bg-mettalic-gold px-8 py-1.5'>{t("submit")}</button>
                     {/* <input
                         className='w-full rounded mb-3 md:rounded-none md:mb-0 bg-white text-sm font-normal placeholder-olive/75 px-5 py-2 text-right'
                         type='text'
@@ -74,7 +74,7 @@ const Contact = ({ val, isDisabled }) => {
                     {/* <Dropdownv2/> */}
                     
                     <input
-                        className='w-full rounded mb-3 md:mb-0 bg-white text-sm font-normal placeholder-olive/75 px-5 py-2 text-right'
+                        className='w-full rounded mb-3 md:mb-0 bg-white text-[1rem] font-medium placeholder-olive/75 px-5 py-2 text-right'
                         type='text'
                         placeholder={t("email")}
                         {...register("email",{
@@ -83,7 +83,7 @@ const Contact = ({ val, isDisabled }) => {
                         })}
                     />
                     <input
-                        className='w-full rounded mb-3 md:mb-0 bg-white text-sm font-normal placeholder-olive/75 px-5 py-2 text-right'
+                        className='w-full rounded mb-3 md:mb-0 bg-white text-[1rem] font-medium placeholder-olive/75 px-5 py-2 text-right'
                         type='text'
                         placeholder={t("phone")}
                         {...register("phone",{
@@ -92,7 +92,7 @@ const Contact = ({ val, isDisabled }) => {
                         })}
                     />
                     <input
-                        className='w-full rounded bg-white text-sm font-normal placeholder-olive/75 px-5 py-2 text-right'
+                        className='w-full rounded bg-white text-[1rem] font-medium placeholder-olive/75 px-5 py-2 text-right'
                         type='text'
                         placeholder={t("name")}
                         {...register("name",{
@@ -104,7 +104,7 @@ const Contact = ({ val, isDisabled }) => {
                 ) : (
                 <div className='flex flex-col justify-center space-y-5 text-russian-violet'>
                     <input
-                        className='w-full rounded mt-5 md:mb-0 bg-white text-sm font-normal placeholder-olive/75 px-5 py-2'
+                        className='w-full rounded mt-5 md:mb-0 bg-white text-[1rem] font-medium placeholder-olive/75 px-5 py-2'
                         type='text'
                         placeholder={t("name")}
                         {...register("name",{
@@ -113,7 +113,7 @@ const Contact = ({ val, isDisabled }) => {
                         })}
                     />
                     <input
-                        className='w-full rounded mb-3  md:mb-0 bg-white text-sm font-normal placeholder-olive/75 px-5 py-2'
+                        className='w-full rounded mb-3  md:mb-0 bg-white text-[1rem] font-medium placeholder-olive/75 px-5 py-2'
                         type='text'
                         placeholder={t("email")}
                         {...register("email",{
@@ -122,7 +122,7 @@ const Contact = ({ val, isDisabled }) => {
                         })}
                     />
                     <input
-                        className='w-full rounded mb-3 md:mb-0 bg-white text-sm font-normal placeholder-olive/75 px-5 py-2'
+                        className='w-full rounded mb-3 md:mb-0 bg-white text-[1rem] font-medium placeholder-olive/75 px-5 py-2'
                         type='text'
                         placeholder={t("phone")}
                         {...register("phone",{
@@ -142,7 +142,7 @@ const Contact = ({ val, isDisabled }) => {
                         })}
                     /> */}
                     
-                    <button className='mt-5 md:mt-0 rounded mb-3 md:mb-0 md:rounded-r-lg bg-mettalic-gold px-8 py-1.5'>{t("submit")}</button>
+                    <button className='text-[1rem] font-medium mt-5 md:mt-0 rounded mb-3 md:mb-0 md:rounded-r-lg bg-mettalic-gold px-8 py-1.5'>{t("submit")}</button>
                 </div>
                 )}
             </form>

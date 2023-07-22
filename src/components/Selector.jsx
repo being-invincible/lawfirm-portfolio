@@ -75,9 +75,9 @@ const Selector = () => {
         //     )}
 
         // </div>
-        <div className={`w-full md:w-[1200px] h-full ${i18n.language === 'Arabic' || 'عربي' ? 'font-reem' : 'font-noto'}`}>
+        <div className={`w-full md:w-[1200px] ${i18n.language === 'Arabic' || 'عربي' ? 'font-reem' : 'font-noto'}`}>
           <Listbox value={selected} onChange={setSelected}>
-            <div className="relative">
+            <div className="relative h-full flex">
               <Listbox.Button className={`relative w-full cursor-default rounded md:rounded-none bg-white py-2 pl-5 pr-5 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 text-sm ${i18n.language === 'عربي' ? 'text-right' : 'text-left'}`}>
               <span className={`pointer-events-none absolute inset-y-0 ${i18n.language === 'عربي' ? 'left-0' : 'right-0'} flex items-center p-2`}>
                   <ChevronUpDownIcon
@@ -85,7 +85,7 @@ const Selector = () => {
                     aria-hidden="true"
                   />
                 </span>
-              <span className={`block truncate `}>{selected.name}</span>
+              <span className={`block truncate text-[1rem]`}>{selected.name}</span>
                 
                 {/* <span className={`block truncate ${i18n.language === 'عربي' ? 'hidden' : 'block'}`}>{selected.name}</span> */}
               </Listbox.Button>
