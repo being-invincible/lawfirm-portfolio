@@ -18,31 +18,14 @@ const About = ({ setSelectedPage, aboutTitle, aboutContent, button02, button03, 
             className='md:grid md:grid-cols-2 md:min-h-screen gap-16 py-10 md:py-40'
         >
             {/* Image Section */}
-            {isAboveMediumScreens ? (
+            
 
-                <div className="bg-about-image bg-no-repeat bg-center bg-cover order-2">
-
+                <div className="bg-about-image bg-no-repeat bg-center bg-cover order-2 z-10">
+                <img
+                    className='sm:hidden block group-hover:scale-110 transition duration-500 ease-in-out z-10 w-full max-w-[450px] md:max-w-[550px]'
+                    alt='Library of Scholars' src='about01.jpeg' />
                 </div>
 
-            ) : (
-
-                <motion.div className='md:order-2 z-10'
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        hidden: { opacity: 0 },
-                        visible: { opacity: 1 }
-                    }}
-                >
-
-                    <div>
-                        <img
-                            className='group-hover:scale-110 transition duration-500 ease-in-out z-10 w-full max-w-[450px] md:max-w-[550px]'
-                            alt='Library of Scholars' src='about01.jpeg' />
-                    </div>
-                </motion.div>)}
 
 
             {/* About Section */}
@@ -76,14 +59,14 @@ const About = ({ setSelectedPage, aboutTitle, aboutContent, button02, button03, 
                 >
                     <a
                         href="#packages"
-                        class="block w-full rounded-lg bg-russian-violet text-mettalic-gold border-2 border-mettalic-gold px-12 py-3 text-sm font-semibold shadow hover:bg-mettalic-gold hover:text-russian-violet hover:border-russian-violet focus:outline-none focus:ring sm:w-auto transition duration-500"
+                        class="block w-full rounded-lg bg-russian-violet text-mettalic-gold border-2 border-mettalic-gold lg:px-12 md:px-8  py-3 text-sm font-semibold shadow hover:bg-mettalic-gold hover:text-russian-violet hover:border-russian-violet focus:outline-none focus:ring sm:w-auto transition duration-500"
                     >
                         {button03}
                     </a>
 
                     <a
                         href="#services"
-                        class="block w-full rounded-lg bg-mettalic-gold text-russian-violet border-2 border-russian-violet px-12 py-3 text-sm font-semibold shadow hover:bg-russian-violet hover:text-mettalic-gold hover:border-mettalic-gold focus:outline-none focus:ring sm:w-auto transition duration-500"
+                        class="block w-full rounded-lg bg-mettalic-gold text-russian-violet border-2 border-russian-violet lg:px-12 md:px-8 py-3 text-sm font-semibold shadow hover:bg-russian-violet hover:text-mettalic-gold hover:border-mettalic-gold focus:outline-none focus:ring sm:w-auto transition duration-500"
                     >
                         {button02}
                     </a>

@@ -110,7 +110,7 @@ const Selector = () => {
                         <>
                           <span
                             className={`block truncate ${
-                              selected ? 'font-medium' : 'font-normal'
+                              selected ? 'font-medium' : 'font-medium'
                             }`}
                           >
                             {person.name}
