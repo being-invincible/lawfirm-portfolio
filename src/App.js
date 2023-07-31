@@ -7,6 +7,9 @@ import Contact from "./pages/Contact";
 import Package02 from "./pages/Package02";
 import Package03 from "./pages/Package03";
 
+import ReactGA from 'react-ga';
+const TRACKING_ID = "G-CCPQ393YP7"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
 
