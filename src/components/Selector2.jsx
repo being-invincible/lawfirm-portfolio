@@ -30,50 +30,7 @@ const Selector2 = ({val}) => {
     const [selected, setSelected] = useState(people[val])
 
     return (
-        // <div className={`w-full md:w-[1250px] h-full ${i18n.language === 'Arabic' || 'عربي' ? 'font-reem' : 'font-noto'}`}>
-        //     {i18n.language === 'عربي' ? (
-        //         <button
-        //             onClick={() => setIsOpen((prev) => !prev)}
-        //             className='rounded mb-3 md:rounded-none md:mb-0 bg-white text-sm font-normal text-olive/75 px-5 py-2 text-right flex flex-row w-full items-center justify-between border-2 border-transparent active:border-russian-violet'
-        //         >
-        //             <BsChevronExpand size={20} />
-        //             اختار الباقة
-        //         </button>
-        //     ) : (
-        //         <button
-        //             onClick={() => setIsOpen((prev) => !prev)}
-        //             className='rounded mb-3 md:rounded-none md:mb-0 bg-white text-sm font-normal text-olive/75 px-5 py-2 text-left flex flex-row w-full items-center justify-between border-2 border-transparent active:border-russian-violet'
-        //         >
-        //             {isSelected}
-        //             <BsChevronExpand size={20} />
-        //         </button>
-        //     )}
-
-        //     {isOpen && (
-        //         <div>
-        //             {i18n.language === 'عربي' ? (
-        //                 <div className={`absolute bg-white text-right text-sm w-[350px] md:w-[228px] rounded-b-lg p-2`}>
-        //                     {options.map((option, index) => {
-        //                         return <div className={`py-2 px-5 hover:bg-russian-violet hover:text-mettalic-gold cursor-pointer`} key={index} onClick={() => { setIsSelected(option) }
-        //                         }>
-        //                             {console.log(isSelected)}
-        //                             {option}
-        //                         </div>
-        //                     })}
-        //                 </div>
-        //             ) : (
-        //                 <div className={`absolute bg-white text-left text-sm w-[350px] md:w-[225px] rounded-b-lg p-2`}>
-        //                     {options.map((option, index) => {
-        //                         return <div className={`py-2 px-5 hover:bg-russian-violet hover:text-mettalic-gold cursor-pointer`} key={index} >
-        //                             {option}
-        //                         </div>
-        //                     })}
-        //                 </div>
-        //             )}
-        //         </div>
-        //     )}
-
-        // </div>
+        
         <div className={`w-full h-full text-md ${i18n.language === 'Arabic' || 'عربي' ? 'font-reem' : 'font-noto'} `}>
           <Listbox disabled={true} value={selected} onChange={setSelected}>
             <div className="relative">

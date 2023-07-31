@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import useMediaQuery from '../hooks/useMediaQuery';
@@ -239,8 +240,18 @@ const Navbarcopy = ({ selectedPage, setSelectedPage, home, about, packages, serv
 
             {/* Mobile Menu Popup */}
             {!isAboveSmallScreens && isMenuToggled && (
-                <div onClick={() => {setIsMenuToggled(!isMenuToggled)}}
-                className={`right-0 bottom-0 flex flex-col items-center justify-center w-full`}>
+                <motion.div 
+                onClick={() => {setIsMenuToggled(!isMenuToggled)}}
+                className={`right-0 bottom-0 flex flex-col items-center justify-center w-full`}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.5 }}
+                    transition={{ duration: 0.4 }}
+                    variants={{
+                        hidden: {opacity:0, y:-50},
+                        visible: {opacity:1, y:0}
+                    }}
+                >
                     {/* Close Icon */}
 
                     {/* Menu Items */}
@@ -291,7 +302,7 @@ const Navbarcopy = ({ selectedPage, setSelectedPage, home, about, packages, serv
                     > 
                     
                     </div>*/}
-                </div>
+                </motion.div>
             )}
 
         </nav >

@@ -8,12 +8,9 @@ import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import ar from '../lng/ar.json'
 import en from '../lng/en.json'
 
-const Selector = () => {
+const Selector = ({ onSelect }) => {
 
     const { t, i18n } = useTranslation();
-
-    const [isOpen, setIsOpen] = useState(false);
-    const [isSelected, setIsSelected] = useState("Select Package");
    
 
     // Data
@@ -30,51 +27,13 @@ const Selector = () => {
     // const [selected, setSelected] = useState(def_arr)
     const [selected, setSelected] = useState(def_arr)
 
+    const handleSelection = (value) => {
+      setSelected(value);
+      onSelect(value);
+    };
+
     return (
-        // <div className={`w-full md:w-[1250px] h-full ${i18n.language === 'Arabic' || 'عربي' ? 'font-reem' : 'font-noto'}`}>
-        //     {i18n.language === 'عربي' ? (
-        //         <button
-        //             onClick={() => setIsOpen((prev) => !prev)}
-        //             className='rounded mb-3 md:rounded-none md:mb-0 bg-white text-sm font-normal text-olive/75 px-5 py-2 text-right flex flex-row w-full items-center justify-between border-2 border-transparent active:border-russian-violet'
-        //         >
-        //             <BsChevronExpand size={20} />
-        //             اختار الباقة
-        //         </button>
-        //     ) : (
-        //         <button
-        //             onClick={() => setIsOpen((prev) => !prev)}
-        //             className='rounded mb-3 md:rounded-none md:mb-0 bg-white text-sm font-normal text-olive/75 px-5 py-2 text-left flex flex-row w-full items-center justify-between border-2 border-transparent active:border-russian-violet'
-        //         >
-        //             {isSelected}
-        //             <BsChevronExpand size={20} />
-        //         </button>
-        //     )}
 
-        //     {isOpen && (
-        //         <div>
-        //             {i18n.language === 'عربي' ? (
-        //                 <div className={`absolute bg-white text-right text-sm w-[350px] md:w-[228px] rounded-b-lg p-2`}>
-        //                     {options.map((option, index) => {
-        //                         return <div className={`py-2 px-5 hover:bg-russian-violet hover:text-mettalic-gold cursor-pointer`} key={index} onClick={() => { setIsSelected(option) }
-        //                         }>
-        //                             {console.log(isSelected)}
-        //                             {option}
-        //                         </div>
-        //                     })}
-        //                 </div>
-        //             ) : (
-        //                 <div className={`absolute bg-white text-left text-sm w-[350px] md:w-[225px] rounded-b-lg p-2`}>
-        //                     {options.map((option, index) => {
-        //                         return <div className={`py-2 px-5 hover:bg-russian-violet hover:text-mettalic-gold cursor-pointer`} key={index} >
-        //                             {option}
-        //                         </div>
-        //                     })}
-        //                 </div>
-        //             )}
-        //         </div>
-        //     )}
-
-        // </div>
         <div className={`w-full md:w-[1200px] ${i18n.language === 'Arabic' || 'عربي' ? 'font-reem' : 'font-noto'}`}>
           <Listbox value={selected} onChange={setSelected}>
             <div className="relative h-full flex">
