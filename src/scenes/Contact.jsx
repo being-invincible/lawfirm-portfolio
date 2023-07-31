@@ -34,7 +34,7 @@ const Selector = ({selected, setSelected, people }) => {
                 <div className={`w-full md:w-[1200px] ${i18n.language === 'عربي' ? 'font-reem' : 'font-noto'}`}>
                   <Listbox value={selected} onChange={setSelected}>
                     <div className="relative h-full flex">
-                      <Listbox.Button className={`relative w-full cursor-default rounded md:rounded-none bg-white  pl-5 pr-5 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 text-sm ${i18n.language === 'عربي' ? 'text-right' : 'text-left'}`}>
+                      <Listbox.Button className={`relative w-full cursor-default rounded md:rounded-none bg-white py-2 pl-5 pr-5 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 text-sm ${i18n.language === 'عربي' ? 'text-right' : 'text-left'}`}>
                         <span className={`pointer-events-none absolute inset-y-0 ${i18n.language === 'عربي' ? 'left-0' : 'right-0'} flex items-center p-2`}>
                           <ChevronUpDownIcon
                             className="h-5 w-5 text-gray-400"
