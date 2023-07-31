@@ -22,6 +22,7 @@ import en from '../lng/en.json'
 const Selector = ({selected, setSelected, people, val }) => {
     const { t, i18n } = useTranslation();
 
+    // useeffect for dynamic changing language tranlation
     useEffect(() => {
         if (i18n.language === 'عربي') {
           setSelected(people[val])
